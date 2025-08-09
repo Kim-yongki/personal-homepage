@@ -542,16 +542,11 @@ export default function App() {
             flexWrap: "wrap",       // 화면 좁으면 자동 줄바꿈
             gap: 12,                // 이메일 사이 간격
             marginBottom: 6,
-            wordBreak: "break-all", // 긴 단어(이메일) 줄바꿈 허용
+            wordBreak: "keep-all", // 긴 단어(이메일) 줄바꿈 허용
             alignItems: "center",
           }}
         >
-          <span>
-            ✉️ <a href={`mailto:${CONFIG.person.emails[0]}`}>{CONFIG.person.emails[0]}</a>
-          </span>
-          <span>
-            ✉️ <a href={`mailto:${CONFIG.person.emails[1]}`}>{CONFIG.person.emails[1]}</a>
-          </span>
+        ✉️ <a href="mailto:Pauluhill74@gmail.com">Pauluhill74@gmail.com</a> • <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
 
         {/* LinkedIn */}
