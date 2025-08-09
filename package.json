@@ -12,9 +12,8 @@
     "esbuild": "^0.23.0"
   },
 "scripts": {
-  "build": "npx esbuild src/index.js --bundle --outfile=build/assets/bundle.js --define:process.env.NODE_ENV='\"production\"' --minify --loader:.js=jsx && if not exist build mkdir build && copy /Y public\\index.html build\\index.html && (if exist public\\404.html copy /Y public\\404.html build\\404.html) && (if exist public copy /Y public\\* build\\ 1>nul 2>nul)",
+  "start": "npx serve -s build -l 3000",
+  "build": "if exist build rmdir /s /q build && mkdir build && npx esbuild src/index.js --bundle --outfile=build/assets/bundle.js --define:process.env.NODE_ENV='\"production\"' --minify --loader:.js=jsx && xcopy public build /E /I /Y",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build"
-}
-
-}
+}}
