@@ -575,8 +575,11 @@ export default function App() {
   const navLinks = CONFIG.nav.map((n) => {
     const href = n.useCV ? CONFIG.site.cvUrl : n.href;
     const props = n.external || n.useCV ? { target: "_blank", rel: "noreferrer" } : {};
+    const styleOverride = n.useCV
+    ? { fontWeight: 800, textDecoration: "underline" }
+    : {};
     return (
-      <a key={n.label} href={href ?? "#"} style={styles.link} {...props}>
+      <a key={n.label} href={href ?? "#"} style={{ ...styles.link, ...styleOverride }} {...props}>
         {n.label}
       </a>
     );
@@ -700,7 +703,7 @@ export default function App() {
       <SectionList id="projects" title="Research Projects" entries={DATA.projects} showYear cols={3} />
 
       {/* Talks & Presentations */}
-      <SectionList id="talks" title="Talks & Presentations" entries={DATA.talks} showYear showVenue cols={2} />
+      <SectionList id="talks" title="Talks & Presentations" entries={DATA.talks} showYear showVenue cols={3} />
 
       {/* Contact */}
       <section id="contact" style={{ ...styles.section, background: "transparent" }}>
