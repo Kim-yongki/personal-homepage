@@ -531,30 +531,46 @@ export default function App() {
   });
 
   /** 연락처 공통 렌더 */
-  function ContactLinks({ compact = false }) {
+  function ContactLinks() {
     const L = CONFIG.person.links;
     return (
       <>
-        <div style={{display: "flex", flexDirection: "column", gap: 4, marginBottom: 6, wordBreak: "break-all"}}>
-          <div>
+        {/* 이메일: 옆으로 나란히, 좁으면 줄바꿈 */}
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",       // 화면 좁으면 자동 줄바꿈
+            gap: 12,                // 이메일 사이 간격
+            marginBottom: 6,
+            wordBreak: "break-all", // 긴 단어(이메일) 줄바꿈 허용
+            alignItems: "center",
+          }}
+        >
+          <span>
             ✉️ <a href={`mailto:${CONFIG.person.emails[0]}`}>{CONFIG.person.emails[0]}</a>
-          </div>
-          <div>
+          </span>
+          <span>
             ✉️ <a href={`mailto:${CONFIG.person.emails[1]}`}>{CONFIG.person.emails[1]}</a>
-          </div>
+          </span>
         </div>
+
+        {/* LinkedIn */}
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
           🔗{" "}
           <a href={L.linkedin} target="_blank" rel="noreferrer">
             LinkedIn
           </a>
         </div>
+
+        {/* Scholar */}
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
           🌐{" "}
           <a href={L.scholar} target="_blank" rel="noreferrer">
             Google Scholar
           </a>
         </div>
+
+        {/* ResearchGate */}
         <div style={{ display: "flex", gap: 8 }}>
           📄{" "}
           <a href={L.researchgate} target="_blank" rel="noreferrer">
