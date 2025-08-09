@@ -101,8 +101,14 @@ const DATA = {
       detail: {
         html: `<p>Compares multi-stop vs hub-and-spoke chains and pressure mapping using OD flows.</p>`,
         images: [
-          "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1581093588401-16b3b0f0b4b9?q=80&w=1600&auto=format&fit=crop",
+          {
+            src: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 1. Multi-stop delivery flow in Seoul Capital Area",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1581093588401-16b3b0f0b4b9?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 2. Hub-and-spoke parcel delivery network",
+          },
         ],
       },
     },
@@ -116,8 +122,14 @@ const DATA = {
       detail: {
         html: `<p>Aggregates store-level indices to brand networks; shows OD-weighted closeness advantage.</p>`,
         images: [
-          "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=1600&auto=format&fit=crop",
+          {
+            src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 1. Store-level network centrality mapping",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 2. Q-commerce vs offline retail accessibility",
+          },
         ],
       },
     },
@@ -133,8 +145,14 @@ const DATA = {
       detail: {
         html: `<p>Fairness contours and detour-gap decomposition across cities.</p>`,
         images: [
-          "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop",
+          {
+            src: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 1. Detour-cost equity contours by city",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 2. Decomposition of detour gaps by region",
+          },
         ],
       },
     },
@@ -148,8 +166,14 @@ const DATA = {
       detail: {
         html: `<p>OD split diagrams, leakage analysis, model comparisons.</p>`,
         images: [
-          "https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1600&auto=format&fit=crop",
+          {
+            src: "https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 1. OD block split for cross-validation",
+          },
+          {
+            src: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1600&auto=format&fit=crop",
+            caption: "Figure 2. Model performance comparison across folds",
+          },
         ],
       },
     },
@@ -278,6 +302,12 @@ function ResponsiveStyles() {
         cursor: zoom-in;
         display: block;
       }
+      .thumb-cap{
+        font-size: 12px;
+        color: #475569;
+        margin-top: 4px;
+        line-height: 1.4;
+      }
 
       /* lightbox */
       .lightbox {
@@ -302,6 +332,13 @@ function ResponsiveStyles() {
       .lightbox-top {
         display: flex; justify-content: flex-end; align-items: center;
         gap: 8px; padding: 8px 10px; border-bottom: 1px solid #E2E8F0;
+      }
+      .lightbox-caption{
+        padding: 8px 10px;
+        border-top: 1px solid #E2E8F0;
+        font-size: 14px;
+        color: #334155;
+        line-height: 1.5;
       }
 
       @media (max-width: 900px){
@@ -418,12 +455,18 @@ export default function App() {
     const [viewer, setViewer] = React.useState({
       open: false,
       src: "",
+      caption: "",
       idx: -1,
     });
     if (!detail.open) return null;
 
     const closeDetail = () =>
       setDetail({ open: false, title: "", html: "", images: [] });
+
+    // 문자열/객체 둘 다 지원: "url" 또는 { src, caption }
+    const images = (detail.images || []).map((img) =>
+      typeof img === "string" ? { src: img, caption: "" } : img
+    );
 
     return (
       <>
@@ -470,16 +513,22 @@ export default function App() {
             </div>
 
             <div style={{ padding: 16, overflowY: "auto" }}>
-              {detail.images?.length > 0 && (
+              {images.length > 0 && (
                 <div className="thumb-grid" style={{ marginBottom: 12 }}>
-                  {detail.images.map((src, i) => (
-                    <img
-                      key={i}
-                      src={src}
-                      alt={`thumb-${i}`}
-                      className="thumb"
-                      onClick={() => setViewer({ open: true, src, idx: i })}
-                    />
+                  {images.map((im, i) => (
+                    <div key={i}>
+                      <img
+                        src={im.src}
+                        alt={`thumb-${i}`}
+                        className="thumb"
+                        onClick={() =>
+                          setViewer({ open: true, src: im.src, caption: im.caption || "", idx: i })
+                        }
+                      />
+                      {im.caption ? (
+                        <div className="thumb-cap">{im.caption}</div>
+                      ) : null}
+                    </div>
                   ))}
                 </div>
               )}
@@ -497,14 +546,14 @@ export default function App() {
         {viewer.open && (
           <div
             className="lightbox"
-            onClick={() => setViewer({ open: false, src: "", idx: -1 })}
+            onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
           >
             <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <div className="lightbox-top">
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => setViewer({ open: false, src: "", idx: -1 })}
+                  onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
                 >
                   ✕ Close
                 </Button>
@@ -512,6 +561,9 @@ export default function App() {
               <div className="lightbox-body">
                 <img src={viewer.src} alt="preview" className="lightbox-img" />
               </div>
+              {viewer.caption ? (
+                <div className="lightbox-caption">{viewer.caption}</div>
+              ) : null}
             </div>
           </div>
         )}
@@ -546,7 +598,7 @@ export default function App() {
             alignItems: "center",
           }}
         >
-        ✉️ <a href="mailto:Pauluhill74@gmail.com">Pauluhill74@gmail.com</a> • <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
+        ✉️<a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> • <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
 
         {/* LinkedIn */}
