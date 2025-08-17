@@ -54,9 +54,9 @@ const DATA = {
         "Rethinking linear-city accessibility: development of linearity indices",
       venue: "",
       url: "",
-      tags: ["Linear city", "Accessibility", "Network analysis", "Equity"],
+      tags: ["Linear city", "Accessibility", "Index development"],
       detail: {
-        html: `<p>Proposes morphological/structural linearity indices and links linearity to detour rate and equity in road networks.</p>`,
+        html: `<p>Proposes morphological/structural urban linearity indices and links linearity to accessibility.</p>`,
         images: [],
       },
     },
@@ -89,11 +89,11 @@ const DATA = {
       title:
         "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
       venue: "SNU Real Estate Club (Contributing Author & Editor)",
-      url: "",
-      tags: ["Book", "Real estate"],
+      url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
+      tags: ["Real estate", "Finance"],
       detail: {
         html: `<p>Edited volume on contemporary Korean real estate; authored chapters. ISBN: 9788924076691.</p>`,
-        images: [],
+        images: ['storage.png'],
       },
     },
   ],
