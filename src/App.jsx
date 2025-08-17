@@ -49,10 +49,10 @@ const CONFIG = {
 const DATA = {
   publications: [
     {
-      year: "Under Review",
+      year: 2025,
       title:
         "Rethinking linear-city accessibility: development of linearity indices",
-      venue: "",
+      venue: "Under Review",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
       detail: {
@@ -77,8 +77,21 @@ const DATA = {
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
       detail: {
-        html: `<p>Analyzes equity from the supplier’s perspective via detour-cost decomposition and inter-city patterning.</p>`,
-        images: [],
+        html: `<p>abstract: Roads are generally public services that do not require a direct cost to the user, which necessitates consideration of not only efficiency but also equity. However, assessing the equity of road services poses significant challenges due to its conceptual ambiguity, and previous studies have mainly focused on the resulting road accessibility gaps from the user's perspective. This study aims to assess the equity of the road network from the provider's perspective by analyzing the causes of accessibility gaps. We examined the impact of road detour costs on accessibility gaps and derived trends based on patterns of detour costs across cities. Our results indicate that the road network in South Korean cities generally exacerbates accessibility gaps by reinforcing Euclidean distance gaps and concentrating road infrastructure. However, we also find that equity of road network can be improved through decentralized urban structures. This research provides a conceptual and methodological framework for analyzing the equity of road services from the provider's perspective and can contribute to policy discussions on road publicity.</p>`,
+        images: [
+          {
+            src: "Equal_transportation_sacrifice.png",
+            caption: "Figure 1. Conceptualization of equal transportation based on equal sacrifice principle",
+          },
+          {
+            src: "Road_effect.png",
+            caption: "Figure 2. Detour cost effect on accessibility gaps",
+          },
+          {
+            src: "accessibilities_detour_cost.png",
+            caption: "Figure 3. Accessibility and detour costs of example cities",
+          }
+        ],
       },
     },
     {
