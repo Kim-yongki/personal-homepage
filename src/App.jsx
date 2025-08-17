@@ -10,7 +10,7 @@ const CONFIG = {
       "https://drive.google.com/file/d/1y6qNMvp16ZrmA4EqHIb09fLoe-ipbIov/view?usp=drive_link",
   },
   hero: {
-    title: "Transport Geography • Urban Structure • Logistics",
+    title: "Transport • Urban Geography",
     blurb:
       "",
     badges: [
@@ -18,7 +18,7 @@ const CONFIG = {
       "Urban Structure",
       "Logistics",
       "Real Estate",
-      "Spatial Data",
+      "Spatial Data Science",
       "Network Analysis",
     ],
   },
@@ -49,6 +49,18 @@ const CONFIG = {
 const DATA = {
   publications: [
     {
+      year: "Under Review",
+      title:
+        "Rethinking linear-city accessibility: development of linearity indices",
+      venue: "",
+      url: "",
+      tags: ["Linear city", "Accessibility", "Network analysis", "Equity"],
+      detail: {
+        html: `<p>Proposes morphological/structural linearity indices and links linearity to detour rate and equity in road networks.</p>`,
+        images: [],
+      },
+    },
+    {
       year: 2025,
       title:
         "Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",
@@ -56,7 +68,7 @@ const DATA = {
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
       detail: {
-        html: `<p>Analyzes equity from provider’s perspective using detour-cost decomposition and city-level patterns.</p>`,
+        html: `<p>Analyzes equity from the supplier’s perspective via detour-cost decomposition and inter-city patterning.</p>`,
         images: [],
       },
     },
@@ -68,82 +80,94 @@ const DATA = {
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
       detail: {
-        html: `<p>Introduces OD-aware brand-level centrality; shows q-commerce efficiency vs offline retail.</p>`,
+        html: `<p>Introduces OD-aware, brand-level centrality; shows efficiency differentials of q-commerce vs. offline retail.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2020,
+      title:
+        "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
+      venue: "SNU Real Estate Club (Contributing Author & Editor)",
+      url: "",
+      tags: ["Book", "Real estate"],
+      detail: {
+        html: `<p>Edited volume on contemporary Korean real estate; authored chapters. ISBN: 9788924076691.</p>`,
+        images: [],
+      },
+    },
+  ],
+
+
+  projects: [
+    {
+      year: 2025,
+      title: "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
+      descr:
+        "Graduate Student Researcher, SNU Enterprise Policy Center. Spatial network analysis of SME transactions.",
+      url: "",
+      tags: ["SME", "Big data", "Policy evaluation", "Spatial network"],
+      detail: {
+        html: `<p><b>Role:</b> Graduate Student Researcher (SNU Enterprise Policy Center).<br>
+               <b>Period:</b> May 2025 – (ongoing).<br>
+               <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2024,
+      title:
+        "A Study on Advancing Big Data-based Policy Evaluation for Small and Medium-sized Enterprises",
+      descr:
+        "Graduate Student Researcher, SNU Enterprise Policy Center. Exploratory spatial data analysis of SME data.",
+      url: "",
+      tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
+      detail: {
+        html: `<p><b>Role:</b> Graduate Student Researcher (SNU Enterprise Policy Center).<br>
+               <b>Period:</b> Jun 2024 – Dec 2024.<br>
+               <b>Work:</b> Exploratory spatial data analysis of SME data.</p>`,
         images: [],
       },
     },
     {
       year: 2025,
       title:
-        "Rethinking linear-city accessibility: development of linearity indices (under review)",
-      venue: "Journal of Transport Geography (submitted)",
-      url: "https://example.com/jtrg-submission",
-      tags: ["Linear city", "Accessibility", "Network analysis"],
+        "A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",
+      descr:
+        "Graduate Student Researcher. Surveyed geography-related interdisciplinary degree programs at Korean universities.",
+      url: "",
+      tags: ["Education", "Curriculum", "Interdisciplinary"],
       detail: {
-        html: `<p>Proposes morphological & structural linearity; relates to detour rate and equity.</p>`,
+        html: `<p><b>Role:</b> Graduate Student Researcher.<br>
+               <b>Main task:</b> Survey of geography-related interdisciplinary degree programs (Korean universities).</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2025,
+      title: "Brain Korea Research Team for the Future Landscape",
+      descr:
+        "Short-term Graduate Researcher (BK). Assisted research tasks for the Future Landscape team.",
+      url: "",
+      tags: ["BK21", "Research team"],
+      detail: {
+        html: `<p><b>Period:</b> Jan 2025 – Feb 2025.<br>
+               <b>Role:</b> Graduate Student Researcher.</p>`,
         images: [],
       },
     },
   ],
-  projects: [
-    {
-      year: 2025,
-      title: "Fulfillment Logistics & Proximity Logistics (M.A. Thesis)",
-      descr:
-        "Evaluated parcel transport-chain scenarios and quantified proximity-logistics pressure in the Seoul Capital Area.",
-      url: "https://example.com/thesis.pdf",
-      tags: [
-        "Fulfillment",
-        "Transport chain",
-        "Logistics sprawl",
-        "Proximity logistics",
-      ],
-      detail: {
-        html: `<p>Compares multi-stop vs hub-and-spoke chains and pressure mapping using OD flows.</p>`,
-        images: [
-          {
-            src: "https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 1. Multi-stop delivery flow in Seoul Capital Area",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1581093588401-16b3b0f0b4b9?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 2. Hub-and-spoke parcel delivery network",
-          },
-        ],
-      },
-    },
-    {
-      year: 2024,
-      title: "OD Network Centrality for Brand-level Q-commerce",
-      descr:
-        "OD-aware centrality to evaluate brand-level transportation efficiency; compared MFCs to offline retail.",
-      url: "https://example.com/od-centrality.pdf",
-      tags: ["Q-commerce", "Centrality", "MFC"],
-      detail: {
-        html: `<p>Aggregates store-level indices to brand networks; shows OD-weighted closeness advantage.</p>`,
-        images: [
-          {
-            src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 1. Store-level network centrality mapping",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 2. Q-commerce vs offline retail accessibility",
-          },
-        ],
-      },
-    },
-  ],
+
   talks: [
     {
       year: 2025,
       title:
         "Equity of detour costs in road networks based on the principle of equal sacrifice",
-      venue: "Korean Geography Conference, Seoul",
-      url: "https://example.com/equal-sacrifice-slides.pdf",
+      venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
+      url: "",
       tags: ["Detour cost", "Equity"],
       detail: {
-        html: `<p>Fairness contours and detour-gap decomposition across cities.</p>`,
+        html: `<p>Introduces fairness contours and detour-gap decomposition across cities.</p>`,
         images: [
           {
             src: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop",
@@ -159,12 +183,12 @@ const DATA = {
     {
       year: 2025,
       title:
-        "Dual-Spatial Cross Validation for Machine Learning–Based OD Prediction",
-      venue: "Korean Geography Conference, Seoul",
-      url: "https://example.com/od-cv-slides.pdf",
+        "Dual-Spatial Cross Validation for Machine Learning–Based Origin–Destination Prediction: A Case Study of Parcel Flow",
+      venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
+      url: "",
       tags: ["OD", "Spatial CV", "ML"],
       detail: {
-        html: `<p>OD split diagrams, leakage analysis, model comparisons.</p>`,
+        html: `<p>OD split diagrams, leakage analysis, and model comparisons for parcel-flow prediction.</p>`,
         images: [
           {
             src: "https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop",
@@ -175,6 +199,78 @@ const DATA = {
             caption: "Figure 2. Model performance comparison across folds",
           },
         ],
+      },
+    },
+    {
+      year: 2025,
+      title:
+        "Analysis of the relationship between the linearity of urban structure and accessibility",
+      venue: "AAG Annual Meeting, Detroit (Mar. 24–28)",
+      url: "",
+      tags: ["Linear city", "Accessibility", "Network analysis"],
+      detail: {
+        html: `<p>Empirically links morphological/structural linearity to accessibility and detour rates.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2024,
+      title:
+        "Differentials in spatial agglomeration among government-supported versus non-supported SMEs: an exploratory spatial data analysis",
+      venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
+      url: "",
+      tags: ["SME", "Agglomeration", "ESDA"],
+      detail: {
+        html: `<p>Exploratory spatial data analysis comparing supported vs. non-supported SMEs.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2024,
+      title:
+        "Urban Linearity and Efficiency–Equity of Accessibility: A Principal Component and Network Analysis of Transport Networks in South Korea’s Cities",
+      venue: "Annual Meeting of Korean Geographers, Gongju (Dec. 6)",
+      url: "",
+      tags: ["Linear city", "Accessibility", "Equity"],
+      detail: {
+        html: `<p>PCA and network analysis to examine city-level accessibility efficiency and equity.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2024,
+      title:
+        "Detecting Urban Development Axes: Development and Application of a Social Network–Based Clustering Methodology",
+      venue: "Korean Geographical Society Annual Meeting, Seoul (Jul. 27–28)",
+      url: "",
+      tags: ["Urban development axes", "Clustering", "SNA"],
+      detail: {
+        html: `<p>Applies social-network-based clustering to identify urban development axes.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2024,
+      title:
+        "Analysis of Quick Commerce MFC Location Using Network Centrality: Focusing on Brand-Level Analysis with Modified Indices",
+      venue: "AAG Annual Meeting, Honolulu (Apr. 16–20)",
+      url: "",
+      tags: ["Q-commerce", "Centrality", "MFC"],
+      detail: {
+        html: `<p>Brand-level centrality for MFC siting and comparison with conventional retail.</p>`,
+        images: [],
+      },
+    },
+    {
+      year: 2023,
+      title:
+        "Comparative Locational Analysis of Quick-Commerce Versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
+      venue: "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
+      url: "",
+      tags: ["Q-commerce", "Centrality", "Coverage"],
+      detail: {
+        html: `<p>Compares q-commerce and conventional retail using centrality and coverage metrics.</p>`,
+        images: [],
       },
     },
   ],
