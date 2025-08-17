@@ -12,19 +12,19 @@ const CONFIG = {
   hero: {
     title: "Transport Geography • Urban Structure • Logistics",
     blurb:
-      "M.A. student at Seoul National University. I study how road and logistics networks shape accessibility, equity, and urban form — from quick-commerce MFC locations to linear-city structures and detour-cost fairness.",
+      "",
     badges: [
       "Transport Geography",
-      "Urban structure",
+      "Urban Structure",
       "Logistics",
-      "Real estate",
-      "Spatial data analysis",
-      "Network analysis",
+      "Real Estate",
+      "Spatial Data",
+      "Network Analysis",
     ],
   },
   person: {
     about:
-      "I’m Yongki Kim, an urban/transport geography researcher focusing on how network structure shapes accessibility and equity. My recent work spans quick-commerce MFC siting (brand-level OD centrality), urban linearity metrics, and detour-cost fairness in public road services.",
+      "M.A. student at Seoul National University. My research focuses on how transportation networks, urban structures, and logistics systems interact to shape spatial accessibility and equity. I'm interested in the implications of these interactions for urban planning and policy.",
     location: "Seoul, South Korea",
     emails: ["pauluhill74@gmail.com", "pauluhill@snu.ac.kr"],
     links: {
