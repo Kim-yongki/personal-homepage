@@ -56,15 +56,19 @@ const DATA = {
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
       detail: {
-        html: `<p>Proposes morphological/structural urban linearity indices and links linearity to accessibility.</p>`,
+        html: `<p>This study challenges the prevailing view that linear road networks inherently enhance efficiency and equity. We introduce two new indices to capture different dimensions of network linearity, and apply them to a large set of urban road systems. The results show that higher linearity does not guarantee better performance; in many cases, it actually amplifies detour rates and inequities, suggesting that corridor-oriented designs can undermine accessibility.</p>`,
         images: [
           {
             src: "MLI.png",
-            caption: "Figure 1. MLI",
+            caption: "Figure 1. Morphological Linearity Index (MLI)",
           },
           {
             src: "SLI.png",
-            caption: "Figure 2. SLI",
+            caption: "Figure 2. Structural Linearity Index (SLI)",
+          },
+          {
+            src: "local_SLI.png",
+            caption: "Figure 3. Local Structural Linearity Index (SLI)",
           }
         ]
       },
@@ -77,7 +81,7 @@ const DATA = {
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
       detail: {
-        html: `<p>abstract: Roads are generally public services that do not require a direct cost to the user, which necessitates consideration of not only efficiency but also equity. However, assessing the equity of road services poses significant challenges due to its conceptual ambiguity, and previous studies have mainly focused on the resulting road accessibility gaps from the user's perspective. This study aims to assess the equity of the road network from the provider's perspective by analyzing the causes of accessibility gaps. We examined the impact of road detour costs on accessibility gaps and derived trends based on patterns of detour costs across cities. Our results indicate that the road network in South Korean cities generally exacerbates accessibility gaps by reinforcing Euclidean distance gaps and concentrating road infrastructure. However, we also find that equity of road network can be improved through decentralized urban structures. This research provides a conceptual and methodological framework for analyzing the equity of road services from the provider's perspective and can contribute to policy discussions on road publicity.</p>`,
+        html: `<p>This study reconceptualizes road-network equity from the provider’s perspective. We define it as the degree to which the road system amplifies or mitigates euclidean(baseline) distance disparities through detour costs and infrastructure patterns. Our findings show that, in South Korean cities, road networks generally exacerbate accessibility inequities.</p>`,
         images: [
           {
             src: "Equal_transportation_sacrifice.png",
@@ -102,19 +106,32 @@ const DATA = {
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
       detail: {
-        html: `<p>Introduces OD-aware, brand-level centrality; shows efficiency differentials of q-commerce vs. offline retail.</p>`,
-        images: [],
+        html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their spatial/logistical strengths and the value of brand-level analysis.</p>`,
+        images: [
+          {
+            src: "retail_locations.png",
+            caption: "Figure 1. Quick commerce & retail locations",
+          },
+          {
+            src: "multilocation_network_centrality.png",
+            caption: "Figure 2. Multi-location network centrality",
+          },
+          {
+            src: "multilocation_network_centrality(equation).png",
+            caption: "Figure 3. Multi-location network centrality (equation)",
+          }
+        ],
       },
     },
     {
       year: 2020,
       title:
         "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
-      venue: "SNU Real Estate Club (Contributing Author & Editor)",
+      venue: "Published by the SNU Real Estate Club (Contributing Author & Editor)",
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
       detail: {
-        html: `<p>Edited volume on contemporary Korean real estate; authored chapters. ISBN: 9788924076691.</p>`,
+        html: `<p>Storage (2020) is a collective volume authored and published by the SNU Real Estate Club (https://www.snusrc.com/), presenting Gen Z perspectives on Korea’s real estate market during a turbulent year. The book compiles analytical reports, opinion essays, and interviews, addressing topics from housing policy and redevelopment to logistics and proptech. As a contributing author and editor, I engaged with issues of accessibility, equity, and the lived meaning of real estate, reflecting my broader research interest in urban accessibility and spatial structures. ISBN: 9788924076691.</p>`,
         images: [
           {
             src: "storage.png",
