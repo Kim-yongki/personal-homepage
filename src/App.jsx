@@ -52,11 +52,11 @@ const DATA = {
       year: 2025,
       title:
         "Rethinking linear-city accessibility: development of linearity indices",
-      venue: "Under Review",
+      venue: "[Under Review]",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
       detail: {
-        html: `<p>This study challenges the prevailing view that linear road networks inherently enhance efficiency and equity. We introduce two new indices to capture different dimensions of network linearity, and apply them to a large set of urban road systems. The results show that higher linearity does not guarantee better performance; in many cases, it actually amplifies detour rates and inequities, suggesting that corridor-oriented designs can undermine accessibility.</p>`,
+        html: `<p>This study challenges the prevailing view that linear road networks inherently enhance efficiency and equity. We introduce two new indices to capture different dimensions of urban linearity, and apply them to a large set of urban road systems in South Korea. The results show that higher linearity does not guarantee better performance; in many cases, it actually amplifies detour rates and inequities, suggesting that corridor-oriented designs can undermine accessibility.</p>`,
         images: [
           {
             src: "MLI.png",
@@ -75,13 +75,24 @@ const DATA = {
     },
     {
       year: 2025,
+      title: "Assessing linear-city accessibility: development of linearity indices",
+      venue: "[In Progress] M.A. Thesis, Seoul National University",
+      url: "",
+      tags: ["Thesis", "Linear city", "Accessibility"],
+      detail: {
+        html: `<p>Master's thesis developing Morphological/Structural Linearity Indices (MLI/SLI) and evaluating their relationship with accessibility and detour rates across South Korean cities.</p>`,
+        images: []
+      }
+    },
+    {
+      year: 2025,
       title:
         "Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",
       venue: "Journal of the Korean Geographical Society, 60(2):168–186",
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
       detail: {
-        html: `<p>This study reconceptualizes road-network equity from the provider’s perspective. We define it as the degree to which the road system amplifies or mitigates euclidean(baseline) distance disparities through detour costs and infrastructure patterns. Our findings show that, in South Korean cities, road networks generally exacerbate accessibility inequities.</p>`,
+        html: `<p>This study reconceptualizes road-network equity from the provider’s perspective. We define it as the degree to which the road system amplifies or mitigates euclidean(baseline)-based accessibility disparities through detour costs and infrastructure patterns. Our findings show that, in South Korean cities, road networks generally exacerbate accessibility inequities.</p>`,
         images: [
           {
             src: "Equal_transportation_sacrifice.png",
@@ -106,7 +117,7 @@ const DATA = {
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
       detail: {
-        html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their spatial/logistical strengths and the value of brand-level analysis.</p>`,
+        html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
         images: [
           {
             src: "retail_locations.png",
@@ -423,7 +434,24 @@ function ResponsiveStyles() {
       .r-grid { display: grid; gap: 16px; }
       .r-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .r-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .r-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; align-items: center; }
+      /* 기본(데스크톱): 좌우 스왑 → about | text */
+      .r-hero {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr; /* 왼쪽(About) 조금 좁게, 오른쪽(텍스트) 넓게 */
+        gap: 16px;
+        align-items: center;
+        grid-template-areas: "about text";
+      }
+      .hero-text  { grid-area: text; }
+      .hero-about { grid-area: about; }
+      @media (max-width: 900px){
+        .r-hero {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "text"
+            "about";
+        }
+      }
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
       .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
@@ -796,20 +824,14 @@ export default function App() {
       </header>
 
       {/* Hero / About */}
-      <section id="home" style={{ ...styles.container, padding: "56px 16px" }} className="r-container">
+      <section
+        id="home"
+        style={{ ...styles.container, padding: "56px 16px" }}
+        className="r-container"
+      >
         <div className="r-hero">
-          <div>
-            <h1 style={{ fontSize: 36, fontWeight: 900, margin: 0, whiteSpace: "normal", wordBreak: "break-all"}}>{CONFIG.hero.title}</h1>
-            <p style={{ marginTop: 16, color: "#475569", lineHeight: 1.6 }}>{CONFIG.hero.blurb}</p>
-            <div style={{ ...styles.chipRow, marginTop: 12 }}>
-              {CONFIG.hero.badges.map((t) => (
-                <Badge key={t}>{t}</Badge>
-              ))}
-            </div>
-          </div>
-
-          {/* About me card */}
-          <div id="about" style={{ paddingLeft: 10 }}>
+          {/* About me card (왼쪽) */}
+          <div id="about" className="hero-about" style={{ paddingRight: 10 }}>
             <Card>
               <CardHeader>
                 <CardTitle>About me</CardTitle>
@@ -818,13 +840,38 @@ export default function App() {
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
                   <img src={CONFIG.site.profileImage} alt="Profile" className="r-profile" />
                 </div>
-                <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}>{CONFIG.person.about}</p>
+                <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}>
+                  {CONFIG.person.about}
+                </p>
                 <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
                   📍 {CONFIG.person.location}
                 </div>
                 <ContactLinks />
               </CardContent>
             </Card>
+          </div>
+
+          {/* 타이틀/배지/소개 (오른쪽) */}
+          <div className="hero-text">
+            <h1
+              style={{
+                fontSize: 36,
+                fontWeight: 900,
+                margin: 0,
+                whiteSpace: "normal",
+                wordBreak: "break-all",
+              }}
+            >
+              {CONFIG.hero.title}
+            </h1>
+            <p style={{ marginTop: 16, color: "#475569", lineHeight: 1.6 }}>
+              {CONFIG.hero.blurb}
+            </p>
+            <div style={{ ...styles.chipRow, marginTop: 12 }}>
+              {CONFIG.hero.badges.map((t) => (
+                <Badge key={t}>{t}</Badge>
+              ))}
+            </div>
           </div>
         </div>
       </section>
