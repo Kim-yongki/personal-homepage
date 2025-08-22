@@ -75,12 +75,12 @@ const DATA = {
     },
     {
       year: 2025,
-      title: "Assessing linear-city accessibility: development of linearity indices",
+      title: "Fulfillment-Service and Proximity Logistics : Focused on Logistics Space of Seoul Capital Area",
       venue: "[In Progress] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
       detail: {
-        html: `<p>Master's thesis developing Morphological/Structural Linearity Indices (MLI/SLI) and evaluating their relationship with accessibility and detour rates across South Korean cities.</p>`,
+        html: `<p></p>`,
         images: []
       }
     },
