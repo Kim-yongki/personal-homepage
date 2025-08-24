@@ -5,14 +5,13 @@ const CONFIG = {
   site: {
     ownerName: "Yongki Kim",
     fontFamily: `'Times New Roman', Times, serif`,
-    profileImage: "./profile image.jpg", // /public 폴더 기준
+    profileImage: "./profile image.jpg", // /public 기준
     cvUrl:
       "https://drive.google.com/file/d/1y6qNMvp16ZrmA4EqHIb09fLoe-ipbIov/view?usp=drive_link",
   },
   hero: {
     title: "Transport • Urban Geography",
-    blurb:
-      "",
+    blurb: "",
     badges: [
       "Transport Geography",
       "Urban Structure",
@@ -55,7 +54,7 @@ const DATA = {
       venue: "[Under Review]",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
-      detail: {
+      highlights: {
         html: `<p>This study challenges the prevailing view that linear road networks inherently enhance efficiency and equity. We introduce two new indices to capture different dimensions of urban linearity, and apply them to a large set of urban road systems in South Korea. The results show that higher linearity does not guarantee better performance; in many cases, it actually amplifies detour rates and inequities, suggesting that corridor-oriented designs can undermine accessibility.</p>`,
         images: [
           {
@@ -69,25 +68,26 @@ const DATA = {
           {
             src: "local_SLI.png",
             caption: "Figure 3. Local Structural Linearity Index (SLI)",
-          }
-        ]
+          },
+        ],
       },
     },
     {
       year: 2025,
-      title: "Fulfillment-Service and Proximity Logistics : Focused on Logistics Space of Seoul Capital Area",
+      title:
+        "Fulfillment-Service and Proximity Logistics : Focused on Logistics Space of Seoul Capital Area",
       venue: "[In Progress] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
-      detail: {
+      highlights: {
         html: `<p>This thesis quantifies how fulfillment-based parcel delivery reconfigures the logistics space of the Seoul Capital Area and what it implies for facility siting and network planning.</p>
   <ul>
     <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run delivery-scenario simulations that combine traditional hub-and-spoke and fulfillment-based chains. The experiments show sizable reductions in average delivery distance and hub-transfer detour when proximity logistics is adopted.</li>
     <li><b>Chain-level, spatial buildup of transport costs.</b> I model and map the cumulative transport cost along each delivery chain—from source to (sub)hubs to destination—identifying where detour costs concentrate and how they shift under fulfillment scenarios.</li>
     <li><b>Policy evaluation and future direction under industrial change.</b> A time-series logistics-sprawl index (warehouses & complexes) reveals continued peripheral siting despite fulfillment-driven proximity needs. I propose a roadmap that pairs proximity-logistics incentives with strategic clustering of large-scale facilities to optimize the regional network.</li>
   </ul>`,
-        images: []
-      }
+        images: [],
+      },
     },
     {
       year: 2025,
@@ -96,12 +96,13 @@ const DATA = {
       venue: "Journal of the Korean Geographical Society, 60(2):168–186",
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
-      detail: {
+      highlights: {
         html: `<p>This study reconceptualizes road-network equity from the provider’s perspective. We define it as the degree to which the road system amplifies or mitigates euclidean(baseline)-based accessibility disparities through detour costs and infrastructure patterns. Our findings show that, in South Korean cities, road networks generally exacerbate accessibility inequities.</p>`,
         images: [
           {
             src: "Equal_transportation_sacrifice.png",
-            caption: "Figure 1. Conceptualization of equal transportation based on equal sacrifice principle",
+            caption:
+              "Figure 1. Conceptualization of equal transportation based on equal sacrifice principle",
           },
           {
             src: "Road_effect.png",
@@ -109,8 +110,9 @@ const DATA = {
           },
           {
             src: "accessibilities_detour_cost.png",
-            caption: "Figure 3. Accessibility and detour costs of example cities",
-          }
+            caption:
+              "Figure 3. Accessibility and detour costs of example cities",
+          },
         ],
       },
     },
@@ -121,7 +123,7 @@ const DATA = {
       venue: "Journal of the Korean Urban Geographical Society, 27(1):17–32",
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
-      detail: {
+      highlights: {
         html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
         images: [
           {
@@ -134,8 +136,9 @@ const DATA = {
           },
           {
             src: "multilocation_network_centrality(equation).png",
-            caption: "Figure 3. Multi-location network centrality (equation)",
-          }
+            caption:
+              "Figure 3. Multi-location network centrality (equation)",
+          },
         ],
       },
     },
@@ -143,31 +146,32 @@ const DATA = {
       year: 2020,
       title:
         "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
-      venue: "Published by the SNU Real Estate Club (Contributing Author & Editor)",
+      venue:
+        "Published by the SNU Real Estate Club (Contributing Author & Editor)",
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
-      detail: {
+      highlights: {
         html: `<p>Storage (2020) is a collective volume authored and published by the SNU Real Estate Club (https://www.snusrc.com/), presenting Gen Z perspectives on Korea’s real estate market during a turbulent year. The book compiles analytical reports, opinion essays, and interviews, addressing topics from housing policy and redevelopment to logistics and proptech. As a contributing author and editor, I engaged with issues of accessibility, equity, and the lived meaning of real estate, reflecting my broader research interest in urban accessibility and spatial structures. ISBN: 9788924076691.</p>`,
         images: [
           {
             src: "storage.png",
             caption: "Figure 1. Cover",
-          }
-        ]
+          },
+        ],
       },
     },
   ],
 
-
   projects: [
     {
       year: 2025,
-      title: "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
+      title:
+        "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
       descr:
         "Graduate Student Researcher, SNU Enterprise Policy Center. Spatial network analysis of SME transactions.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "Spatial network"],
-      detail: {
+      highlights: {
         html: `<p><b>Role:</b> Graduate Student Researcher (SNU Enterprise Policy Center).<br>
                <b>Period:</b> May 2025 – (ongoing).<br>
                <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
@@ -182,7 +186,7 @@ const DATA = {
         "Graduate Student Researcher, SNU Enterprise Policy Center. Exploratory spatial data analysis of SME data.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
-      detail: {
+      highlights: {
         html: `<p><b>Role:</b> Graduate Student Researcher (SNU Enterprise Policy Center).<br>
                <b>Period:</b> Jun 2024 – Dec 2024.<br>
                <b>Work:</b> Exploratory spatial data analysis of SME data.</p>`,
@@ -197,7 +201,7 @@ const DATA = {
         "Graduate Student Researcher. Surveyed geography-related interdisciplinary degree programs at Korean universities.",
       url: "",
       tags: ["Education", "Curriculum", "Interdisciplinary"],
-      detail: {
+      highlights: {
         html: `<p><b>Role:</b> Graduate Student Researcher.<br>
                <b>Main task:</b> Survey of geography-related interdisciplinary degree programs (Korean universities).</p>`,
         images: [],
@@ -210,7 +214,7 @@ const DATA = {
         "Short-term Graduate Researcher (BK). Assisted research tasks for the Future Landscape team.",
       url: "",
       tags: ["BK21", "Research team"],
-      detail: {
+      highlights: {
         html: `<p><b>Period:</b> Jan 2025 – Feb 2025.<br>
                <b>Role:</b> Graduate Student Researcher.</p>`,
         images: [],
@@ -226,7 +230,7 @@ const DATA = {
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["Detour cost", "Equity"],
-      detail: {
+      highlights: {
         html: `<p>Introduces fairness contours and detour-gap decomposition across cities.</p>`,
         images: [
           {
@@ -247,7 +251,7 @@ const DATA = {
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["OD", "Spatial CV", "ML"],
-      detail: {
+      highlights: {
         html: `<p>OD split diagrams, leakage analysis, and model comparisons for parcel-flow prediction.</p>`,
         images: [
           {
@@ -268,7 +272,7 @@ const DATA = {
       venue: "AAG Annual Meeting, Detroit (Mar. 24–28)",
       url: "",
       tags: ["Linear city", "Accessibility", "Network analysis"],
-      detail: {
+      highlights: {
         html: `<p>Empirically links morphological/structural linearity to accessibility and detour rates.</p>`,
         images: [],
       },
@@ -277,10 +281,11 @@ const DATA = {
       year: 2024,
       title:
         "Differentials in spatial agglomeration among government-supported versus non-supported SMEs: an exploratory spatial data analysis",
-      venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
+      venue:
+        "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
-      detail: {
+      highlights: {
         html: `<p>Exploratory spatial data analysis comparing supported vs. non-supported SMEs.</p>`,
         images: [],
       },
@@ -292,7 +297,7 @@ const DATA = {
       venue: "Annual Meeting of Korean Geographers, Gongju (Dec. 6)",
       url: "",
       tags: ["Linear city", "Accessibility", "Equity"],
-      detail: {
+      highlights: {
         html: `<p>PCA and network analysis to examine city-level accessibility efficiency and equity.</p>`,
         images: [],
       },
@@ -304,7 +309,7 @@ const DATA = {
       venue: "Korean Geographical Society Annual Meeting, Seoul (Jul. 27–28)",
       url: "",
       tags: ["Urban development axes", "Clustering", "SNA"],
-      detail: {
+      highlights: {
         html: `<p>Applies social-network-based clustering to identify urban development axes.</p>`,
         images: [],
       },
@@ -316,7 +321,7 @@ const DATA = {
       venue: "AAG Annual Meeting, Honolulu (Apr. 16–20)",
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
-      detail: {
+      highlights: {
         html: `<p>Brand-level centrality for MFC siting and comparison with conventional retail.</p>`,
         images: [],
       },
@@ -325,10 +330,11 @@ const DATA = {
       year: 2023,
       title:
         "Comparative Locational Analysis of Quick-Commerce Versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
-      venue: "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
+      venue:
+        "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
       url: "",
       tags: ["Q-commerce", "Centrality", "Coverage"],
-      detail: {
+      highlights: {
         html: `<p>Compares q-commerce and conventional retail using centrality and coverage metrics.</p>`,
         images: [],
       },
@@ -439,10 +445,10 @@ function ResponsiveStyles() {
       .r-grid { display: grid; gap: 16px; }
       .r-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .r-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      /* 기본(데스크톱): 좌우 스왑 → about | text */
+      /* 데스크톱: 좌우 스왑 → about | text */
       .r-hero {
         display: grid;
-        grid-template-columns: 1fr 1.2fr; /* 왼쪽(About) 조금 좁게, 오른쪽(텍스트) 넓게 */
+        grid-template-columns: 1fr 1.2fr;
         gap: 16px;
         align-items: center;
         grid-template-areas: "about text";
@@ -450,17 +456,11 @@ function ResponsiveStyles() {
       .hero-text  { grid-area: text; }
       .hero-about { grid-area: about; }
       @media (max-width: 900px){
-        .r-hero {
-          grid-template-columns: 1fr;
-          grid-template-areas:
-            "text"
-            "about";
-        }
+        .r-hero { grid-template-columns: 1fr; grid-template-areas: "text" "about"; }
       }
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
       .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
-      /* detail thumbnails grid */
       .thumb-grid {
         display: grid;
         gap: 8px;
@@ -475,44 +475,16 @@ function ResponsiveStyles() {
         cursor: zoom-in;
         display: block;
       }
-      .thumb-cap{
-        font-size: 12px;
-        color: #475569;
-        margin-top: 4px;
-        line-height: 1.4;
-      }
+      .thumb-cap{ font-size: 12px; color: #475569; margin-top: 4px; line-height: 1.4; }
 
-      /* lightbox */
-      .lightbox {
-        position: fixed;
-        inset: 0;
-        z-index: 80;
-        background: rgba(0,0,0,.65);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .lightbox-inner {
-        background: #fff;
-        max-width: min(1100px, 94vw);
-        max-height: 92vh;
-        border-radius: 14px;
-        overflow: hidden;
-        box-shadow: 0 12px 36px rgba(0,0,0,.35);
-      }
+      .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.65);
+        display: flex; align-items: center; justify-content: center; }
+      .lightbox-inner { background: #fff; max-width: min(1100px, 94vw); max-height: 92vh; border-radius: 14px;
+        overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
       .lightbox-body { padding: 8px; }
       .lightbox-img { max-width: 100%; max-height: 84vh; display: block; }
-      .lightbox-top {
-        display: flex; justify-content: flex-end; align-items: center;
-        gap: 8px; padding: 8px 10px; border-bottom: 1px solid #E2E8F0;
-      }
-      .lightbox-caption{
-        padding: 8px 10px;
-        border-top: 1px solid #E2E8F0;
-        font-size: 14px;
-        color: #334155;
-        line-height: 1.5;
-      }
+      .lightbox-top { display: flex; justify-content: flex-end; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #E2E8F0; }
+      .lightbox-caption{ padding: 8px 10px; border-top: 1px solid #E2E8F0; font-size: 14px; color: #334155; line-height: 1.5; }
 
       @media (max-width: 900px){
         .r-cols-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -534,7 +506,8 @@ function ResponsiveStyles() {
 
 /** ───────────────────── 4) App ───────────────────── */
 export default function App() {
-  const [detail, setDetail] = useState({
+  // 하이라이트 모달 상태
+  const [hlModal, setHlModal] = useState({
     open: false,
     title: "",
     html: "",
@@ -556,88 +529,92 @@ export default function App() {
         <div className="r-container">
           <h2 style={styles.h2}>{title}</h2>
           <div className={`r-grid ${colClass}`}>
-            {entries.map((it, idx) => (
-              <Card key={idx}>
-                <CardHeader>
-                  <CardTitle>
-                    {showYear && it.year ? `[${it.year}] ` : ""}
-                    {it.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {showVenue && it.venue && (
-                    <div style={{ color: "#334155", marginBottom: 8 }}>
-                      {it.venue}
-                    </div>
-                  )}
-                  {it.descr && (
-                    <p
+            {entries.map((it, idx) => {
+              const hasHL =
+                !!it?.highlights?.html ||
+                ((it?.highlights?.images?.length ?? 0) > 0);
+              return (
+                <Card key={idx}>
+                  <CardHeader>
+                    <CardTitle>
+                      {showYear && it.year ? `[${it.year}] ` : ""}
+                      {it.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    {showVenue && it.venue && (
+                      <div style={{ color: "#334155", marginBottom: 8 }}>
+                        {it.venue}
+                      </div>
+                    )}
+                    {it.descr && (
+                      <p
+                        style={{
+                          color: "#334155",
+                          lineHeight: 1.6,
+                          marginBottom: 8,
+                        }}
+                      >
+                        {it.descr}
+                      </p>
+                    )}
+                    {it.tags?.length ? (
+                      <div style={{ ...styles.chipRow, marginTop: 4 }}>
+                        {it.tags.map((t) => (
+                          <Badge key={t}>{t}</Badge>
+                        ))}
+                      </div>
+                    ) : null}
+                    <div
                       style={{
-                        color: "#334155",
-                        lineHeight: 1.6,
-                        marginBottom: 8,
+                        display: "flex",
+                        gap: 8,
+                        marginTop: 12,
+                        flexWrap: "wrap",
                       }}
                     >
-                      {it.descr}
-                    </p>
-                  )}
-                  {it.tags?.length ? (
-                    <div style={{ ...styles.chipRow, marginTop: 4 }}>
-                      {it.tags.map((t) => (
-                        <Badge key={t}>{t}</Badge>
-                      ))}
+                      {it.url && <Button href={it.url}>View (PDF)</Button>}
+                      {hasHL && (
+                        <Button
+                          variant="outline"
+                          onClick={() =>
+                            setHlModal({
+                              open: true,
+                              title: it.title,
+                              html: it.highlights?.html || "",
+                              images: it.highlights?.images || [],
+                            })
+                          }
+                        >
+                          Highlights
+                        </Button>
+                      )}
                     </div>
-                  ) : null}
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: 8,
-                      marginTop: 12,
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    {it.url && <Button href={it.url}>View (PDF)</Button>}
-                    {(it.detail?.html ||
-                      (it.detail?.images?.length ?? 0) > 0) && (
-                      <Button
-                        variant="outline"
-                        onClick={() =>
-                          setDetail({
-                            open: true,
-                            title: it.title,
-                            html: it.detail?.html || "",
-                            images: it.detail?.images || [],
-                          })
-                        }
-                      >
-                        Detail
-                      </Button>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
     );
   }
 
-  /** Detail modal with 3-col thumbnails + lightbox */
-  function DetailModal() {
+  /** Highlights modal with 3-col thumbnails + lightbox */
+  function HighlightsModal() {
     const [viewer, setViewer] = React.useState({
       open: false,
       src: "",
       caption: "",
       idx: -1,
     });
-    if (!detail.open) return null;
+    if (!hlModal.open) return null;
 
-    const closeDetail = () =>
-      setDetail({ open: false, title: "", html: "", images: [] });
+    const close = () =>
+      setHlModal({ open: false, title: "", html: "", images: [] });
 
-    // 문자열/객체 둘 다 지원: "url" 또는 { src, caption }
-    const images = (detail.images || []).map((img) =>
+    // 문자열/객체 둘 다 지원
+    const images = (hlModal.images || []).map((img) =>
       typeof img === "string" ? { src: img, caption: "" } : img
     );
 
@@ -645,7 +622,7 @@ export default function App() {
       <>
         {/* 메인 모달 */}
         <div
-          onClick={closeDetail}
+          onClick={close}
           style={{
             position: "fixed",
             inset: 0,
@@ -679,8 +656,10 @@ export default function App() {
                 borderBottom: "1px solid #E2E8F0",
               }}
             >
-              <strong style={{ fontSize: 18 }}>{detail.title}</strong>
-              <Button variant="outline" onClick={closeDetail}>
+              <strong style={{ fontSize: 18 }}>
+                {hlModal.title} — Highlights
+              </strong>
+              <Button variant="outline" onClick={close}>
                 ✕ Close
               </Button>
             </div>
@@ -695,7 +674,12 @@ export default function App() {
                         alt={`thumb-${i}`}
                         className="thumb"
                         onClick={() =>
-                          setViewer({ open: true, src: im.src, caption: im.caption || "", idx: i })
+                          setViewer({
+                            open: true,
+                            src: im.src,
+                            caption: im.caption || "",
+                            idx: i,
+                          })
                         }
                       />
                       {im.caption ? (
@@ -705,10 +689,10 @@ export default function App() {
                   ))}
                 </div>
               )}
-              {detail.html && (
+              {hlModal.html && (
                 <div
                   style={{ color: "#334155", lineHeight: 1.7 }}
-                  dangerouslySetInnerHTML={{ __html: detail.html }}
+                  dangerouslySetInnerHTML={{ __html: hlModal.html }}
                 />
               )}
             </div>
@@ -719,14 +703,18 @@ export default function App() {
         {viewer.open && (
           <div
             className="lightbox"
-            onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
+            onClick={() =>
+              setViewer({ open: false, src: "", caption: "", idx: -1 })
+            }
           >
             <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <div className="lightbox-top">
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
+                  onClick={() =>
+                    setViewer({ open: false, src: "", caption: "", idx: -1 })
+                  }
                 >
                   ✕ Close
                 </Button>
@@ -747,12 +735,18 @@ export default function App() {
   /** 헤더 네비 링크 (CONFIG.nav 사용) */
   const navLinks = CONFIG.nav.map((n) => {
     const href = n.useCV ? CONFIG.site.cvUrl : n.href;
-    const props = n.external || n.useCV ? { target: "_blank", rel: "noreferrer" } : {};
+    const props =
+      n.external || n.useCV ? { target: "_blank", rel: "noreferrer" } : {};
     const styleOverride = n.useCV
-    ? { fontWeight: 800, textDecoration: "underline" }
-    : {};
+      ? { fontWeight: 800, textDecoration: "underline" }
+      : {};
     return (
-      <a key={n.label} href={href ?? "#"} style={{ ...styles.link, ...styleOverride }} {...props}>
+      <a
+        key={n.label}
+        href={href ?? "#"}
+        style={{ ...styles.link, ...styleOverride }}
+        {...props}
+      >
         {n.label}
       </a>
     );
@@ -763,21 +757,21 @@ export default function App() {
     const L = CONFIG.person.links;
     return (
       <>
-        {/* 이메일: 옆으로 나란히, 좁으면 줄바꿈 */}
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap",       // 화면 좁으면 자동 줄바꿈
-            gap: 12,                // 이메일 사이 간격
+            flexWrap: "wrap",
+            gap: 12,
             marginBottom: 6,
-            wordBreak: "keep-all", // 긴 단어(이메일) 줄바꿈 허용
+            wordBreak: "keep-all",
             alignItems: "center",
           }}
         >
-        ✉️<a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> • <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
+          ✉️
+          <a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> •{" "}
+          <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
 
-        {/* LinkedIn */}
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
           🔗{" "}
           <a href={L.linkedin} target="_blank" rel="noreferrer">
@@ -785,7 +779,6 @@ export default function App() {
           </a>
         </div>
 
-        {/* Scholar */}
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
           🌐{" "}
           <a href={L.scholar} target="_blank" rel="noreferrer">
@@ -793,7 +786,6 @@ export default function App() {
           </a>
         </div>
 
-        {/* ResearchGate */}
         <div style={{ display: "flex", gap: 8 }}>
           📄{" "}
           <a href={L.researchgate} target="_blank" rel="noreferrer">
@@ -813,13 +805,19 @@ export default function App() {
         fontFamily: styles.fontFamily,
       }}
     >
-      <DetailModal />
+      <HighlightsModal />
       <ResponsiveStyles />
 
       {/* Header */}
       <header style={styles.header}>
-        <div style={{ ...styles.container, ...styles.navRow }} className="r-container">
-          <a href="#home" style={{ ...styles.link, fontWeight: 700, fontSize: 20 }}>
+        <div
+          style={{ ...styles.container, ...styles.navRow }}
+          className="r-container"
+        >
+          <a
+            href="#home"
+            style={{ ...styles.link, fontWeight: 700, fontSize: 20 }}
+          >
             {CONFIG.site.ownerName}
           </a>
           <nav style={styles.navLinks} className="r-nav">
@@ -842,13 +840,32 @@ export default function App() {
                 <CardTitle>About me</CardTitle>
               </CardHeader>
               <CardContent>
-                <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
-                  <img src={CONFIG.site.profileImage} alt="Profile" className="r-profile" />
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginBottom: 12,
+                  }}
+                >
+                  <img
+                    src={CONFIG.site.profileImage}
+                    alt="Profile"
+                    className="r-profile"
+                  />
                 </div>
-                <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}>
+                <p
+                  style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}
+                >
                   {CONFIG.person.about}
                 </p>
-                <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
+                <div
+                  style={{
+                    display: "flex",
+                    gap: 8,
+                    alignItems: "center",
+                    marginBottom: 6,
+                  }}
+                >
                   📍 {CONFIG.person.location}
                 </div>
                 <ContactLinks />
@@ -892,13 +909,29 @@ export default function App() {
       />
 
       {/* Research Projects */}
-      <SectionList id="projects" title="Research Projects" entries={DATA.projects} showYear cols={3} />
+      <SectionList
+        id="projects"
+        title="Research Projects"
+        entries={DATA.projects}
+        showYear
+        cols={3}
+      />
 
       {/* Talks & Presentations */}
-      <SectionList id="talks" title="Talks & Presentations" entries={DATA.talks} showYear showVenue cols={3} />
+      <SectionList
+        id="talks"
+        title="Talks & Presentations"
+        entries={DATA.talks}
+        showYear
+        showVenue
+        cols={3}
+      />
 
       {/* Contact */}
-      <section id="contact" style={{ ...styles.section, background: "transparent" }}>
+      <section
+        id="contact"
+        style={{ ...styles.section, background: "transparent" }}
+      >
         <div className="r-container">
           <h2 style={styles.h2}>Contact</h2>
         </div>
