@@ -197,7 +197,16 @@ const DATA = {
             <b>Funding:</b> Ministry of SMEs and Startups<br>
             <b>Period:</b> Jun 2024 – Dec 2024<br>
             <b>Contributions:</b> Exploratory spatial data analysis of SME data</p>`,
-        images: [],
+        images: [          
+          {
+            src: "figures/SME_Gmoran.png",
+            caption: "Figure 1. Global Moran's I (example)",
+          },
+          {
+            src: "figures/SME_Lmoran.png",
+            caption: "Figure 2. Local Moran's I (example)",
+          },
+        ],
       },
     },
     {
@@ -223,9 +232,9 @@ const DATA = {
       descr:
         "Student-led industry reports Sponsored by ELYSIA (cryptocurrency based real estate investment platform)",
       url: "https://www.snusrc.com/elysia",
-      tags: ["Real estate", "Club research", "Student initiative", "Periodic reports"],
+      tags: ["Real estate", "Student initiative", "Periodic reports"],
       highlights: {
-        html: `<p><b>Role:</b> Club President & Project Lead<br>
+        html: `<p><b>Role:</b> Project Lead<br>
                <b>Organization:</b> SNUSRC Real Estate Club<br>
                <b>Period:</b> Aug 2020 - Dec 2020.<br>
                <b>Contributions:</b> Managed sponsorship, led project management, and edited/co-authored reports.</p>`,
