@@ -80,7 +80,12 @@ const DATA = {
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
       detail: {
-        html: `<p></p>`,
+        html: `<p>This thesis quantifies how fulfillment-based parcel delivery reconfigures the logistics space of the Seoul Capital Area and what it implies for facility siting and network planning.</p>
+  <ul>
+    <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run delivery-scenario simulations that combine traditional hub-and-spoke and fulfillment-based chains. The experiments show sizable reductions in average delivery distance and hub-transfer detour when proximity logistics is adopted.</li>
+    <li><b>Chain-level, spatial buildup of transport costs.</b> I model and map the cumulative transport cost along each delivery chain—from source to (sub)hubs to destination—identifying where detour costs concentrate and how they shift under fulfillment scenarios.</li>
+    <li><b>Policy evaluation and future direction under industrial change.</b> A time-series logistics-sprawl index (warehouses & complexes) reveals continued peripheral siting despite fulfillment-driven proximity needs. I propose a roadmap that pairs proximity-logistics incentives with strategic clustering of large-scale facilities to optimize the regional network.</li>
+  </ul>`,
         images: []
       }
     },
