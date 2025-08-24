@@ -253,10 +253,10 @@ const DATA = {
       venue: "AAG Annual Meeting, Detroit (Mar. 24–28)",
       url: "",
       tags: ["Linear city", "Accessibility", "Network analysis"],
-      highlights: {
-        html: `<p>Empirically links morphological/structural linearity to accessibility and detour rates.</p>`,
-        images: [],
-      },
+      publishedRef:
+        "rethinking-linear-city-accessibility-development-of-linearity-indices",
+      publishedLabel: "Published",
+      highlights: {},
     },
     {
       year: 2024,
@@ -278,10 +278,10 @@ const DATA = {
       venue: "Annual Meeting of Korean Geographers, Gongju (Dec. 6)",
       url: "",
       tags: ["Linear city", "Accessibility", "Equity"],
-      highlights: {
-        html: `<p>PCA and network analysis to examine city-level accessibility efficiency and equity.</p>`,
-        images: [],
-      },
+      publishedRef:
+        "rethinking-linear-city-accessibility-development-of-linearity-indices",
+      publishedLabel: "Published",
+      highlights: {},
     },
     {
       year: 2024,
@@ -302,14 +302,10 @@ const DATA = {
       venue: "AAG Annual Meeting, Honolulu (Apr. 16–20)",
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
-      // 출판 연결: 2024 JKUGS 논문
       publishedRef:
         "analysis-of-quick-commerce-location-using-modified-network-centrality",
       publishedLabel: "Published",
-      highlights: {
-        html: `<p>Brand-level centrality for MFC siting and comparison with conventional retail.</p>`,
-        images: [],
-      },
+      highlights: {},
     },
     {
       year: 2023,
@@ -318,11 +314,11 @@ const DATA = {
       venue:
         "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
       url: "",
-      tags: ["Q-commerce", "Centrality", "Coverage"],
-      highlights: {
-        html: `<p>Compares q-commerce and conventional retail using centrality and coverage metrics.</p>`,
-        images: [],
-      },
+      tags: ["Q-commerce", "Centrality", "MFC"],
+      publishedRef:
+        "analysis-of-quick-commerce-location-using-modified-network-centrality",
+      publishedLabel: "Published",
+      highlights: {},
     },
   ],
 };
@@ -586,7 +582,7 @@ export default function App() {
                               onClick={() => goToAndFlash(it.publishedRef)}
                               title="Go to the corresponding publication"
                             >
-                              Linked Article
+                              Related Paper
                             </Button>
                           )}
                         </div>
