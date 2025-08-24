@@ -159,7 +159,7 @@ const DATA = {
       title:
         "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
       descr:
-        "[In progress] SNU Enterprise Policy Center. Funded by Ministry of SMEs and Startups.",
+        "[In progress] Funded by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "Spatial network analysis"],
       highlights: {
@@ -194,7 +194,6 @@ const DATA = {
       highlights: {
       html: `<p><b>Role:</b> Graduate Student Researcher<br>
             <b>Institution:</b> SNU Enterprise Policy Center<br>
-            <b>Funding:</b> Ministry of SMEs and Startups<br>
             <b>Period:</b> Jun 2024 – Dec 2024<br>
             <b>Contributions:</b> Exploratory spatial data analysis of SME data</p>`,
         images: [          
