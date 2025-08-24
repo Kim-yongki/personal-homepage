@@ -159,14 +159,28 @@ const DATA = {
       title:
         "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
       descr:
-        "Graduate Student Researcher, SNU Enterprise Policy Center. Spatial network analysis of SME transactions.",
+        "[In progress] SNU Enterprise Policy Center. Funded by Ministry of SMEs and Startups.",
       url: "",
-      tags: ["SME", "Big data", "Policy evaluation", "Spatial network"],
+      tags: ["SME", "Big data", "Policy evaluation", "Spatial network analysis"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Researcher (SNU Enterprise Policy Center).<br>
+        html: `<p><b>Role:</b> Graduate Student Researcher.<br>
+               <b>Institution:</b> SNU Enterprise Policy Center<br>
                <b>Period:</b> May 2025 – (ongoing).<br>
                <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
-        images: [],
+        images: [
+          {
+            src: "figures/transactions.png",
+            caption: "Figure 1. transaction network (example)",
+          },
+          {
+            src: "figures/community.png",
+            caption: "Figure 2. community detection (example)",
+          },
+          {
+            src: "figures/sankey.png",
+            caption: "Figure 3. sankey diagram (example)",
+          },
+        ],
       },
     },
     {
@@ -174,13 +188,15 @@ const DATA = {
       title:
         "A Study on Advancing Big Data-based Policy Evaluation for Small and Medium-sized Enterprises",
       descr:
-        "Graduate Student Researcher, SNU Enterprise Policy Center. Exploratory spatial data analysis of SME data.",
+        "Funded by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Researcher (SNU Enterprise Policy Center).<br>
-               <b>Period:</b> Jun 2024 – Dec 2024.<br>
-               <b>Work:</b> Exploratory spatial data analysis of SME data.</p>`,
+      html: `<p><b>Role:</b> Graduate Student Researcher<br>
+            <b>Institution:</b> SNU Enterprise Policy Center<br>
+            <b>Funding:</b> Ministry of SMEs and Startups<br>
+            <b>Period:</b> Jun 2024 – Dec 2024<br>
+            <b>Contributions:</b> Exploratory spatial data analysis of SME data</p>`,
         images: [],
       },
     },
@@ -189,26 +205,40 @@ const DATA = {
       title:
         "A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",
       descr:
-        "Graduate Student Researcher. Surveyed geography-related interdisciplinary degree programs at Korean universities.",
+        "Funded by Brain Korea Research Team for the Future Landscape.",
       url: "",
       tags: ["Education", "Curriculum", "Interdisciplinary"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Researcher.<br>
-               <b>Main task:</b> Survey of geography-related interdisciplinary degree programs (Korean universities).</p>`,
+        html: `<p><b>Role:</b> Graduate Student Research Assistant.<br>
+               <b>Institution:</b> SNU Geography<br>
+               <b>Period:</b> Jan 2025 - Feb 2025.<br>
+               <b>Contributions:</b> Survey of geography-related interdisciplinary degree programs in Korea.</p>`,
         images: [],
       },
     },
     {
-      year: 2025,
-      title: "Brain Korea Research Team for the Future Landscape",
+      year: 2020,
+      title:
+        "SNUSRC X ELYSIA Real Estate Report ",
       descr:
-        "Short-term Graduate Researcher (BK). Assisted research tasks for the Future Landscape team.",
-      url: "",
-      tags: ["BK21", "Research team"],
+        "Student-led industry reports Sponsored by ELYSIA (cryptocurrency based real estate investment platform)",
+      url: "https://www.snusrc.com/elysia",
+      tags: ["Real estate", "Club research", "Student initiative", "Periodic reports"],
       highlights: {
-        html: `<p><b>Period:</b> Jan 2025 – Feb 2025.<br>
-               <b>Role:</b> Graduate Student Researcher.</p>`,
-        images: [],
+        html: `<p><b>Role:</b> Club President & Project Lead<br>
+               <b>Organization:</b> SNUSRC Real Estate Club<br>
+               <b>Period:</b> Aug 2020 - Dec 2020.<br>
+               <b>Contributions:</b> Managed sponsorship, led project management, and edited/co-authored reports.</p>`,
+        images: [
+          {
+            src: "figures/SRC_ELYSIA_cover.png",
+            caption: "Figure 1. Cover",
+          },
+          {
+            src: "figures/SRC_ELYSIA_list.png",
+            caption: "Figure 2. List of Reports",
+          },
+        ],
       },
     },
   ],
@@ -221,12 +251,17 @@ const DATA = {
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["Detour cost", "Equity"],
-      // 출판 연결: 2025 KGS 논문
       publishedRef:
         "analyzing-the-equity-of-road-services-through-accessibility-gaps-focusing-on-detour-costs",
       publishedLabel: "Published",
       highlights: {
-        html: `<p>Introduces fairness contours and detour-gap decomposition across cities.</p>`,
+        html: `<p>This talk builds a theoretical foundation for evaluating road-network equity using <i>detour distance</i> as a user-side sacrifice, and interprets it through the <i>equal-sacrifice</i> principle. We also discuss how locational rent endogeneity can bias naive equity assessments and why detour should be treated as a form of privatized cost when public supply is insufficient.</p>
+<ul>
+  <li><b>Equal-sacrifice framing of detour.</b> We reinterpret detour (road – Euclidean distance) as a utility loss borne by users, enabling equity tests under proportional, absolute, and marginal equal-sacrifice criteria (via Gini and SD diagnostics).</li>
+  <li><b>From geometry to fairness metrics.</b> By decomposing accessibility into Euclidean baseline and detour cost, we show how the network can amplify or mitigate baseline disparities—making “free-to-use” roads not automatically equitable.</li>
+  <li><b>Endogeneity of locational rent.</b> Land values co-move with accessibility <i>and</i> amenities; naive regressions risk reverse causality. We motivate identification-focused designs and caution against reading equity from rent gradients alone.</li>
+  <li><b>Policy implication.</b> When public networks under-supply low-circuity routes, users “pay” the gap as detour—i.e., a privatization-by-inaction. Targeting where detour concentrates yields fairer distributions without blanket expansion.</li>
+</ul>`,
         images: [
           {
             src: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop",
