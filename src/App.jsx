@@ -40,9 +40,22 @@ const CONFIG = {
     { label: "Projects", href: "#projects", external: false },
     { label: "Talks", href: "#talks", external: false },
     { label: "Contact", href: "#contact", external: false },
-    { label: "CV", href: null, external: true, useCV: true }, // useCV=true면 CONFIG.site.cvUrl 사용
+    { label: "CV", href: null, external: true, useCV: true },
   ],
 };
+
+/** ───────────────────── 0.5) 이미지 경로 resolver (figures 폴더 지원) ───────────────────── */
+// figures 폴더가 public/figures 에 있다고 가정 → /figures/파일명 으로 접근
+const IMAGE_BASE = "/figures/";
+function resolveImgSrc(src) {
+  if (!src) return src;
+  // 절대 URL/프로토콜 또는 data URL은 그대로
+  if (/^(https?:)?\/\//i.test(src) || /^data:/i.test(src)) return src;
+  // 이미 figures/ 로 시작하면 그대로
+  if (/^\.?\/?figures\//i.test(src)) return src.replace(/^\.?\//, "/");
+  // 상대 파일명인 경우 BASE 붙이기
+  return `${IMAGE_BASE}${src.replace(/^\.?\//, "")}`;
+}
 
 /** ───────────────────── 1) SECTION DATA (여기만 수정) ───────────────────── */
 const DATA = {
@@ -452,7 +465,7 @@ function ResponsiveStyles() {
       .flash-highlight {
         outline: 2px solid #22c55e;
         animation: flashBorder 1.8s ease-out 0s 2;
-        border-radius: 16px; /* 카드 radius와 일치 */
+        border-radius: 16px;
       }
 
       @media (max-width: 900px){
@@ -487,12 +500,7 @@ export default function App() {
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
       setFlashId(id);
-      // 4초 후 해제
-      window.setTimeout(() => setFlashId(""), 4000);
-    }
-    // 상단 네비에 Publications 섹션이 있으면 앵커도 바꿔줌(선택)
-    if (location && typeof location.replaceState !== "function") {
-      // no-op for strict environments
+      window.setTimeout(() => setFlashId(""), 4000); // 4초 후 해제
     }
   }
 
@@ -546,7 +554,6 @@ export default function App() {
                             )}
                           </div>
                         ) : (
-                          // 태그가 없더라도 Talks의 Published 배지는 보여주자
                           type === "talks" &&
                           it.publishedRef && (
                             <div style={{ ...styles.chipRow, marginTop: 4 }}>
@@ -579,7 +586,7 @@ export default function App() {
                               onClick={() => goToAndFlash(it.publishedRef)}
                               title="Go to the corresponding publication"
                             >
-                              View Publication
+                              Linked Article
                             </Button>
                           )}
                         </div>
@@ -653,11 +660,16 @@ export default function App() {
                   {images.map((im, i) => (
                     <div key={i}>
                       <img
-                        src={im.src}
+                        src={resolveImgSrc(im.src)}
                         alt={`thumb-${i}`}
                         className="thumb"
                         onClick={() =>
-                          setViewer({ open: true, src: im.src, caption: im.caption || "", idx: i })
+                          setViewer({
+                            open: true,
+                            src: resolveImgSrc(im.src), // 라이트박스 원본
+                            caption: im.caption || "",
+                            idx: i,
+                          })
                         }
                       />
                       {im.caption ? <div className="thumb-cap">{im.caption}</div> : null}
