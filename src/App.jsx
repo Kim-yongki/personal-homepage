@@ -62,17 +62,22 @@ const DATA = {
   publications: [
     {
       year: 2025,
-      title:
-        "Rethinking linear-city accessibility: development of linearity indices",
-      venue: "[Under Review]",
+      title: "Rethinking linear-city accessibility: development of linearity indices",
+      venue: "[Under Review] Journal of Transport Geography",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
       highlights: {
-        html: `<p>This study challenges the prevailing view that linear road networks inherently enhance efficiency and equity. We introduce two new indices to capture different dimensions of urban linearity, and apply them to a large set of urban road systems in South Korea. The results show that higher linearity does not guarantee better performance; in many cases, it actually amplifies detour rates and inequities, suggesting that corridor-oriented designs can undermine accessibility.</p>`,
+        html: `<p>This study re-examines the assumption that linear urban road networks inherently improve efficiency and equity, proposing two flow-based linearity indices and testing them across 65 South Korean cities.</p>
+        <ul>
+          <li><b>Two new indices.</b> The Morphological Linearity Index (MLI) captures the alignment of trip flows along a single axis, while the Structural Linearity Index (SLI) measures redundancy of shortest paths.</li>
+          <li><b>Differential effects.</b> High-MLI cities show lower mean detour rates but slightly longer average trip distances; high-SLI cities exhibit higher detour rates and greater inequity in detour distribution.</li>
+          <li><b>Implication.</b> Linearity as a geometric form is not inherently efficient or equitable; benefits emerge when paired with high-capacity trunk corridors (e.g., fast regional rail).</li>
+          <li><b>Use.</b> The indices provide a diagnostic tool for evaluating corridor-oriented planning and assessing distributional outcomes.</li>
+        </ul>`,
         images: [
-          { src: "MLI.png", caption: "Figure 1. Morphological Linearity Index (MLI)" },
-          { src: "SLI.png", caption: "Figure 2. Structural Linearity Index (SLI)" },
-          { src: "local_SLI.png", caption: "Figure 3. Local Structural Linearity Index (SLI)" },
+          { src: "figures/MLI.png", caption: "Figure. Morphological Linearity Index (MLI)" },
+          { src: "figures/SLI.png", caption: "Figure. Structural Linearity Index (SLI)" },
+          { src: "figures/local_SLI.png", caption: "Figure. Local Structural Linearity Index (SLI)" }
         ],
       },
     },
@@ -95,33 +100,42 @@ const DATA = {
     },
     {
       year: 2025,
-      title:
-        "Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",
+      title: "Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",
       venue: "Journal of the Korean Geographical Society, 60(2):168–186",
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
       highlights: {
-        html: `<p>This study reconceptualizes road-network equity from the provider’s perspective. We define it as the degree to which the road system amplifies or mitigates euclidean(baseline)-based accessibility disparities through detour costs and infrastructure patterns. Our findings show that, in South Korean cities, road networks generally exacerbate accessibility inequities.</p>`,
+        html: `<p>From a <i>provider-side</i> perspective, this study assesses road-network equity by decomposing accessibility into Euclidean baseline and detour-induced costs.</p>
+    <ul>
+      <li><b>Framework.</b> Define equity via an equal-sacrifice principle on <i>detour costs</i>; measure mean transportation cost (road vs. Euclidean) and evaluate dispersion with SD & Gini to judge whether networks amplify gaps.</li>
+      <li><b>Evidence across 65 cities.</b> In South Korea’s mid-sized cities, road networks generally <i>exacerbate</i> accessibility gaps—especially where low-circuity benefits concentrate in urban cores; decentralized urban structures show room for improvement.</li>
+      <li><b>Implications.</b> Equity cannot be inferred from “free-to-use” status alone; planning should target where detour costs accumulate and promote forms that diffuse low-circuity benefits beyond cores.</li>
+    </ul>`,
         images: [
-          { src: "Equal_transportation_sacrifice.png", caption: "Figure 1. Conceptualization of equal transportation based on equal sacrifice principle" },
-          { src: "Road_effect.png", caption: "Figure 2. Detour cost effect on accessibility gaps" },
-          { src: "accessibilities_detour_cost.png", caption: "Figure 3. Accessibility and detour costs of example cities" },
-        ],
-      },
+          { src: "figures/Equal_transportation_sacrifice.png", caption: "Figure 1. Equal-sacrifice principle for detour costs" },
+          { src: "figures/Road_effect.png", caption: "Figure 2. Road-network effect on accessibility gaps" },
+          { src: "figures/accessibilities_detour_cost.png", caption: "Figure 3. Accessibility vs. detour costs (examples)" }
+        ]
+      }
     },
     {
-      year: 2024,
-      title:
-        "Analysis of Quick Commerce Location Using Modified Network Centrality",
-      venue: "Journal of the Korean Urban Geographical Society, 27(1):17–32",
-      url: "https://doi.org/10.21189/JKUGS.27.1.2",
-      tags: ["Quick commerce", "Network centrality", "Retail"],
+      year: 2023,
+      title: "Comparative Locational Analysis of Quick-Commerce Versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
+      venue: "KUGS Winter Conference 2023 (Proceedings), Seoul",
+      url: "",
+      tags: ["Q-commerce", "Centrality", "Coverage"],
       highlights: {
-        html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
+        html: `<p>We compare brand-level location strategies of a quick-commerce service (“B Mart”) and conventional formats in Seoul across multi-scale trade areas and network measures.</p>
+        <ul>
+          <li><b>Multi-scale demand & MCA.</b> Using 500–5000m trade areas and Multi Centrality Analysis, we show firm/format-specific patterns; B Mart resembles large-format stores at broad ranges despite lower narrow-range demand.</li>
+          <li><b>Coverage & evenness.</b> Coverage analysis indicates B Mart serves up to 96% of census tracts within a 5 km range, attributable to its relatively even spatial distribution (low internal interference).</li>
+          <li><b>Spacing & dispersion.</b> Nearest-neighbor CV≈0.35 (most stable) and ANN≈1.33 indicate a dispersed, uniform pattern compared with clustered conventional formats.</li>
+          <li><b>Brand-level centrality.</b> Modified centrality at the brand level shows higher straightness (especially at short distances) and efficiency benefits versus SSM.</li>
+        </ul>`,
         images: [
-          { src: "retail_locations.png", caption: "Figure 1. Quick commerce & retail locations" },
-          { src: "multilocation_network_centrality.png", caption: "Figure 2. Multi-location network centrality" },
-          { src: "multilocation_network_centrality(equation).png", caption: "Figure 3. Multi-location network centrality (equation)" },
+          { src: "figures/retail_locations.png", caption: "Figure 1. Quick commerce & retail locations" },
+          { src: "figures/multilocation_network_centrality.png", caption: "Figure 2. Multi-location network centrality" },
+          { src: "figures/multilocation_network_centrality(equation).png", caption: "Figure 3. Multi-location network centrality (equation)" }
         ],
       },
     },
