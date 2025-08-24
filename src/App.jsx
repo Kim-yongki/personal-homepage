@@ -57,18 +57,9 @@ const DATA = {
       highlights: {
         html: `<p>This study challenges the prevailing view that linear road networks inherently enhance efficiency and equity. We introduce two new indices to capture different dimensions of urban linearity, and apply them to a large set of urban road systems in South Korea. The results show that higher linearity does not guarantee better performance; in many cases, it actually amplifies detour rates and inequities, suggesting that corridor-oriented designs can undermine accessibility.</p>`,
         images: [
-          {
-            src: "MLI.png",
-            caption: "Figure 1. Morphological Linearity Index (MLI)",
-          },
-          {
-            src: "SLI.png",
-            caption: "Figure 2. Structural Linearity Index (SLI)",
-          },
-          {
-            src: "local_SLI.png",
-            caption: "Figure 3. Local Structural Linearity Index (SLI)",
-          },
+          { src: "MLI.png", caption: "Figure 1. Morphological Linearity Index (MLI)" },
+          { src: "SLI.png", caption: "Figure 2. Structural Linearity Index (SLI)" },
+          { src: "local_SLI.png", caption: "Figure 3. Local Structural Linearity Index (SLI)" },
         ],
       },
     },
@@ -99,20 +90,9 @@ const DATA = {
       highlights: {
         html: `<p>This study reconceptualizes road-network equity from the provider’s perspective. We define it as the degree to which the road system amplifies or mitigates euclidean(baseline)-based accessibility disparities through detour costs and infrastructure patterns. Our findings show that, in South Korean cities, road networks generally exacerbate accessibility inequities.</p>`,
         images: [
-          {
-            src: "Equal_transportation_sacrifice.png",
-            caption:
-              "Figure 1. Conceptualization of equal transportation based on equal sacrifice principle",
-          },
-          {
-            src: "Road_effect.png",
-            caption: "Figure 2. Detour cost effect on accessibility gaps",
-          },
-          {
-            src: "accessibilities_detour_cost.png",
-            caption:
-              "Figure 3. Accessibility and detour costs of example cities",
-          },
+          { src: "Equal_transportation_sacrifice.png", caption: "Figure 1. Conceptualization of equal transportation based on equal sacrifice principle" },
+          { src: "Road_effect.png", caption: "Figure 2. Detour cost effect on accessibility gaps" },
+          { src: "accessibilities_detour_cost.png", caption: "Figure 3. Accessibility and detour costs of example cities" },
         ],
       },
     },
@@ -126,19 +106,9 @@ const DATA = {
       highlights: {
         html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
         images: [
-          {
-            src: "retail_locations.png",
-            caption: "Figure 1. Quick commerce & retail locations",
-          },
-          {
-            src: "multilocation_network_centrality.png",
-            caption: "Figure 2. Multi-location network centrality",
-          },
-          {
-            src: "multilocation_network_centrality(equation).png",
-            caption:
-              "Figure 3. Multi-location network centrality (equation)",
-          },
+          { src: "retail_locations.png", caption: "Figure 1. Quick commerce & retail locations" },
+          { src: "multilocation_network_centrality.png", caption: "Figure 2. Multi-location network centrality" },
+          { src: "multilocation_network_centrality(equation).png", caption: "Figure 3. Multi-location network centrality (equation)" },
         ],
       },
     },
@@ -146,18 +116,12 @@ const DATA = {
       year: 2020,
       title:
         "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
-      venue:
-        "Published by the SNU Real Estate Club (Contributing Author & Editor)",
+      venue: "Published by the SNU Real Estate Club (Contributing Author & Editor)",
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
         html: `<p>Storage (2020) is a collective volume authored and published by the SNU Real Estate Club (https://www.snusrc.com/), presenting Gen Z perspectives on Korea’s real estate market during a turbulent year. The book compiles analytical reports, opinion essays, and interviews, addressing topics from housing policy and redevelopment to logistics and proptech. As a contributing author and editor, I engaged with issues of accessibility, equity, and the lived meaning of real estate, reflecting my broader research interest in urban accessibility and spatial structures. ISBN: 9788924076691.</p>`,
-        images: [
-          {
-            src: "storage.png",
-            caption: "Figure 1. Cover",
-          },
-        ],
+        images: [{ src: "storage.png", caption: "Figure 1. Cover" }],
       },
     },
   ],
@@ -230,6 +194,10 @@ const DATA = {
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["Detour cost", "Equity"],
+      // 출판 연결: 2025 KGS 논문
+      publishedRef:
+        "analyzing-the-equity-of-road-services-through-accessibility-gaps-focusing-on-detour-costs",
+      publishedLabel: "Published",
       highlights: {
         html: `<p>Introduces fairness contours and detour-gap decomposition across cities.</p>`,
         images: [
@@ -321,6 +289,10 @@ const DATA = {
       venue: "AAG Annual Meeting, Honolulu (Apr. 16–20)",
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
+      // 출판 연결: 2024 JKUGS 논문
+      publishedRef:
+        "analysis-of-quick-commerce-location-using-modified-network-centrality",
+      publishedLabel: "Published",
       highlights: {
         html: `<p>Brand-level centrality for MFC siting and comparison with conventional retail.</p>`,
         images: [],
@@ -403,6 +375,14 @@ const styles = {
   h2: { fontSize: 26, margin: "0 0 12px 0", fontWeight: 800 },
 };
 
+/** 유틸: 제목을 앵커 ID로 변환 */
+const slug = (s) =>
+  s
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+/** 버튼/카드 컴포넌트 */
 function Button({ children, href, variant = "solid", size = "md", ...props }) {
   const style = {
     ...styles.btn.base,
@@ -437,7 +417,7 @@ function Badge({ children }) {
   return <span style={styles.badge}>{children}</span>;
 }
 
-/** ───────────────────── 3) Responsive CSS ───────────────────── */
+/** ───────────────────── 3) Responsive & highlight CSS ───────────────────── */
 function ResponsiveStyles() {
   return (
     <style>{`
@@ -445,46 +425,35 @@ function ResponsiveStyles() {
       .r-grid { display: grid; gap: 16px; }
       .r-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .r-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      /* 데스크톱: 좌우 스왑 → about | text */
-      .r-hero {
-        display: grid;
-        grid-template-columns: 1fr 1.2fr;
-        gap: 16px;
-        align-items: center;
-        grid-template-areas: "about text";
-      }
+      .r-hero { display: grid; grid-template-columns: 1fr 1.2fr; gap: 16px; align-items: center; grid-template-areas: "about text"; }
       .hero-text  { grid-area: text; }
       .hero-about { grid-area: about; }
-      @media (max-width: 900px){
-        .r-hero { grid-template-columns: 1fr; grid-template-areas: "text" "about"; }
-      }
+      @media (max-width: 900px){ .r-hero { grid-template-columns: 1fr; grid-template-areas: "text" "about"; } }
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
       .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
-      .thumb-grid {
-        display: grid;
-        gap: 8px;
-        grid-template-columns: repeat(3, minmax(0,1fr));
-      }
-      .thumb {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-        border: 1px solid #E2E8F0;
-        border-radius: 10px;
-        cursor: zoom-in;
-        display: block;
-      }
+      .thumb-grid { display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #E2E8F0; border-radius: 10px; cursor: zoom-in; display: block; }
       .thumb-cap{ font-size: 12px; color: #475569; margin-top: 4px; line-height: 1.4; }
 
-      .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.65);
-        display: flex; align-items: center; justify-content: center; }
-      .lightbox-inner { background: #fff; max-width: min(1100px, 94vw); max-height: 92vh; border-radius: 14px;
-        overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
+      .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; }
+      .lightbox-inner { background: #fff; max-width: min(1100px, 94vw); max-height: 92vh; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
       .lightbox-body { padding: 8px; }
       .lightbox-img { max-width: 100%; max-height: 84vh; display: block; }
       .lightbox-top { display: flex; justify-content: flex-end; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #E2E8F0; }
       .lightbox-caption{ padding: 8px 10px; border-top: 1px solid #E2E8F0; font-size: 14px; color: #334155; line-height: 1.5; }
+
+      /* 🔆 출판 카드 하이라이트 효과 */
+      @keyframes flashBorder {
+        0% { box-shadow: 0 0 0 rgba(34,197,94,0); }
+        30% { box-shadow: 0 0 0 6px rgba(34,197,94,.25); }
+        100% { box-shadow: 0 0 0 rgba(34,197,94,0); }
+      }
+      .flash-highlight {
+        outline: 2px solid #22c55e;
+        animation: flashBorder 1.8s ease-out 0s 2;
+        border-radius: 16px; /* 카드 radius와 일치 */
+      }
 
       @media (max-width: 900px){
         .r-cols-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
@@ -506,13 +475,26 @@ function ResponsiveStyles() {
 
 /** ───────────────────── 4) App ───────────────────── */
 export default function App() {
-  // 하이라이트 모달 상태
-  const [hlModal, setHlModal] = useState({
-    open: false,
-    title: "",
-    html: "",
-    images: [],
-  });
+  // 하이라이트 모달
+  const [hlModal, setHlModal] = useState({ open: false, title: "", html: "", images: [] });
+  // 출판 카드 깜빡임 제어
+  const [flashId, setFlashId] = useState("");
+
+  /** 특정 출판물(ID)로 스크롤 & 하이라이트 */
+  function goToAndFlash(id) {
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+      setFlashId(id);
+      // 4초 후 해제
+      window.setTimeout(() => setFlashId(""), 4000);
+    }
+    // 상단 네비에 Publications 섹션이 있으면 앵커도 바꿔줌(선택)
+    if (location && typeof location.replaceState !== "function") {
+      // no-op for strict environments
+    }
+  }
 
   function SectionList({
     id,
@@ -521,77 +503,90 @@ export default function App() {
     showYear = false,
     showVenue = false,
     cols = 3,
+    type = "generic", // "pubs" | "talks" | ...
   }) {
-    const colClass =
-      cols === 3 ? "r-cols-3" : cols === 2 ? "r-cols-2" : "r-cols-2";
+    const colClass = cols === 3 ? "r-cols-3" : "r-cols-2";
     return (
       <section id={id} style={styles.section}>
         <div className="r-container">
           <h2 style={styles.h2}>{title}</h2>
           <div className={`r-grid ${colClass}`}>
             {entries.map((it, idx) => {
-              const hasHL =
-                !!it?.highlights?.html ||
-                ((it?.highlights?.images?.length ?? 0) > 0);
+              const hasHL = !!it?.highlights?.html || ((it?.highlights?.images?.length ?? 0) > 0);
+              const cardId = type === "pubs" ? slug(it.title) : undefined;
+              const isFlash = cardId && flashId === cardId;
+
               return (
-                <Card key={idx}>
-                  <CardHeader>
-                    <CardTitle>
-                      {showYear && it.year ? `[${it.year}] ` : ""}
-                      {it.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    {showVenue && it.venue && (
-                      <div style={{ color: "#334155", marginBottom: 8 }}>
-                        {it.venue}
-                      </div>
-                    )}
-                    {it.descr && (
-                      <p
-                        style={{
-                          color: "#334155",
-                          lineHeight: 1.6,
-                          marginBottom: 8,
-                        }}
-                      >
-                        {it.descr}
-                      </p>
-                    )}
-                    {it.tags?.length ? (
-                      <div style={{ ...styles.chipRow, marginTop: 4 }}>
-                        {it.tags.map((t) => (
-                          <Badge key={t}>{t}</Badge>
-                        ))}
-                      </div>
-                    ) : null}
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: 8,
-                        marginTop: 12,
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      {it.url && <Button href={it.url}>View (PDF)</Button>}
-                      {hasHL && (
-                        <Button
-                          variant="outline"
-                          onClick={() =>
-                            setHlModal({
-                              open: true,
-                              title: it.title,
-                              html: it.highlights?.html || "",
-                              images: it.highlights?.images || [],
-                            })
-                          }
-                        >
-                          Highlights
-                        </Button>
-                      )}
+                <div key={idx} id={cardId}>
+                  <Card style={isFlash ? { outline: "2px solid #22c55e" } : undefined} >
+                    <div className={isFlash ? "flash-highlight" : ""} style={{ borderRadius: 16 }}>
+                      <CardHeader>
+                        <CardTitle>
+                          {showYear && it.year ? `[${it.year}] ` : ""}
+                          {it.title}
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        {showVenue && it.venue && (
+                          <div style={{ color: "#334155", marginBottom: 8 }}>{it.venue}</div>
+                        )}
+                        {it.descr && (
+                          <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 8 }}>
+                            {it.descr}
+                          </p>
+                        )}
+                        {it.tags?.length ? (
+                          <div style={{ ...styles.chipRow, marginTop: 4 }}>
+                            {it.tags.map((t) => (
+                              <Badge key={t}>{t}</Badge>
+                            ))}
+                            {/* Talks에서 출판 연결 배지 */}
+                            {type === "talks" && it.publishedRef && (
+                              <Badge>{it.publishedLabel || "Published"}</Badge>
+                            )}
+                          </div>
+                        ) : (
+                          // 태그가 없더라도 Talks의 Published 배지는 보여주자
+                          type === "talks" &&
+                          it.publishedRef && (
+                            <div style={{ ...styles.chipRow, marginTop: 4 }}>
+                              <Badge>{it.publishedLabel || "Published"}</Badge>
+                            </div>
+                          )
+                        )}
+
+                        <div style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
+                          {it.url && <Button href={it.url}>Link</Button>}
+                          {hasHL && (
+                            <Button
+                              variant="outline"
+                              onClick={() =>
+                                setHlModal({
+                                  open: true,
+                                  title: it.title,
+                                  html: it.highlights?.html || "",
+                                  images: it.highlights?.images || [],
+                                })
+                              }
+                            >
+                              Highlights
+                            </Button>
+                          )}
+                          {/* Talks → Publications 연결 버튼 */}
+                          {type === "talks" && it.publishedRef && (
+                            <Button
+                              variant="outline"
+                              onClick={() => goToAndFlash(it.publishedRef)}
+                              title="Go to the corresponding publication"
+                            >
+                              View Publication
+                            </Button>
+                          )}
+                        </div>
+                      </CardContent>
                     </div>
-                  </CardContent>
-                </Card>
+                  </Card>
+                </div>
               );
             })}
           </div>
@@ -602,18 +597,10 @@ export default function App() {
 
   /** Highlights modal with 3-col thumbnails + lightbox */
   function HighlightsModal() {
-    const [viewer, setViewer] = React.useState({
-      open: false,
-      src: "",
-      caption: "",
-      idx: -1,
-    });
+    const [viewer, setViewer] = React.useState({ open: false, src: "", caption: "", idx: -1 });
     if (!hlModal.open) return null;
 
-    const close = () =>
-      setHlModal({ open: false, title: "", html: "", images: [] });
-
-    // 문자열/객체 둘 다 지원
+    const close = () => setHlModal({ open: false, title: "", html: "", images: [] });
     const images = (hlModal.images || []).map((img) =>
       typeof img === "string" ? { src: img, caption: "" } : img
     );
@@ -656,12 +643,8 @@ export default function App() {
                 borderBottom: "1px solid #E2E8F0",
               }}
             >
-              <strong style={{ fontSize: 18 }}>
-                {hlModal.title} — Highlights
-              </strong>
-              <Button variant="outline" onClick={close}>
-                ✕ Close
-              </Button>
+              <strong style={{ fontSize: 18 }}>{hlModal.title} — Highlights</strong>
+              <Button variant="outline" onClick={close}>✕ Close</Button>
             </div>
 
             <div style={{ padding: 16, overflowY: "auto" }}>
@@ -674,17 +657,10 @@ export default function App() {
                         alt={`thumb-${i}`}
                         className="thumb"
                         onClick={() =>
-                          setViewer({
-                            open: true,
-                            src: im.src,
-                            caption: im.caption || "",
-                            idx: i,
-                          })
+                          setViewer({ open: true, src: im.src, caption: im.caption || "", idx: i })
                         }
                       />
-                      {im.caption ? (
-                        <div className="thumb-cap">{im.caption}</div>
-                      ) : null}
+                      {im.caption ? <div className="thumb-cap">{im.caption}</div> : null}
                     </div>
                   ))}
                 </div>
@@ -703,18 +679,14 @@ export default function App() {
         {viewer.open && (
           <div
             className="lightbox"
-            onClick={() =>
-              setViewer({ open: false, src: "", caption: "", idx: -1 })
-            }
+            onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
           >
             <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <div className="lightbox-top">
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() =>
-                    setViewer({ open: false, src: "", caption: "", idx: -1 })
-                  }
+                  onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
                 >
                   ✕ Close
                 </Button>
@@ -722,9 +694,7 @@ export default function App() {
               <div className="lightbox-body">
                 <img src={viewer.src} alt="preview" className="lightbox-img" />
               </div>
-              {viewer.caption ? (
-                <div className="lightbox-caption">{viewer.caption}</div>
-              ) : null}
+              {viewer.caption ? <div className="lightbox-caption">{viewer.caption}</div> : null}
             </div>
           </div>
         )}
@@ -735,18 +705,10 @@ export default function App() {
   /** 헤더 네비 링크 (CONFIG.nav 사용) */
   const navLinks = CONFIG.nav.map((n) => {
     const href = n.useCV ? CONFIG.site.cvUrl : n.href;
-    const props =
-      n.external || n.useCV ? { target: "_blank", rel: "noreferrer" } : {};
-    const styleOverride = n.useCV
-      ? { fontWeight: 800, textDecoration: "underline" }
-      : {};
+    const props = n.external || n.useCV ? { target: "_blank", rel: "noreferrer" } : {};
+    const styleOverride = n.useCV ? { fontWeight: 800, textDecoration: "underline" } : {};
     return (
-      <a
-        key={n.label}
-        href={href ?? "#"}
-        style={{ ...styles.link, ...styleOverride }}
-        {...props}
-      >
+      <a key={n.label} href={href ?? "#"} style={{ ...styles.link, ...styleOverride }} {...props}>
         {n.label}
       </a>
     );
@@ -767,30 +729,20 @@ export default function App() {
             alignItems: "center",
           }}
         >
-          ✉️
-          <a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> •{" "}
+          ✉️ <a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> •{" "}
           <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          🔗{" "}
-          <a href={L.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
+          🔗 <a href={L.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          🌐{" "}
-          <a href={L.scholar} target="_blank" rel="noreferrer">
-            Google Scholar
-          </a>
+          🌐 <a href={L.scholar} target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
 
         <div style={{ display: "flex", gap: 8 }}>
-          📄{" "}
-          <a href={L.researchgate} target="_blank" rel="noreferrer">
-            ResearchGate
-          </a>
+          📄 <a href={L.researchgate} target="_blank" rel="noreferrer">ResearchGate</a>
         </div>
       </>
     );
@@ -810,14 +762,8 @@ export default function App() {
 
       {/* Header */}
       <header style={styles.header}>
-        <div
-          style={{ ...styles.container, ...styles.navRow }}
-          className="r-container"
-        >
-          <a
-            href="#home"
-            style={{ ...styles.link, fontWeight: 700, fontSize: 20 }}
-          >
+        <div style={{ ...styles.container, ...styles.navRow }} className="r-container">
+          <a href="#home" style={{ ...styles.link, fontWeight: 700, fontSize: 20 }}>
             {CONFIG.site.ownerName}
           </a>
           <nav style={styles.navLinks} className="r-nav">
@@ -827,45 +773,20 @@ export default function App() {
       </header>
 
       {/* Hero / About */}
-      <section
-        id="home"
-        style={{ ...styles.container, padding: "56px 16px" }}
-        className="r-container"
-      >
+      <section id="home" style={{ ...styles.container, padding: "56px 16px" }} className="r-container">
         <div className="r-hero">
           {/* About me card (왼쪽) */}
           <div id="about" className="hero-about" style={{ paddingRight: 10 }}>
             <Card>
-              <CardHeader>
-                <CardTitle>About me</CardTitle>
-              </CardHeader>
+              <CardHeader><CardTitle>About me</CardTitle></CardHeader>
               <CardContent>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    marginBottom: 12,
-                  }}
-                >
-                  <img
-                    src={CONFIG.site.profileImage}
-                    alt="Profile"
-                    className="r-profile"
-                  />
+                <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
+                  <img src={CONFIG.site.profileImage} alt="Profile" className="r-profile" />
                 </div>
-                <p
-                  style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}
-                >
+                <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}>
                   {CONFIG.person.about}
                 </p>
-                <div
-                  style={{
-                    display: "flex",
-                    gap: 8,
-                    alignItems: "center",
-                    marginBottom: 6,
-                  }}
-                >
+                <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
                   📍 {CONFIG.person.location}
                 </div>
                 <ContactLinks />
@@ -875,24 +796,14 @@ export default function App() {
 
           {/* 타이틀/배지/소개 (오른쪽) */}
           <div className="hero-text">
-            <h1
-              style={{
-                fontSize: 36,
-                fontWeight: 900,
-                margin: 0,
-                whiteSpace: "normal",
-                wordBreak: "break-all",
-              }}
-            >
+            <h1 style={{ fontSize: 36, fontWeight: 900, margin: 0, whiteSpace: "normal", wordBreak: "break-all" }}>
               {CONFIG.hero.title}
             </h1>
             <p style={{ marginTop: 16, color: "#475569", lineHeight: 1.6 }}>
               {CONFIG.hero.blurb}
             </p>
             <div style={{ ...styles.chipRow, marginTop: 12 }}>
-              {CONFIG.hero.badges.map((t) => (
-                <Badge key={t}>{t}</Badge>
-              ))}
+              {CONFIG.hero.badges.map((t) => (<Badge key={t}>{t}</Badge>))}
             </div>
           </div>
         </div>
@@ -906,6 +817,7 @@ export default function App() {
         showYear
         showVenue
         cols={3}
+        type="pubs"
       />
 
       {/* Research Projects */}
@@ -915,6 +827,7 @@ export default function App() {
         entries={DATA.projects}
         showYear
         cols={3}
+        type="projects"
       />
 
       {/* Talks & Presentations */}
@@ -925,13 +838,11 @@ export default function App() {
         showYear
         showVenue
         cols={3}
+        type="talks"
       />
 
       {/* Contact */}
-      <section
-        id="contact"
-        style={{ ...styles.section, background: "transparent" }}
-      >
+      <section id="contact" style={{ ...styles.section, background: "transparent" }}>
         <div className="r-container">
           <h2 style={styles.h2}>Contact</h2>
         </div>
@@ -960,9 +871,7 @@ export default function App() {
           className="r-container"
         >
           <div>© {new Date().getFullYear()} {CONFIG.site.ownerName}</div>
-          <a href="#home" style={{ ...styles.link, color: "#64748B" }}>
-            Top ↑
-          </a>
+          <a href="#home" style={{ ...styles.link, color: "#64748B" }}>Top ↑</a>
         </div>
       </footer>
     </div>
