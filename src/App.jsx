@@ -91,7 +91,7 @@ const DATA = {
       highlights: {
         html: `<p>This thesis quantifies how fulfillment-based parcel delivery reconfigures the logistics space of the Seoul Capital Area and what it implies for facility siting and network planning.</p>
   <ul>
-    <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run delivery-scenario simulations that combine traditional hub-and-spoke and fulfillment-based chains. The experiments show sizable reductions in average delivery distance and hub-transfer detour when proximity logistics is adopted.</li>
+    <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run freight transportation-scenario simulations (based on optimization) that combine traditional hub-and-spoke and fulfillment-based chains. The results show sizable reductions in average delivery distance and hub-transfer detour when fulfillment logistics is adopted.</li>
     <li><b>Chain-level, spatial buildup of transport costs.</b> I model and map the cumulative transport cost along each delivery chain—from source to (sub)hubs to destination—identifying where detour costs concentrate and how they shift under fulfillment scenarios.</li>
     <li><b>Policy evaluation and future direction under industrial change.</b> A time-series logistics-sprawl index (warehouses & complexes) reveals continued peripheral siting despite fulfillment-driven proximity needs. I propose a roadmap that pairs proximity-logistics incentives with strategic clustering of large-scale facilities to optimize the regional network.</li>
   </ul>`,
@@ -357,7 +357,21 @@ const DATA = {
       tags: ["Urban development axes", "Clustering", "SNA"],
       highlights: {
         html: `<p>Applies social-network-based clustering to identify urban development axes.</p>`,
-        images: [],
+        images: [
+          {
+            src: "figures/Hierarchical_road_network.png",
+            caption: "Figure 1. Hierarchical road network (Flow from the urban center)",
+          },
+          {
+            src: "figures/Compared_with_urbanplan.png",
+            caption: "Figure 2. Compared with government urban plan",
+          },
+          {
+            src: "figures/Bid_rent_theory_with_clusters.png",
+            caption: "Figure 3. Bid rent theory with axis clusters",
+          },
+
+        ],
       },
     },
     {
