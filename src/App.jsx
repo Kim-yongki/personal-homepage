@@ -627,7 +627,6 @@ export default function App() {
                 alt={it.label || `figure-${i}`}
                 className="hg-img"
               />
-              {it.label ? <div className="hg-cap">{it.label}</div> : null}
             </div>
           ))}
         </div>
@@ -695,9 +694,6 @@ export default function App() {
                             {it.tags.map((t) => (
                               <Badge key={t}>{t}</Badge>
                             ))}
-                            {type === "talks" && it.publishedRef && (
-                              <Badge>{it.publishedLabel || "Published"}</Badge>
-                            )}
                           </div>
                         ) : (
                           type === "talks" &&
