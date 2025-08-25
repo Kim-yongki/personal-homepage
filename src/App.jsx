@@ -59,7 +59,8 @@ const DATA = {
   publications: [
     {
       year: 2025,
-      title: "Rethinking linear-city accessibility: development of linearity indices",
+      title:
+        "Rethinking linear-city accessibility: development of linearity indices",
       venue: "[Under Review] Journal of Transport Geography",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
@@ -74,7 +75,7 @@ const DATA = {
         images: [
           { src: "figures/MLI.png", caption: "Morphological Linearity Index (MLI)" },
           { src: "figures/SLI.png", caption: "Structural Linearity Index (SLI)" },
-          { src: "figures/local_SLI.png", caption: "Local Structural Linearity Index (SLI)" }
+          { src: "figures/local_SLI.png", caption: "Local Structural Linearity Index (SLI)" },
         ],
       },
     },
@@ -95,13 +96,14 @@ const DATA = {
         images: [
           { src: "figures/Freight_supplychain.png", caption: "Supply chain by scenarios" },
           { src: "figures/Freight_scenario.png", caption: "Transportation cost by scenarios" },
-          { src: "figures/Logistics_sprawl.png", caption: "Logistics sprawl over time" }
+          { src: "figures/Logistics_sprawl.png", caption: "Logistics sprawl over time" },
         ],
       },
     },
     {
       year: 2025,
-      title: "Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",
+      title:
+        "Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",
       venue: "Journal of the Korean Geographical Society, 60(2):168–186",
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
@@ -115,9 +117,9 @@ const DATA = {
         images: [
           { src: "figures/Equal_transportation_sacrifice.png", caption: "Equal-sacrifice principle for detour" },
           { src: "figures/Road_effect.png", caption: "Road-network effect on gaps" },
-          { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" }
-        ]
-      }
+          { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" },
+        ],
+      },
     },
     {
       year: 2024,
@@ -139,7 +141,8 @@ const DATA = {
       year: 2020,
       title:
         "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
-      venue: "Published by the SNU Real Estate Club (Contributing Author & Editor)",
+      venue:
+        "Published by the SNU Real Estate Club (Contributing Author & Editor)",
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
@@ -232,9 +235,12 @@ const DATA = {
           </ul>
         `,
         images: [
-          {src: "figures/Framework_road_equity.png", caption: "Framework for analyzing road equity"}
-        ]
-      }
+          {
+            src: "figures/Framework_road_equity.png",
+            caption: "Framework for analyzing road equity",
+          },
+        ],
+      },
     },
     {
       year: 2025,
@@ -338,7 +344,7 @@ function buildHeroGallery(DATA, limit = 9999) {
         seen.add(src);
         items.push({
           src,
-          label: (typeof im === "object" && im.caption) ? im.caption : entry.title,
+          label: typeof im === "object" && im.caption ? im.caption : entry.title,
           targetRef,
         });
       });
@@ -349,8 +355,8 @@ function buildHeroGallery(DATA, limit = 9999) {
   collectFromArray(DATA.talks);
   // 🔀 랜덤 셔플
   for (let i = items.length - 1; i > 0; i--) {
-  const j = Math.floor(Math.random() * (i + 1));
-  [items[i], items[j]] = [items[j], items[i]];
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
   }
   return limit ? items.slice(0, limit) : items;
 }
@@ -472,9 +478,15 @@ function ResponsiveStyles() {
       .hero-text  { grid-area: text; }
       .hero-about { grid-area: about; }
 
+      /* 표시 토글 유틸 */
+      .only-desktop { display: block; }
+      .only-mobile { display: none; }
+
       @media (max-width: 900px){
         .r-hero { grid-template-columns: 1fr; grid-template-areas: "text" "about"; }
         .r-cols-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+        .only-desktop { display: none !important; }
+        .only-mobile { display: block !important; }
       }
       @media (max-width: 640px){
         .r-cols-3, .r-cols-2 { grid-template-columns: repeat(1, minmax(0,1fr)); }
@@ -487,8 +499,13 @@ function ResponsiveStyles() {
       .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
       /* ── Hero figure gallery ── */
+      .hg-hint{
+        font-size: 12px;
+        color: #64748B;
+        margin: 8px 0 6px 2px;
+      }
       .hero-gallery{
-        margin-top: 16px;
+        margin-top: 8px;
         max-height: 260px;
         overflow-y: auto;
         border: 1px solid #E2E8F0;
@@ -556,7 +573,12 @@ function ResponsiveStyles() {
 /** ───────────────────── 4) App ───────────────────── */
 export default function App() {
   // 하이라이트 모달
-  const [hlModal, setHlModal] = useState({ open: false, title: "", html: "", images: [] });
+  const [hlModal, setHlModal] = useState({
+    open: false,
+    title: "",
+    html: "",
+    images: [],
+  });
   // 카드 깜빡임 제어
   const [flashId, setFlashId] = useState("");
   // 히어로 갤러리 자동 수집
@@ -573,11 +595,20 @@ export default function App() {
     }
   }
 
+  /** 갤러리 위 안내문구 */
+  function HeroGalleryHint() {
+    return (
+      <div className="hg-hint">
+        *Tap a figure to jump to the corresponding research.
+      </div>
+    );
+  }
+
   /** 히어로 갤러리 */
   function HeroGallery({ items }) {
     if (!items || items.length === 0) return null;
     return (
-      <div className="hero-gallery">
+      <div className="hero-gallery" aria-label="figure gallery">
         <div className="hg-grid">
           {items.map((it, i) => (
             <div
@@ -585,8 +616,17 @@ export default function App() {
               className="hg-item"
               onClick={() => goToAndFlash(it.targetRef)}
               title="Jump to related highlight"
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") goToAndFlash(it.targetRef);
+              }}
             >
-              <img src={it.src} alt={it.label || `figure-${i}`} className="hg-img" />
+              <img
+                src={it.src}
+                alt={it.label || `figure-${i}`}
+                className="hg-img"
+              />
               {it.label ? <div className="hg-cap">{it.label}</div> : null}
             </div>
           ))}
@@ -611,14 +651,21 @@ export default function App() {
           <h2 style={styles.h2}>{title}</h2>
           <div className={`r-grid ${colClass}`}>
             {entries.map((it, idx) => {
-              const hasHL = !!it?.highlights?.html || ((it?.highlights?.images?.length ?? 0) > 0);
+              const hasHL =
+                !!it?.highlights?.html ||
+                ((it?.highlights?.images?.length ?? 0) > 0);
               const cardId = slug(it.title);
               const isFlash = flashId === cardId;
 
               return (
                 <div key={idx} id={cardId}>
-                  <Card style={isFlash ? { outline: "2px solid #22c55e" } : undefined}>
-                    <div className={isFlash ? "flash-highlight" : ""} style={{ borderRadius: 16 }}>
+                  <Card
+                    style={isFlash ? { outline: "2px solid #22c55e" } : undefined}
+                  >
+                    <div
+                      className={isFlash ? "flash-highlight" : ""}
+                      style={{ borderRadius: 16 }}
+                    >
                       <CardHeader>
                         <CardTitle>
                           {showYear && it.year ? `[${it.year}] ` : ""}
@@ -627,10 +674,18 @@ export default function App() {
                       </CardHeader>
                       <CardContent>
                         {showVenue && it.venue && (
-                          <div style={{ color: "#334155", marginBottom: 8 }}>{it.venue}</div>
+                          <div style={{ color: "#334155", marginBottom: 8 }}>
+                            {it.venue}
+                          </div>
                         )}
                         {it.descr && (
-                          <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 8 }}>
+                          <p
+                            style={{
+                              color: "#334155",
+                              lineHeight: 1.6,
+                              marginBottom: 8,
+                            }}
+                          >
                             {it.descr}
                           </p>
                         )}
@@ -653,7 +708,14 @@ export default function App() {
                           )
                         )}
 
-                        <div style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: 8,
+                            marginTop: 12,
+                            flexWrap: "wrap",
+                          }}
+                        >
                           {it.url && <Button href={it.url}>Link</Button>}
 
                           {hasHL && (
@@ -708,7 +770,12 @@ export default function App() {
 
   /** 하이라이트 모달 + 라이트박스 */
   function HighlightsModal() {
-    const [viewer, setViewer] = React.useState({ open: false, src: "", caption: "", idx: -1 });
+    const [viewer, setViewer] = React.useState({
+      open: false,
+      src: "",
+      caption: "",
+      idx: -1,
+    });
     if (!hlModal.open) return null;
 
     const close = () => setHlModal({ open: false, title: "", html: "", images: [] });
@@ -753,8 +820,12 @@ export default function App() {
                 borderBottom: "1px solid #E2E8F0",
               }}
             >
-              <strong style={{ fontSize: 18 }}>{hlModal.title} — Highlights</strong>
-              <Button variant="outline" onClick={close}>✕ Close</Button>
+              <strong style={{ fontSize: 18 }}>
+                {hlModal.title} — Highlights
+              </strong>
+              <Button variant="outline" onClick={close}>
+                ✕ Close
+              </Button>
             </div>
 
             <div style={{ padding: 16, overflowY: "auto" }}>
@@ -775,7 +846,9 @@ export default function App() {
                           })
                         }
                       />
-                      {im.caption ? <div className="thumb-cap">{im.caption}</div> : null}
+                      {im.caption ? (
+                        <div className="thumb-cap">{im.caption}</div>
+                      ) : null}
                     </div>
                   ))}
                 </div>
@@ -793,14 +866,18 @@ export default function App() {
         {viewer.open && (
           <div
             className="lightbox"
-            onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
+            onClick={() =>
+              setViewer({ open: false, src: "", caption: "", idx: -1 })
+            }
           >
             <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <div className="lightbox-top">
                 <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
+                  onClick={() =>
+                    setViewer({ open: false, src: "", caption: "", idx: -1 })
+                  }
                 >
                   ✕ Close
                 </Button>
@@ -808,7 +885,9 @@ export default function App() {
               <div className="lightbox-body">
                 <img src={viewer.src} alt="preview" className="lightbox-img" />
               </div>
-              {viewer.caption ? <div className="lightbox-caption">{viewer.caption}</div> : null}
+              {viewer.caption ? (
+                <div className="lightbox-caption">{viewer.caption}</div>
+              ) : null}
             </div>
           </div>
         )}
@@ -842,21 +921,31 @@ export default function App() {
             wordBreak: "keep-all",
             alignItems: "center",
           }}
+          aria-label="emails"
         >
           ✉️ <a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> •{" "}
           <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          🔗 <a href={L.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          🔗{" "}
+          <a href={L.linkedin} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          🌐 <a href={L.scholar} target="_blank" rel="noreferrer">Google Scholar</a>
+          🌐{" "}
+          <a href={L.scholar} target="_blank" rel="noreferrer">
+            Google Scholar
+          </a>
         </div>
 
         <div style={{ display: "flex", gap: 8 }}>
-          📄 <a href={L.researchgate} target="_blank" rel="noreferrer">ResearchGate</a>
+          📄{" "}
+          <a href={L.researchgate} target="_blank" rel="noreferrer">
+            ResearchGate
+          </a>
         </div>
       </>
     );
@@ -892,9 +981,12 @@ export default function App() {
           {/* About me card (왼쪽) */}
           <div id="about" className="hero-about" style={{ paddingRight: 10 }}>
             <Card>
-              <CardHeader><CardTitle>About me</CardTitle></CardHeader>
+              <CardHeader>
+                <CardTitle>About me</CardTitle>
+              </CardHeader>
               <CardContent>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
+                  {/* 확대 기능 없음 */}
                   <img src={CONFIG.site.profileImage} alt="Profile" className="r-profile" />
                 </div>
                 <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}>
@@ -906,22 +998,41 @@ export default function App() {
                 <ContactLinks />
               </CardContent>
             </Card>
+
+            {/* ✅ 모바일 전용: About 아래 갤러리 */}
+            <div className="only-mobile" style={{ marginTop: 12 }}>
+              <HeroGalleryHint />
+              <HeroGallery items={heroGalleryItems} />
+            </div>
           </div>
 
-          {/* 타이틀/배지/소개 + 자동 갤러리 (오른쪽) */}
+          {/* 타이틀/배지/소개 + 갤러리 (오른쪽 - 데스크톱 전용) */}
           <div className="hero-text">
-            <h1 style={{ fontSize: 36, fontWeight: 900, margin: 0, whiteSpace: "normal", wordBreak: "break-all" }}>
+            <h1
+              style={{
+                fontSize: 36,
+                fontWeight: 900,
+                margin: 0,
+                whiteSpace: "normal",
+                wordBreak: "break-all",
+              }}
+            >
               {CONFIG.hero.title}
             </h1>
             <p style={{ marginTop: 16, color: "#475569", lineHeight: 1.6 }}>
               {CONFIG.hero.blurb}
             </p>
             <div style={{ ...styles.chipRow, marginTop: 12 }}>
-              {CONFIG.hero.badges.map((t) => (<Badge key={t}>{t}</Badge>))}
+              {CONFIG.hero.badges.map((t) => (
+                <Badge key={t}>{t}</Badge>
+              ))}
             </div>
 
-            {/* 🔽 자동 생성된 figure 갤러리 */}
-            <HeroGallery items={heroGalleryItems} />
+            {/* 🔽 데스크톱 전용 갤러리 (모바일에서는 숨김) */}
+            <div className="only-desktop">
+              <HeroGalleryHint />
+              <HeroGallery items={heroGalleryItems} />
+            </div>
           </div>
         </div>
       </section>
@@ -988,7 +1099,9 @@ export default function App() {
           className="r-container"
         >
           <div>© {new Date().getFullYear()} {CONFIG.site.ownerName}</div>
-          <a href="#home" style={{ ...styles.link, color: "#64748B" }}>Top ↑</a>
+          <a href="#home" style={{ ...styles.link, color: "#64748B" }}>
+            Top ↑
+          </a>
         </div>
       </footer>
     </div>
