@@ -49,11 +49,8 @@ const CONFIG = {
 const IMAGE_BASE = "/figures/";
 function resolveImgSrc(src) {
   if (!src) return src;
-  // 절대 URL/프로토콜 또는 data URL은 그대로
   if (/^(https?:)?\/\//i.test(src) || /^data:/i.test(src)) return src;
-  // 이미 figures/ 로 시작하면 그대로
   if (/^\.?\/?figures\//i.test(src)) return src.replace(/^\.?\//, "/");
-  // 상대 파일명인 경우 BASE 붙이기
   return `${IMAGE_BASE}${src.replace(/^\.?\//, "")}`;
 }
 
@@ -91,9 +88,9 @@ const DATA = {
       highlights: {
         html: `<p>This thesis quantifies how fulfillment-based parcel delivery reconfigures the logistics space of the Seoul Capital Area and what it implies for facility siting and network planning.</p>
   <ul>
-    <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run freight transportation-scenario simulations (based on optimization) that combine traditional hub-and-spoke and fulfillment-based chains. The results show sizable reductions in average delivery distance and hub-transfer detour when fulfillment logistics is adopted.</li>
-    <li><b>Chain-level, spatial buildup of transport costs.</b> I model and map the cumulative transport cost along each delivery chain—from source to (sub)hubs to destination—identifying where detour costs concentrate and how they shift under fulfillment scenarios.</li>
-    <li><b>Policy evaluation and future direction under industrial change.</b> A time-series logistics-sprawl index (warehouses & complexes) reveals continued peripheral siting despite fulfillment-driven proximity needs. I propose a roadmap that pairs proximity-logistics incentives with strategic clustering of large-scale facilities to optimize the regional network.</li>
+    <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run freight transportation-scenario simulations combining hub-and-spoke and fulfillment-based chains.</li>
+    <li><b>Chain-level buildup of transport costs.</b> Map cumulative transport cost along each delivery chain and identify where detour costs concentrate.</li>
+    <li><b>Policy direction.</b> A time-series logistics-sprawl index reveals persistent peripheral siting; propose incentives for proximity logistics with strategic clustering.</li>
   </ul>`,
         images: [
           { src: "figures/Freight_supplychain.png", caption: "Figure 1. Supply chain composition by scenarios" },
@@ -111,9 +108,9 @@ const DATA = {
       highlights: {
         html: `<p>From a <i>provider-side</i> perspective, this study assesses road-network equity by decomposing accessibility into Euclidean baseline and detour-induced costs.</p>
     <ul>
-      <li><b>Framework.</b> Define equity via an equal-sacrifice principle on <i>detour costs</i>; measure mean transportation cost (road vs. Euclidean) and evaluate dispersion with SD & Gini to judge whether networks amplify gaps.</li>
-      <li><b>Evidence across 65 cities.</b> In South Korea’s mid-sized cities, road networks generally <i>exacerbate</i> accessibility gaps—especially where low-circuity benefits concentrate in urban cores; decentralized urban structures show room for improvement.</li>
-      <li><b>Implications.</b> Equity cannot be inferred from “free-to-use” status alone; planning should target where detour costs accumulate and promote forms that diffuse low-circuity benefits beyond cores.</li>
+      <li><b>Framework.</b> Equal-sacrifice principle on detour; diagnose mean transportation cost and dispersion (SD, Gini).</li>
+      <li><b>Evidence.</b> Many mid-sized cities’ road networks <i>exacerbate</i> accessibility gaps; cores capture low-circuity benefits.</li>
+      <li><b>Implications.</b> Target places where detour concentrates to diffuse benefits beyond cores.</li>
     </ul>`,
         images: [
           { src: "figures/Equal_transportation_sacrifice.png", caption: "Figure 1. Equal-sacrifice principle for detour costs" },
@@ -130,20 +127,11 @@ const DATA = {
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
       highlights: {
-        html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
+        html: `<p>We propose a multi-location network centrality to capture brand-level performance in q-commerce, where retailers bear last-mile costs.</p>`,
         images: [
-          {
-            src: "figures/retail_locations.png",
-            caption: "Figure 1. Quick commerce & retail locations",
-          },
-          {
-            src: "figures/multilocation_network_centrality.png",
-            caption: "Figure 2. Multi-location network centrality",
-          },
-          {
-            src: "figures/multilocation_network_centrality(equation).png",
-            caption: "Figure 3. Multi-location network centrality (equation)",
-          },
+          { src: "figures/retail_locations.png", caption: "Figure 1. Quick commerce & retail locations" },
+          { src: "figures/multilocation_network_centrality.png", caption: "Figure 2. Multi-location network centrality" },
+          { src: "figures/multilocation_network_centrality(equation).png", caption: "Figure 3. Multi-location network centrality (equation)" },
         ],
       },
     },
@@ -155,7 +143,7 @@ const DATA = {
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
-        html: `<p>Storage (2020) is a collective volume authored and published by the SNU Real Estate Club (https://www.snusrc.com/), presenting Gen Z perspectives on Korea’s real estate market during a turbulent year. The book compiles analytical reports, opinion essays, and interviews, addressing topics from housing policy and redevelopment to logistics and proptech. As a contributing author and editor, I engaged with issues of accessibility, equity, and the lived meaning of real estate, reflecting my broader research interest in urban accessibility and spatial structures. ISBN: 9788924076691.</p>`,
+        html: `<p>A student-led volume by SNU Real Estate Club presenting Gen Z perspectives on Korea’s 2020 real estate market. ISBN: 9788924076691.</p>`,
         images: [{ src: "figures/storage.png", caption: "Figure 1. Cover" }],
       },
     },
@@ -166,28 +154,15 @@ const DATA = {
       year: 2025,
       title:
         "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
-      descr:
-        "[In progress] Funded by Ministry of SMEs and Startups.",
+      descr: "[In progress] Funded by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "Spatial network analysis"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Researcher.<br>
-               <b>Institution:</b> SNU Enterprise Policy Center<br>
-               <b>Period:</b> May 2025 – (ongoing).<br>
-               <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
+        html: `<p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> May 2025 – ongoing · <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
         images: [
-          {
-            src: "figures/transactions.png",
-            caption: "Figure 1. transaction network (example)",
-          },
-          {
-            src: "figures/community.png",
-            caption: "Figure 2. community detection (example)",
-          },
-          {
-            src: "figures/sankey.png",
-            caption: "Figure 3. sankey diagram (example)",
-          },
+          { src: "figures/transactions.png", caption: "Figure 1. Transaction network (example)" },
+          { src: "figures/community.png", caption: "Figure 2. Community detection (example)" },
+          { src: "figures/sankey.png", caption: "Figure 3. Sankey diagram (example)" },
         ],
       },
     },
@@ -195,24 +170,14 @@ const DATA = {
       year: 2024,
       title:
         "A Study on Advancing Big Data-based Policy Evaluation for Small and Medium-sized Enterprises",
-      descr:
-        "Funded by Ministry of SMEs and Startups.",
+      descr: "Funded by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
       highlights: {
-      html: `<p><b>Role:</b> Graduate Student Researcher<br>
-            <b>Institution:</b> SNU Enterprise Policy Center<br>
-            <b>Period:</b> Jun 2024 – Dec 2024<br>
-            <b>Contributions:</b> Exploratory spatial data analysis of SME data</p>`,
-        images: [          
-          {
-            src: "figures/SME_Gmoran.png",
-            caption: "Figure 1. Global Moran's I (example)",
-          },
-          {
-            src: "figures/SME_Lmoran.png",
-            caption: "Figure 2. Local Moran's I (example)",
-          },
+        html: `<p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> Jun 2024 – Dec 2024 · <b>Contributions:</b> ESDA of SME data.</p>`,
+        images: [
+          { src: "figures/SME_Gmoran.png", caption: "Figure 1. Global Moran's I (example)" },
+          { src: "figures/SME_Lmoran.png", caption: "Figure 2. Local Moran's I (example)" },
         ],
       },
     },
@@ -220,40 +185,25 @@ const DATA = {
       year: 2025,
       title:
         "A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",
-      descr:
-        "Funded by Brain Korea Research Team for the Future Landscape.",
+      descr: "Funded by Brain Korea Research Team for the Future Landscape.",
       url: "",
       tags: ["Education", "Curriculum", "Interdisciplinary"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Research Assistant.<br>
-               <b>Institution:</b> SNU Geography<br>
-               <b>Period:</b> Jan 2025 - Feb 2025.<br>
-               <b>Contributions:</b> Survey of geography-related interdisciplinary degree programs in Korea.</p>`,
+        html: `<p><b>Role:</b> Graduate Student Research Assistant · <b>Institution:</b> SNU Geography · <b>Period:</b> Jan–Feb 2025 · <b>Contributions:</b> Survey of geography-related interdisciplinary degree programs in Korea.</p>`,
         images: [],
       },
     },
     {
       year: 2020,
-      title:
-        "SNUSRC X ELYSIA Real Estate Report ",
-      descr:
-        "Student-led industry reports Sponsored by ELYSIA (cryptocurrency based real estate investment platform)",
+      title: "SNUSRC X ELYSIA Real Estate Report",
+      descr: "Student-led industry reports sponsored by ELYSIA.",
       url: "https://www.snusrc.com/elysia",
       tags: ["Real estate", "Student initiative", "Periodic reports"],
       highlights: {
-        html: `<p><b>Role:</b> Project Lead<br>
-               <b>Organization:</b> SNUSRC Real Estate Club<br>
-               <b>Period:</b> Aug 2020 - Dec 2020.<br>
-               <b>Contributions:</b> Managed sponsorship, led project management, and edited/co-authored reports.</p>`,
+        html: `<p><b>Role:</b> Project Lead · <b>Organization:</b> SNUSRC Real Estate Club · <b>Period:</b> Aug–Dec 2020 · <b>Contributions:</b> Managed sponsorship, led PM, edited & co-authored reports.</p>`,
         images: [
-          {
-            src: "figures/SRC_ELYSIA_cover.png",
-            caption: "Figure 1. Cover",
-          },
-          {
-            src: "figures/SRC_ELYSIA_list.png",
-            caption: "Figure 2. List of Reports",
-          },
+          { src: "figures/SRC_ELYSIA_cover.png", caption: "Figure 1. Cover" },
+          { src: "figures/SRC_ELYSIA_list.png", caption: "Figure 2. List of Reports" },
         ],
       },
     },
@@ -271,22 +221,10 @@ const DATA = {
         "analyzing-the-equity-of-road-services-through-accessibility-gaps-focusing-on-detour-costs",
       publishedLabel: "Published",
       highlights: {
-        html: `<p>This talk builds a theoretical foundation for evaluating road-network equity using <i>detour distance</i> as a user-side sacrifice, and interprets it through the <i>equal-sacrifice</i> principle. We also discuss how locational rent endogeneity can bias naive equity assessments and why detour should be treated as a form of privatized cost when public supply is insufficient.</p>
-<ul>
-  <li><b>Equal-sacrifice framing of detour.</b> We reinterpret detour (road – Euclidean distance) as a utility loss borne by users, enabling equity tests under proportional, absolute, and marginal equal-sacrifice criteria (via Gini and SD diagnostics).</li>
-  <li><b>From geometry to fairness metrics.</b> By decomposing accessibility into Euclidean baseline and detour cost, we show how the network can amplify or mitigate baseline disparities—making “free-to-use” roads not automatically equitable.</li>
-  <li><b>Endogeneity of locational rent.</b> Land values co-move with accessibility <i>and</i> amenities; naive regressions risk reverse causality. We motivate identification-focused designs and caution against reading equity from rent gradients alone.</li>
-  <li><b>Policy implication.</b> When public networks under-supply low-circuity routes, users “pay” the gap as detour—i.e., a privatization-by-inaction. Targeting where detour concentrates yields fairer distributions without blanket expansion.</li>
-</ul>`,
+        html: `<p>Equal-sacrifice framing of detour; geometry-to-fairness metrics; policy implications.</p>`,
         images: [
-          {
-            src: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 1. Detour-cost equity contours by city",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 2. Decomposition of detour gaps by region",
-          },
+          { src: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop", caption: "Detour-cost equity contours by city" },
+          { src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop", caption: "Decomposition of detour gaps by region" },
         ],
       },
     },
@@ -298,16 +236,10 @@ const DATA = {
       url: "",
       tags: ["OD", "Spatial CV", "ML"],
       highlights: {
-        html: `<p>OD split diagrams, leakage analysis, and model comparisons for parcel-flow prediction.</p>`,
+        html: `<p>OD block split, leakage analysis, model comparisons for parcel-flow prediction.</p>`,
         images: [
-          {
-            src: "https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 1. OD block split for cross-validation",
-          },
-          {
-            src: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1600&auto=format&fit=crop",
-            caption: "Figure 2. Model performance comparison across folds",
-          },
+          { src: "https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop", caption: "OD block split" },
+          { src: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1600&auto=format&fit=crop", caption: "Performance comparison" },
         ],
       },
     },
@@ -327,14 +259,12 @@ const DATA = {
       year: 2024,
       title:
         "Differentials in spatial agglomeration among government-supported versus non-supported SMEs: an exploratory spatial data analysis",
-      venue:
-        "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
+      venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
-      highlights: {
-        html: `<p>Exploratory spatial data analysis comparing supported vs. non-supported SMEs.</p>`,
-        images: [],
-      },
+      relatedProjectRef:
+        "a-study-on-advancing-big-data-based-policy-evaluation-for-small-and-medium-sized-enterprises",
+      highlights: {},
     },
     {
       year: 2024,
@@ -356,21 +286,11 @@ const DATA = {
       url: "",
       tags: ["Urban development axes", "Clustering", "SNA"],
       highlights: {
-        html: `<p>Applies social-network-based clustering to identify urban development axes.</p>`,
+        html: `<p>Clustering-based detection of urban development axes.</p>`,
         images: [
-          {
-            src: "figures/Hierarchical_road_network.png",
-            caption: "Figure 1. Hierarchical road network (Flow from the urban center)",
-          },
-          {
-            src: "figures/Compared_with_urbanplan.png",
-            caption: "Figure 2. Compared with government urban plan",
-          },
-          {
-            src: "figures/Bid_rent_theory_with_clusters.png",
-            caption: "Figure 3. Bid rent theory with axis clusters",
-          },
-
+          { src: "figures/Hierarchical_road_network.png", caption: "Hierarchical road network" },
+          { src: "figures/Compared_with_urbanplan.png", caption: "Compared with government plan" },
+          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Bid rent theory with axis clusters" },
         ],
       },
     },
@@ -390,8 +310,7 @@ const DATA = {
       year: 2023,
       title:
         "Comparative Locational Analysis of Quick-Commerce Versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
-      venue:
-        "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
+      venue: "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
       publishedRef:
@@ -513,10 +432,23 @@ function ResponsiveStyles() {
       .r-grid { display: grid; gap: 16px; }
       .r-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .r-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+
+      /* 데스크톱: About | Text */
       .r-hero { display: grid; grid-template-columns: 1fr 1.2fr; gap: 16px; align-items: center; grid-template-areas: "about text"; }
       .hero-text  { grid-area: text; }
       .hero-about { grid-area: about; }
-      @media (max-width: 900px){ .r-hero { grid-template-columns: 1fr; grid-template-areas: "text" "about"; } }
+
+      @media (max-width: 900px){
+        .r-hero { grid-template-columns: 1fr; grid-template-areas: "text" "about"; }
+        .r-cols-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      }
+      @media (max-width: 640px){
+        .r-cols-3, .r-cols-2 { grid-template-columns: repeat(1, minmax(0,1fr)); }
+        .r-nav { gap: 12px; }
+        .r-nav a { font-size: 16px; }
+        .r-profile { width:96px; height:96px; }
+      }
+
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
       .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
@@ -531,51 +463,29 @@ function ResponsiveStyles() {
       .lightbox-top { display: flex; justify-content: flex-end; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #E2E8F0; }
       .lightbox-caption{ padding: 8px 10px; border-top: 1px solid #E2E8F0; font-size: 14px; color: #334155; line-height: 1.5; }
 
-      /* 🔆 출판 카드 하이라이트 효과 */
+      /* 카드 하이라이트 */
       @keyframes flashBorder {
         0% { box-shadow: 0 0 0 rgba(34,197,94,0); }
         30% { box-shadow: 0 0 0 6px rgba(34,197,94,.25); }
         100% { box-shadow: 0 0 0 rgba(34,197,94,0); }
       }
-      .flash-highlight {
-        outline: 2px solid #22c55e;
-        animation: flashBorder 1.8s ease-out 0s 2;
-        border-radius: 16px;
-      }
-
-      @media (max-width: 900px){
-        .r-cols-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
-        .r-hero { grid-template-columns: 1fr; }
-        .thumb-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      }
-      @media (max-width: 640px){
-        .r-cols-3, .r-cols-2 { grid-template-columns: repeat(1, minmax(0,1fr)); }
-        .r-nav { gap: 12px; }
-        .r-nav a { font-size: 16px; }
-        .r-profile { width:96px; height:96px; }
-      }
-      @media (max-width: 520px){
-        .thumb-grid { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 6px; }
-      }
+      .flash-highlight { outline: 2px solid #22c55e; animation: flashBorder 1.8s ease-out 0s 2; border-radius: 16px; }
     `}</style>
   );
 }
 
 /** ───────────────────── 4) App ───────────────────── */
 export default function App() {
-  // 하이라이트 모달
   const [hlModal, setHlModal] = useState({ open: false, title: "", html: "", images: [] });
-  // 출판 카드 깜빡임 제어
   const [flashId, setFlashId] = useState("");
 
-  /** 특정 출판물(ID)로 스크롤 & 하이라이트 */
   function goToAndFlash(id) {
     if (!id) return;
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "center" });
       setFlashId(id);
-      window.setTimeout(() => setFlashId(""), 4000); // 4초 후 해제
+      window.setTimeout(() => setFlashId(""), 4000);
     }
   }
 
@@ -586,7 +496,7 @@ export default function App() {
     showYear = false,
     showVenue = false,
     cols = 3,
-    type = "generic", // "pubs" | "talks" | ...
+    type = "generic", // "pubs" | "projects" | "talks"
   }) {
     const colClass = cols === 3 ? "r-cols-3" : "r-cols-2";
     return (
@@ -596,12 +506,12 @@ export default function App() {
           <div className={`r-grid ${colClass}`}>
             {entries.map((it, idx) => {
               const hasHL = !!it?.highlights?.html || ((it?.highlights?.images?.length ?? 0) > 0);
-              const cardId = type === "pubs" ? slug(it.title) : undefined;
-              const isFlash = cardId && flashId === cardId;
+              const cardId = slug(it.title); // 모든 섹션에서 ID 부여
+              const isFlash = flashId === cardId;
 
               return (
                 <div key={idx} id={cardId}>
-                  <Card style={isFlash ? { outline: "2px solid #22c55e" } : undefined} >
+                  <Card style={isFlash ? { outline: "2px solid #22c55e" } : undefined}>
                     <div className={isFlash ? "flash-highlight" : ""} style={{ borderRadius: 16 }}>
                       <CardHeader>
                         <CardTitle>
@@ -618,12 +528,12 @@ export default function App() {
                             {it.descr}
                           </p>
                         )}
+
                         {it.tags?.length ? (
                           <div style={{ ...styles.chipRow, marginTop: 4 }}>
                             {it.tags.map((t) => (
                               <Badge key={t}>{t}</Badge>
                             ))}
-                            {/* Talks에서 출판 연결 배지 */}
                             {type === "talks" && it.publishedRef && (
                               <Badge>{it.publishedLabel || "Published"}</Badge>
                             )}
@@ -654,7 +564,8 @@ export default function App() {
                               Highlights
                             </Button>
                           )}
-                          {/* Talks → Publications 연결 버튼 */}
+
+                          {/* 🔗 Talks → Publications */}
                           {type === "talks" && it.publishedRef && (
                             <Button
                               variant="outline"
@@ -662,6 +573,17 @@ export default function App() {
                               title="Go to the corresponding publication"
                             >
                               Related Paper
+                            </Button>
+                          )}
+
+                          {/* 🔗 Talks → Projects (요청한 'related project') */}
+                          {type === "talks" && it.relatedProjectRef && (
+                            <Button
+                              variant="outline"
+                              onClick={() => goToAndFlash(it.relatedProjectRef)}
+                              title="Go to the related project"
+                            >
+                              Related Project
                             </Button>
                           )}
                         </div>
@@ -689,7 +611,6 @@ export default function App() {
 
     return (
       <>
-        {/* 메인 모달 */}
         <div
           onClick={close}
           style={{
@@ -741,7 +662,7 @@ export default function App() {
                         onClick={() =>
                           setViewer({
                             open: true,
-                            src: resolveImgSrc(im.src), // 라이트박스 원본
+                            src: resolveImgSrc(im.src),
                             caption: im.caption || "",
                             idx: i,
                           })
@@ -762,7 +683,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* 라이트박스 */}
         {viewer.open && (
           <div
             className="lightbox"
