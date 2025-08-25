@@ -142,7 +142,7 @@ const DATA = {
           },
         ],
       },
-    }
+    },
     {
       year: 2020,
       title:
