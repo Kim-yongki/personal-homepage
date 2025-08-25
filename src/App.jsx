@@ -129,15 +129,15 @@ const DATA = {
         html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
         images: [
           {
-            src: "retail_locations.png",
+            src: "figures/retail_locations.png",
             caption: "Figure 1. Quick commerce & retail locations",
           },
           {
-            src: "multilocation_network_centrality.png",
+            src: "figures/multilocation_network_centrality.png",
             caption: "Figure 2. Multi-location network centrality",
           },
           {
-            src: "multilocation_network_centrality(equation).png",
+            src: "figures/multilocation_network_centrality(equation).png",
             caption: "Figure 3. Multi-location network centrality (equation)",
           },
         ],
@@ -152,7 +152,7 @@ const DATA = {
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
         html: `<p>Storage (2020) is a collective volume authored and published by the SNU Real Estate Club (https://www.snusrc.com/), presenting Gen Z perspectives on Korea’s real estate market during a turbulent year. The book compiles analytical reports, opinion essays, and interviews, addressing topics from housing policy and redevelopment to logistics and proptech. As a contributing author and editor, I engaged with issues of accessibility, equity, and the lived meaning of real estate, reflecting my broader research interest in urban accessibility and spatial structures. ISBN: 9788924076691.</p>`,
-        images: [{ src: "storage.png", caption: "Figure 1. Cover" }],
+        images: [{ src: "figures/storage.png", caption: "Figure 1. Cover" }],
       },
     },
   ],
