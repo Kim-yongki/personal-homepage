@@ -325,7 +325,7 @@ const DATA = {
 
 /** ───────────────────── 1.5) 갤러리 자동 수집기 ───────────────────── */
 /** publications/projects/talks의 highlights.images를 모아 히어로 갤러리 생성 */
-function buildHeroGallery(DATA, limit = 10) {
+function buildHeroGallery(DATA, limit = 9999) {
   const seen = new Set();
   const items = [];
   function collectFromArray(arr) {
