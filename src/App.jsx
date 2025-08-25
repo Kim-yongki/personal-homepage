@@ -221,12 +221,20 @@ const DATA = {
         "analyzing-the-equity-of-road-services-through-accessibility-gaps-focusing-on-detour-costs",
       publishedLabel: "Published",
       highlights: {
-        html: `<p>Equal-sacrifice framing of detour; geometry-to-fairness metrics; policy implications.</p>`,
+        html: `
+          <p>From a <i>conceptual</i> perspective, this study reinterprets location rent as accessibility rent, highlighting the role of detour in road-network equity.</p>
+          <ul>
+            <li><b>Definition.</b> Location rent theory usually employs “distance” without clear specification.</li>
+            <li><b>Practice.</b> Distance is often measured along roads, so rent represents <i>accessibility rent</i> rather than pure <i>land rent</i>.</li>
+            <li><b>Model.</b> If distance is Euclidean (<i>d</i><sub>E</sub>), rent is <span>R(d<sub>E</sub>) = R<sub>0</sub> &minus; &beta; d<sub>E</sub></span>.</li>
+            <li><b>Network.</b> With road detours (<i>d</i><sub>N</sub>), the ratio <span>DR = d<sub>N</sub> / d<sub>E</sub> &ge; 1</span> inflates distance and induces inequality.</li>
+            <li><b>Equity.</b> When <span>Var[R(d<sub>N</sub>)] &gt; Var[R(d<sub>E</sub>)]</span>, the road system amplifies disparities and thus fails equity.</li>
+          </ul>
+        `,
         images: [
-          { src: "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop", caption: "Detour-cost equity contours by city" },
-          { src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop", caption: "Decomposition of detour gaps by region" },
-        ],
-      },
+          {src: "figures/Framework_road_equity.png", caption: "Figure 1. Framework for analyzing road equity"}
+        ]
+      }
     },
     {
       year: 2025,
@@ -236,11 +244,7 @@ const DATA = {
       url: "",
       tags: ["OD", "Spatial CV", "ML"],
       highlights: {
-        html: `<p>OD block split, leakage analysis, model comparisons for parcel-flow prediction.</p>`,
-        images: [
-          { src: "https://images.unsplash.com/photo-1509223197845-458d87318791?q=80&w=1600&auto=format&fit=crop", caption: "OD block split" },
-          { src: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=1600&auto=format&fit=crop", caption: "Performance comparison" },
-        ],
+        html: `<p>In progress of publication.</p>`,
       },
     },
     {
@@ -288,9 +292,9 @@ const DATA = {
       highlights: {
         html: `<p>Clustering-based detection of urban development axes.</p>`,
         images: [
-          { src: "figures/Hierarchical_road_network.png", caption: "Hierarchical road network" },
-          { src: "figures/Compared_with_urbanplan.png", caption: "Compared with government plan" },
-          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Bid rent theory with axis clusters" },
+          { src: "figures/Hierarchical_road_network.png", caption: "Figure 1. Hierarchical road network" },
+          { src: "figures/Compared_with_urbanplan.png", caption: "Figure 2. Compared with government plan" },
+          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Figure 3. Bid rent theory with axis clusters" },
         ],
       },
     },
