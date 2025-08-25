@@ -560,7 +560,7 @@ export default function App() {
   // 카드 깜빡임 제어
   const [flashId, setFlashId] = useState("");
   // 히어로 갤러리 자동 수집
-  const heroGalleryItems = React.useMemo(() => buildHeroGallery(DATA, 10), []);
+  const heroGalleryItems = React.useMemo(() => buildHeroGallery(DATA), []);
 
   /** 특정 카드로 스크롤 & 하이라이트 */
   function goToAndFlash(id) {
