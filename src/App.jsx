@@ -264,7 +264,6 @@ const DATA = {
       venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
-      // 파생: 2024 프로젝트로 연결
       relatedProjectRef:
         "a-study-on-advancing-big-data-based-policy-evaluation-for-small-and-medium-sized-enterprises",
       highlights: {},
@@ -917,7 +916,7 @@ export default function App() {
             </div>
 
             {/* 🔽 자동 생성된 figure 갤러리 */}
-            <HeroGallery />
+            <HeroGallery items={heroGalleryItems} />
           </div>
         </div>
       </section>
