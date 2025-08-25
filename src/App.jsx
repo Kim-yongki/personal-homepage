@@ -72,9 +72,9 @@ const DATA = {
           <li><b>Use.</b> The indices provide a diagnostic tool for evaluating corridor-oriented planning and assessing distributional outcomes.</li>
         </ul>`,
         images: [
-          { src: "figures/MLI.png", caption: "Figure. Morphological Linearity Index (MLI)" },
-          { src: "figures/SLI.png", caption: "Figure. Structural Linearity Index (SLI)" },
-          { src: "figures/local_SLI.png", caption: "Figure. Local Structural Linearity Index (SLI)" }
+          { src: "figures/MLI.png", caption: "Morphological Linearity Index (MLI)" },
+          { src: "figures/SLI.png", caption: "Structural Linearity Index (SLI)" },
+          { src: "figures/local_SLI.png", caption: "Local Structural Linearity Index (SLI)" }
         ],
       },
     },
@@ -93,9 +93,9 @@ const DATA = {
     <li><b>Policy direction.</b> A time-series logistics-sprawl index reveals persistent peripheral siting; propose incentives for proximity logistics with strategic clustering.</li>
   </ul>`,
         images: [
-          { src: "figures/Freight_supplychain.png", caption: "Figure 1. Supply chain composition by scenarios" },
-          { src: "figures/Freight_scenario.png", caption: "Figure 2. Transportation cost by scenarios" },
-          { src: "figures/Logistics_sprawl.png", caption: "Figure 3. Logistics sprawl over time" }
+          { src: "figures/Freight_supplychain.png", caption: "Supply chain by scenarios" },
+          { src: "figures/Freight_scenario.png", caption: "Transportation cost by scenarios" },
+          { src: "figures/Logistics_sprawl.png", caption: "Logistics sprawl over time" }
         ],
       },
     },
@@ -113,9 +113,9 @@ const DATA = {
       <li><b>Implications.</b> Target places where detour concentrates to diffuse benefits beyond cores.</li>
     </ul>`,
         images: [
-          { src: "figures/Equal_transportation_sacrifice.png", caption: "Figure 1. Equal-sacrifice principle for detour costs" },
-          { src: "figures/Road_effect.png", caption: "Figure 2. Road-network effect on accessibility gaps" },
-          { src: "figures/accessibilities_detour_cost.png", caption: "Figure 3. Accessibility vs. detour costs (examples)" }
+          { src: "figures/Equal_transportation_sacrifice.png", caption: "Equal-sacrifice principle for detour" },
+          { src: "figures/Road_effect.png", caption: "Road-network effect on gaps" },
+          { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" }
         ]
       }
     },
@@ -129,9 +129,9 @@ const DATA = {
       highlights: {
         html: `<p>We propose a multi-location network centrality to capture brand-level performance in q-commerce, where retailers bear last-mile costs.</p>`,
         images: [
-          { src: "figures/retail_locations.png", caption: "Figure 1. Quick commerce & retail locations" },
-          { src: "figures/multilocation_network_centrality.png", caption: "Figure 2. Multi-location network centrality" },
-          { src: "figures/multilocation_network_centrality(equation).png", caption: "Figure 3. Multi-location network centrality (equation)" },
+          { src: "figures/retail_locations.png", caption: "Quick commerce & retail locations" },
+          { src: "figures/multilocation_network_centrality.png", caption: "Multi-location network centrality" },
+          { src: "figures/multilocation_network_centrality(equation).png", caption: "Centrality (equation)" },
         ],
       },
     },
@@ -144,7 +144,7 @@ const DATA = {
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
         html: `<p>A student-led volume by SNU Real Estate Club presenting Gen Z perspectives on Korea’s 2020 real estate market. ISBN: 9788924076691.</p>`,
-        images: [{ src: "figures/storage.png", caption: "Figure 1. Cover" }],
+        images: [{ src: "figures/storage.png", caption: "Cover" }],
       },
     },
   ],
@@ -160,9 +160,9 @@ const DATA = {
       highlights: {
         html: `<p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> May 2025 – ongoing · <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
         images: [
-          { src: "figures/transactions.png", caption: "Figure 1. Transaction network (example)" },
-          { src: "figures/community.png", caption: "Figure 2. Community detection (example)" },
-          { src: "figures/sankey.png", caption: "Figure 3. Sankey diagram (example)" },
+          { src: "figures/transactions.png", caption: "Transaction network (example)" },
+          { src: "figures/community.png", caption: "Community detection (example)" },
+          { src: "figures/sankey.png", caption: "Sankey diagram (example)" },
         ],
       },
     },
@@ -176,8 +176,8 @@ const DATA = {
       highlights: {
         html: `<p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> Jun 2024 – Dec 2024 · <b>Contributions:</b> ESDA of SME data.</p>`,
         images: [
-          { src: "figures/SME_Gmoran.png", caption: "Figure 1. Global Moran's I (example)" },
-          { src: "figures/SME_Lmoran.png", caption: "Figure 2. Local Moran's I (example)" },
+          { src: "figures/SME_Gmoran.png", caption: "Global Moran's I (example)" },
+          { src: "figures/SME_Lmoran.png", caption: "Local Moran's I (example)" },
         ],
       },
     },
@@ -202,8 +202,8 @@ const DATA = {
       highlights: {
         html: `<p><b>Role:</b> Project Lead · <b>Organization:</b> SNUSRC Real Estate Club · <b>Period:</b> Aug–Dec 2020 · <b>Contributions:</b> Managed sponsorship, led PM, edited & co-authored reports.</p>`,
         images: [
-          { src: "figures/SRC_ELYSIA_cover.png", caption: "Figure 1. Cover" },
-          { src: "figures/SRC_ELYSIA_list.png", caption: "Figure 2. List of Reports" },
+          { src: "figures/SRC_ELYSIA_cover.png", caption: "Cover" },
+          { src: "figures/SRC_ELYSIA_list.png", caption: "List of Reports" },
         ],
       },
     },
@@ -232,7 +232,7 @@ const DATA = {
           </ul>
         `,
         images: [
-          {src: "figures/Framework_road_equity.png", caption: "Figure 1. Framework for analyzing road equity"}
+          {src: "figures/Framework_road_equity.png", caption: "Framework for analyzing road equity"}
         ]
       }
     },
@@ -243,9 +243,7 @@ const DATA = {
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["OD", "Spatial CV", "ML"],
-      highlights: {
-        html: `<p>In progress of publication.</p>`,
-      },
+      highlights: { html: `<p>In progress of publication.</p>` },
     },
     {
       year: 2025,
@@ -266,6 +264,7 @@ const DATA = {
       venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
+      // 파생: 2024 프로젝트로 연결
       relatedProjectRef:
         "a-study-on-advancing-big-data-based-policy-evaluation-for-small-and-medium-sized-enterprises",
       highlights: {},
@@ -292,9 +291,9 @@ const DATA = {
       highlights: {
         html: `<p>Clustering-based detection of urban development axes.</p>`,
         images: [
-          { src: "figures/Hierarchical_road_network.png", caption: "Figure 1. Hierarchical road network" },
-          { src: "figures/Compared_with_urbanplan.png", caption: "Figure 2. Compared with government plan" },
-          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Figure 3. Bid rent theory with axis clusters" },
+          { src: "figures/Hierarchical_road_network.png", caption: "Hierarchical road network" },
+          { src: "figures/Compared_with_urbanplan.png", caption: "Compared with government plan" },
+          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Bid rent theory with axis clusters" },
         ],
       },
     },
@@ -324,6 +323,33 @@ const DATA = {
     },
   ],
 };
+
+/** ───────────────────── 1.5) 갤러리 자동 수집기 ───────────────────── */
+/** publications/projects/talks의 highlights.images를 모아 히어로 갤러리 생성 */
+function buildHeroGallery(DATA, limit = 10) {
+  const seen = new Set();
+  const items = [];
+  function collectFromArray(arr) {
+    (arr || []).forEach((entry) => {
+      const targetRef = slug(entry.title); // 카드 id
+      const imgs = entry?.highlights?.images || [];
+      imgs.forEach((im) => {
+        const src = resolveImgSrc(typeof im === "string" ? im : im.src);
+        if (!src || seen.has(src)) return;
+        seen.add(src);
+        items.push({
+          src,
+          label: (typeof im === "object" && im.caption) ? im.caption : entry.title,
+          targetRef,
+        });
+      });
+    });
+  }
+  collectFromArray(DATA.publications);
+  collectFromArray(DATA.projects);
+  collectFromArray(DATA.talks);
+  return items.slice(0, limit);
+}
 
 /** ───────────────────── 2) Mini UI (no external deps) ───────────────────── */
 const styles = {
@@ -428,7 +454,7 @@ function Badge({ children }) {
   return <span style={styles.badge}>{children}</span>;
 }
 
-/** ───────────────────── 3) Responsive & highlight CSS ───────────────────── */
+/** ───────────────────── 3) Responsive & gallery & highlight CSS ───────────────────── */
 function ResponsiveStyles() {
   return (
     <style>{`
@@ -456,6 +482,59 @@ function ResponsiveStyles() {
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
       .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
+      /* ── Hero figure gallery ── */
+      .hero-gallery{
+        margin-top: 16px;
+        max-height: 260px;
+        overflow-y: auto;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 8px;
+        background: #fff;
+      }
+      .hg-grid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        gap: 8px;
+      }
+      .hg-item{
+        position: relative;
+        cursor: pointer;
+        border: 1px solid #E2E8F0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .hg-img{
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        display: block;
+      }
+      .hg-cap{
+        position: absolute;
+        left: 8px; bottom: 8px;
+        background: rgba(0,0,0,.55);
+        color: #fff;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 8px;
+      }
+      @media (max-width: 900px){
+        .hero-gallery{ max-height: 220px; }
+      }
+      @media (max-width: 520px){
+        .hero-gallery{ max-height: 200px; }
+        .hg-grid{ grid-template-columns: 1fr; }
+      }
+
+      /* 카드 하이라이트 */
+      @keyframes flashBorder {
+        0% { box-shadow: 0 0 0 rgba(34,197,94,0); }
+        30% { box-shadow: 0 0 0 6px rgba(34,197,94,.25); }
+        100% { box-shadow: 0 0 0 rgba(34,197,94,0); }
+      }
+      .flash-highlight { outline: 2px solid #22c55e; animation: flashBorder 1.8s ease-out 0s 2; border-radius: 16px; }
+
       .thumb-grid { display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0,1fr)); }
       .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #E2E8F0; border-radius: 10px; cursor: zoom-in; display: block; }
       .thumb-cap{ font-size: 12px; color: #475569; margin-top: 4px; line-height: 1.4; }
@@ -466,23 +545,20 @@ function ResponsiveStyles() {
       .lightbox-img { max-width: 100%; max-height: 84vh; display: block; }
       .lightbox-top { display: flex; justify-content: flex-end; align-items: center; gap: 8px; padding: 8px 10px; border-bottom: 1px solid #E2E8F0; }
       .lightbox-caption{ padding: 8px 10px; border-top: 1px solid #E2E8F0; font-size: 14px; color: #334155; line-height: 1.5; }
-
-      /* 카드 하이라이트 */
-      @keyframes flashBorder {
-        0% { box-shadow: 0 0 0 rgba(34,197,94,0); }
-        30% { box-shadow: 0 0 0 6px rgba(34,197,94,.25); }
-        100% { box-shadow: 0 0 0 rgba(34,197,94,0); }
-      }
-      .flash-highlight { outline: 2px solid #22c55e; animation: flashBorder 1.8s ease-out 0s 2; border-radius: 16px; }
     `}</style>
   );
 }
 
 /** ───────────────────── 4) App ───────────────────── */
 export default function App() {
+  // 하이라이트 모달
   const [hlModal, setHlModal] = useState({ open: false, title: "", html: "", images: [] });
+  // 카드 깜빡임 제어
   const [flashId, setFlashId] = useState("");
+  // 히어로 갤러리 자동 수집
+  const heroGalleryItems = React.useMemo(() => buildHeroGallery(DATA, 10), []);
 
+  /** 특정 카드로 스크롤 & 하이라이트 */
   function goToAndFlash(id) {
     if (!id) return;
     const el = document.getElementById(id);
@@ -491,6 +567,28 @@ export default function App() {
       setFlashId(id);
       window.setTimeout(() => setFlashId(""), 4000);
     }
+  }
+
+  /** 히어로 갤러리 */
+  function HeroGallery({ items }) {
+    if (!items || items.length === 0) return null;
+    return (
+      <div className="hero-gallery">
+        <div className="hg-grid">
+          {items.map((it, i) => (
+            <div
+              key={i}
+              className="hg-item"
+              onClick={() => goToAndFlash(it.targetRef)}
+              title="Jump to related highlight"
+            >
+              <img src={it.src} alt={it.label || `figure-${i}`} className="hg-img" />
+              {it.label ? <div className="hg-cap">{it.label}</div> : null}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   }
 
   function SectionList({
@@ -510,7 +608,7 @@ export default function App() {
           <div className={`r-grid ${colClass}`}>
             {entries.map((it, idx) => {
               const hasHL = !!it?.highlights?.html || ((it?.highlights?.images?.length ?? 0) > 0);
-              const cardId = slug(it.title); // 모든 섹션에서 ID 부여
+              const cardId = slug(it.title);
               const isFlash = flashId === cardId;
 
               return (
@@ -553,6 +651,7 @@ export default function App() {
 
                         <div style={{ display: "flex", gap: 8, marginTop: 12, flexWrap: "wrap" }}>
                           {it.url && <Button href={it.url}>Link</Button>}
+
                           {hasHL && (
                             <Button
                               variant="outline"
@@ -569,7 +668,7 @@ export default function App() {
                             </Button>
                           )}
 
-                          {/* 🔗 Talks → Publications */}
+                          {/* Talks → Publications */}
                           {type === "talks" && it.publishedRef && (
                             <Button
                               variant="outline"
@@ -580,7 +679,7 @@ export default function App() {
                             </Button>
                           )}
 
-                          {/* 🔗 Talks → Projects (요청한 'related project') */}
+                          {/* Talks → Projects (파생 관계) */}
                           {type === "talks" && it.relatedProjectRef && (
                             <Button
                               variant="outline"
@@ -603,7 +702,7 @@ export default function App() {
     );
   }
 
-  /** Highlights modal with 3-col thumbnails + lightbox */
+  /** 하이라이트 모달 + 라이트박스 */
   function HighlightsModal() {
     const [viewer, setViewer] = React.useState({ open: false, src: "", caption: "", idx: -1 });
     if (!hlModal.open) return null;
@@ -805,7 +904,7 @@ export default function App() {
             </Card>
           </div>
 
-          {/* 타이틀/배지/소개 (오른쪽) */}
+          {/* 타이틀/배지/소개 + 자동 갤러리 (오른쪽) */}
           <div className="hero-text">
             <h1 style={{ fontSize: 36, fontWeight: 900, margin: 0, whiteSpace: "normal", wordBreak: "break-all" }}>
               {CONFIG.hero.title}
@@ -816,6 +915,9 @@ export default function App() {
             <div style={{ ...styles.chipRow, marginTop: 12 }}>
               {CONFIG.hero.badges.map((t) => (<Badge key={t}>{t}</Badge>))}
             </div>
+
+            {/* 🔽 자동 생성된 figure 갤러리 */}
+            <HeroGallery />
           </div>
         </div>
       </section>
