@@ -95,7 +95,11 @@ const DATA = {
     <li><b>Chain-level, spatial buildup of transport costs.</b> I model and map the cumulative transport cost along each delivery chain—from source to (sub)hubs to destination—identifying where detour costs concentrate and how they shift under fulfillment scenarios.</li>
     <li><b>Policy evaluation and future direction under industrial change.</b> A time-series logistics-sprawl index (warehouses & complexes) reveals continued peripheral siting despite fulfillment-driven proximity needs. I propose a roadmap that pairs proximity-logistics incentives with strategic clustering of large-scale facilities to optimize the regional network.</li>
   </ul>`,
-        images: [],
+        images: [
+          { src: "figures/Freight_supplychain.png", caption: "Figure 1. Supply chain composition by scenarios" },
+          { src: "figures/Freight_scenario.png", caption: "Figure 2. Transportation cost by scenarios" },
+          { src: "figures/Logistics_sprawl.png", caption: "Figure 3. Logistics sprawl over time" }
+        ],
       },
     },
     {
