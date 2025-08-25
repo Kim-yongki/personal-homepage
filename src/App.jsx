@@ -347,7 +347,12 @@ function buildHeroGallery(DATA, limit = 9999) {
   collectFromArray(DATA.publications);
   collectFromArray(DATA.projects);
   collectFromArray(DATA.talks);
-  return items.slice(0, limit);
+  // 🔀 랜덤 셔플
+  for (let i = items.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [items[i], items[j]] = [items[j], items[i]];
+  }
+  return limit ? items.slice(0, limit) : items;
 }
 
 /** ───────────────────── 2) Mini UI (no external deps) ───────────────────── */
