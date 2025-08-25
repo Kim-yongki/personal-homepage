@@ -119,26 +119,30 @@ const DATA = {
       }
     },
     {
-      year: 2023,
-      title: "Comparative Locational Analysis of Quick-Commerce Versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
-      venue: "KUGS Winter Conference 2023 (Proceedings), Seoul",
-      url: "",
-      tags: ["Q-commerce", "Centrality", "Coverage"],
-      highlights: {
-        html: `<p>We compare brand-level location strategies of a quick-commerce service (“B Mart”) and conventional formats in Seoul across multi-scale trade areas and network measures.</p>
-        <ul>
-          <li><b>Multi-scale demand & MCA.</b> Using 500–5000m trade areas and Multi Centrality Analysis, we show firm/format-specific patterns; B Mart resembles large-format stores at broad ranges despite lower narrow-range demand.</li>
-          <li><b>Coverage & evenness.</b> Coverage analysis indicates B Mart serves up to 96% of census tracts within a 5 km range, attributable to its relatively even spatial distribution (low internal interference).</li>
-          <li><b>Spacing & dispersion.</b> Nearest-neighbor CV≈0.35 (most stable) and ANN≈1.33 indicate a dispersed, uniform pattern compared with clustered conventional formats.</li>
-          <li><b>Brand-level centrality.</b> Modified centrality at the brand level shows higher straightness (especially at short distances) and efficiency benefits versus SSM.</li>
-        </ul>`,
+      year: 2024,
+      title:
+        "Analysis of Quick Commerce Location Using Modified Network Centrality",
+      venue: "Journal of the Korean Urban Geographical Society, 27(1):17–32",
+      url: "https://doi.org/10.21189/JKUGS.27.1.2",
+      tags: ["Quick commerce", "Network centrality", "Retail"],
+      detail: {
+        html: `<p>This study examines location efficiency in the quick-commerce (q-commerce) sector, where retailers directly bear last-mile transport costs. We propose a multi-location network centrality, moving beyond store-level measures to capture brand-level performance. Results show that q-commerce brands hold a closeness advantage, often achieved by locating in underutilized yet accessible urban areas, underscoring both their strengths in logistics & real estate.</p>`,
         images: [
-          { src: "figures/retail_locations.png", caption: "Figure 1. Quick commerce & retail locations" },
-          { src: "figures/multilocation_network_centrality.png", caption: "Figure 2. Multi-location network centrality" },
-          { src: "figures/multilocation_network_centrality(equation).png", caption: "Figure 3. Multi-location network centrality (equation)" }
+          {
+            src: "retail_locations.png",
+            caption: "Figure 1. Quick commerce & retail locations",
+          },
+          {
+            src: "multilocation_network_centrality.png",
+            caption: "Figure 2. Multi-location network centrality",
+          },
+          {
+            src: "multilocation_network_centrality(equation).png",
+            caption: "Figure 3. Multi-location network centrality (equation)",
+          },
         ],
       },
-    },
+    }
     {
       year: 2020,
       title:
