@@ -23,7 +23,7 @@ const CONFIG = {
   },
   person: {
     about:
-      "I am an M.A. student in Geography at Seoul National University (SNU). My research examines the interplay between transportation networks and urban structures, focusing on how they shape spatial accessibility and equity. I also investigate the implications of these dynamics for urban planning, logistics, and real estate.",
+      "Hi! I’m an M.A. student in Geography at Seoul National University (SNU). I study how transport networks and urban structures shape accessibility and equity, and what this means for planning, logistics, and real estate. I aim to turn everyday urban challenges into clear, trackable goals, helping decisions be grounded in evidence and make a real difference in daily life.",
     location: "Seoul, South Korea",
     emails: ["pauluhill74@gmail.com", "pauluhill@snu.ac.kr"],
     links: {
