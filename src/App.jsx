@@ -602,11 +602,71 @@ function ResponsiveStyles() {
       .thumb {width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #E2E8F0; border-radius: 10px; cursor: zoom-in; display: block;}
       .thumb-cap{ font-size: 12px; color: #475569; margin-top: 4px; line-height: 1.4; }
 
-      .thumb-strip {display: flex; gap: 8px; overflow-x: auto; overflow-y: hidden; padding-bottom: 6px; scroll-snap-type: x mandatory;}
-      .thumb-item { flex: 0 0 auto; width: 180px; scroll-snap-align: start; }
-      .thumb-strip .thumb {width: 100%; aspect-ratio: 4 / 3; }
+      /* ── Thumb strip: 항상 가로 스크롤, 얇고 작게 ── */
+      .thumb-strip-wrap {
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .thumb-strip {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 6px 36px; /* 좌우 화살표 공간 */
+        scroll-snap-type: x mandatory;
+      }
+      .thumb-item {
+        flex: 0 0 auto;
+        width: 30%;              /* 모달 폭 기준 약 3장 보이도록 */
+        max-width: 160px;        /* 너무 커지지 않게 상한 */
+        min-width: 120px;        /* 너무 작아지지 않게 하한 */
+        scroll-snap-align: start;
+      }
+      .thumb {
+        width: 100%;
+        height: 84px;            /* 얇게 */
+        object-fit: cover;
+        border: 1px solid #E2E8F0;
+        border-radius: 10px;
+        cursor: zoom-in;
+        display: block;
+      }
+      .thumb-cap {
+        font-size: 11px;
+        color: #475569;
+        margin-top: 4px;
+        line-height: 1.35;
+      }
 
-      @media (max-width: 520px){ .thumb-item { width: 150px; } }
+      /* 좌/우 화살표: 작고 얇게 */
+      .strip-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: 22px;              /* 더 얇게 */
+        height: 40px;             /* 길쭉하게 */
+        border-radius: 6px;       /* 원형 → 길쭉 버튼 */
+        border: 1px solid #CBD5E1;
+        background: rgba(255,255,255,.9);
+        color: #0f172a;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+      }
+      .strip-left { left: 6px; }
+      .strip-right { right: 6px; }
+      .strip-nav:hover { background: #fff; }
+
+      /* 반응형: 모바일에서 조금 더 작게 */
+      @media (max-width: 520px){
+        .thumb-item { max-width: 140px; min-width: 110px; width: 45%; }
+        .thumb { height: 78px; }
+      }
+
 
       .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; }
       .lightbox-inner { background: #fff; max-width: min(1100px, 94vw); max-height: 92vh; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
@@ -1212,4 +1272,3 @@ export default function App() {
       </footer>
     </div>
   );
-}
