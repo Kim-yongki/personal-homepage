@@ -643,28 +643,6 @@ function ResponsiveStyles() {
         line-height: 1.35;
       }
 
-      /* 좌/우 화살표: 얇고 작게 */
-      .strip-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        width: 22px;
-        height: 22px;
-        border-radius: 9999px;
-        border: 1px solid #CBD5E1;
-        background: rgba(255,255,255,.9);
-        color: #0f172a;
-        font-size: 14px;
-        line-height: 1;
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-      }
-      .strip-left { left: 6px; }
-      .strip-right { right: 6px; }
-      .strip-nav:hover { background: #fff; }
-
       /* 모바일에서는 조금 더 좁게 */
       @media (max-width: 520px){
         .thumb-item { width: 45%; max-width: 140px; min-width: 110px; }
@@ -958,43 +936,7 @@ export default function App() {
                 images.length >= 4 ? (
                   // 5장 이상: 가로 스크롤 스트립
                   <div className="thumb-strip-wrap" style={{ marginBottom: 12 }}>
-                    <button
-                      type="button"
-                      className="strip-nav strip-left"
-                      aria-label="Scroll left"
-                      onClick={() => scrollStrip(-1)}
-                    >
-                      ◀
-                    </button>
-                    <div className="thumb-strip" ref={stripRef}>
-                      {images.map((im, i) => (
-                        <div key={i} className="thumb-item">
-                          <img
-                            src={resolveImgSrc(im.src)}
-                            alt={`thumb-${i}`}
-                            className="thumb"
-                            onClick={() => openViewer(i)}
-                            onKeyDown={(e) => {
-                              if (e.key === "Enter" || e.key === " ")
-                                openViewer(i);
-                            }}
-                            tabIndex={0}
-                            role="button"
-                          />
-                          {im.caption ? (
-                            <div className="thumb-cap">{im.caption}</div>
-                          ) : null}
-                        </div>
-                      ))}
-                    </div>
-                    <button
-                      type="button"
-                      className="strip-nav strip-right"
-                      aria-label="Scroll right"
-                      onClick={() => scrollStrip(1)}
-                    >
-                      ▶
-                    </button>
+                
                   </div>
                 ) : (
                   // 4장 이하: 기존 그리드
