@@ -120,7 +120,7 @@ const DATA = {
         images: [
           { src: "figures/Framework_road_equity.png", caption: "Framework for analyzing road equity" },
           { src: "figures/Equal_transportation_sacrifice.png", caption: "Equal-sacrifice principle for detour" },
-          { src: "figures/Road_effect.png", caption: "Road-network effect on gaps" },
+          { src: "figures/Road_effect.png", caption: "Road-network effect on accessibility gaps" },
           { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" },
         ],
       },
