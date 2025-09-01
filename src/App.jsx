@@ -14,7 +14,7 @@ const CONFIG = {
     blurb: "",
     badges: [
       "Transport Geography",
-      "Urban Structure",
+      "Urban Planning",
       "Logistics",
       "Real Estate",
       "Spatial Data Science",
@@ -23,7 +23,7 @@ const CONFIG = {
   },
   person: {
     about:
-      "M.A. student at Seoul National University. My research focuses on how transportation networks, urban structures, and logistics systems interact to shape spatial accessibility and equity. I'm interested in the implications of these interactions for urban planning and policy.",
+      "M.A. student at Seoul National University. My research focuses on the interplay between transportation networks and urban structures, particularly how they shape spatial accessibility and equity, and I explore the implications of these dynamics for urban planning and related industries.",
     location: "Seoul, South Korea",
     emails: ["pauluhill74@gmail.com", "pauluhill@snu.ac.kr"],
     links: {
@@ -60,39 +60,41 @@ const DATA = {
     {
       year: 2025,
       title:
-        "Rethinking linear-city accessibility: development of linearity indices",
+        "Rethinking Linear-City Accessibility: Development of Linearity Indices",
       venue: "[Under Review] Journal of Transport Geography",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
       highlights: {
-        html: `<p>This study re-examines the assumption that linear urban road networks inherently improve efficiency and equity, proposing two flow-based linearity indices and testing them across 65 South Korean cities.</p>
+        html: `
+        <p>To test whether linear road configurations actually improve accessibility and equity, two flow-based linearity indices were developed and applied to 65 cities in South Korea.</p>
         <ul>
-          <li><b>Two new indices.</b> The Morphological Linearity Index (MLI) captures the alignment of trip flows along a single axis, while the Structural Linearity Index (SLI) measures redundancy of shortest paths.</li>
-          <li><b>Differential effects.</b> High-MLI cities show lower mean detour rates but slightly longer average trip distances; high-SLI cities exhibit higher detour rates and greater inequity in detour distribution.</li>
-          <li><b>Implication.</b> Linearity as a geometric form is not inherently efficient or equitable; benefits emerge when paired with high-capacity trunk corridors (e.g., fast regional rail).</li>
-          <li><b>Use.</b> The indices provide a diagnostic tool for evaluating corridor-oriented planning and assessing distributional outcomes.</li>
+          <li><b>Methodology.</b> Defined the Morphological Linearity Index and the Structural Linearity Index, and analyzed their correlation with accessibility in small and mid-sized cities.</li>
+          <li><b>Findings.</b> Higher MLI was associated with lower mean detour rates but slightly longer average trip distances, whereas higher SLI corresponded to higher detour rates and greater detour inequality.</li>
+          <li><b>Implications.</b> The results suggest that a linear urban form is not inherently efficient or equitable; benefits materialize only when it is coupled with capacity-rich trunk corridors (e.g., fast regional rail) and careful corridor design.</li>
         </ul>`,
         images: [
           { src: "figures/MLI.png", caption: "Morphological Linearity Index (MLI)" },
           { src: "figures/SLI.png", caption: "Structural Linearity Index (SLI)" },
-          { src: "figures/local_SLI.png", caption: "Local Structural Linearity Index (SLI)" },
+          { src: "figures/local_SLI.png", caption: "Local SLI" },
         ],
       },
     },
     {
       year: 2025,
       title:
-        "Fulfillment-Service and Proximity Logistics : Focused on Logistics Space of Seoul Capital Area",
+        "Fulfillment Services and Proximity Logistics: Focused on the Logistics Space of the Seoul Capital Area",
       venue: "[In Progress] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
       highlights: {
-        html: `<p>This thesis quantifies how fulfillment-based parcel delivery reconfigures the logistics space of the Seoul Capital Area and what it implies for facility siting and network planning.</p>
-  <ul>
-    <li><b>Empirical impact of fulfillment on proximity logistics.</b> Using parcel OD volumes and firm-level networks (CJ Logistics vs. Coupang), I run freight transportation-scenario simulations combining hub-and-spoke and fulfillment-based chains.</li>
-    <li><b>Chain-level buildup of transport costs.</b> Map cumulative transport cost along each delivery chain and identify where detour costs concentrate.</li>
-    <li><b>Policy direction.</b> A time-series logistics-sprawl index reveals persistent peripheral siting; propose incentives for proximity logistics with strategic clustering.</li>
-  </ul>`,
+        html: `
+        <p>This thesis quantified how fulfillment-based delivery reshaped logistics space in the Seoul Capital Area (SCA) and where transport and detour costs concentrated along supply chains.</p>
+        <ul>
+          <li><b>Methodology.</b> Using parcel OD and firm data (CJ Logistics vs. Coupang), terminal allocation and route-optimization-based simulations were conducted for hub-and-spoke versus fulfillment scenarios, and changes in logistics space—including logistics sprawl—were interpreted from both market- and public-sector perspectives.</li>
+          <li><b>Findings 1.</b> Fulfillment enhanced transport efficiency by minimizing detours along transport chains and achieved substantial transport-cost savings via consumer proximity.</li>
+          <li><b>Findings 2.</b> As an investment asset, logistics facilities increasingly sprawled, driven more by real-estate market liquidity than by network optimization; similar dynamics appeared even in public-led supply.</li>
+          <li><b>Implications.</b> The findings underscore the growing importance of optimizing location and allocation strategies for proximity logistics and transport networks, and highlight the need for government-led siting incentives to support the formation of logistics clusters.</li>
+        </ul>`,
         images: [
           { src: "figures/Freight_supplychain.png", caption: "Supply chain by scenarios" },
           { src: "figures/Freight_scenario.png", caption: "Transportation cost by scenarios" },
@@ -108,13 +110,15 @@ const DATA = {
       url: "https://doi.org/10.22776/kgs.2025.60.2.168",
       tags: ["Equity", "Road network", "Detour cost"],
       highlights: {
-        html: `<p>From a <i>provider-side</i> perspective, this study assesses road-network equity by decomposing accessibility into Euclidean baseline and detour-induced costs.</p>
-    <ul>
-      <li><b>Framework.</b> Equal-sacrifice principle on detour; diagnose mean transportation cost and dispersion (SD, Gini).</li>
-      <li><b>Evidence.</b> Many mid-sized cities’ road networks <i>exacerbate</i> accessibility gaps; cores capture low-circuity benefits.</li>
-      <li><b>Implications.</b> Target places where detour concentrates to diffuse benefits beyond cores.</li>
-    </ul>`,
+        html: `
+        <p>The endogeneity of road distance (i.e., detours) within bid-rent theory was articulated, and a conceptual framework for evaluating equity in road networks was proposed. Based on the equal-sacrifice principle, an empirical analysis was conducted for small and mid-sized cities in South Korea.</p>
+        <ul>
+          <li><b>Methodology.</b> Compared Euclidean and network distances, analyzed within-city accessibility dispersion using the standard deviation and the Gini coefficient, and assessed road-network equity under absolute, proportional, and marginal equal-sacrifice criteria.</li>
+          <li><b>Findings.</b> Dispersion in network distances (SD, Gini) generally exceeded that of Euclidean distances, reflecting amplified Euclidean-based gaps and/or unequal development of road networks.</li>
+          <li><b>Implications.</b> Articulates concrete policy goals that road networks—as a public service—can pursue beyond “free use,” and recommends embedding such goals into road-network planning and appraisal.</li>
+        </ul>`,
         images: [
+          { src: "figures/Framework_road_equity.png", caption: "Framework for analyzing road equity" },
           { src: "figures/Equal_transportation_sacrifice.png", caption: "Equal-sacrifice principle for detour" },
           { src: "figures/Road_effect.png", caption: "Road-network effect on gaps" },
           { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" },
@@ -129,7 +133,13 @@ const DATA = {
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
       highlights: {
-        html: `<p>We propose a multi-location network centrality to capture brand-level performance in q-commerce, where retailers bear last-mile costs.</p>`,
+        html: `
+        <p>By interpreting the Q-commerce industry as a retail format in which sellers bear delivery costs, changes in retail locational patterns driven by last-mile logistics were analyzed.</p>
+        <ul>
+          <li><b>Methodology.</b> Modified network centrality indices to measure multi-location brand centrality, and analyzed locational patterns by retail category.</li>
+          <li><b>Findings.</b> Q-commerce fulfillment centers tended to locate in lower-rent subcenters while still exhibiting superior centrality (accessibility) relative to offline retail.</li>
+          <li><b>Implications.</b> The results indicate a shift in retail spatial structure—driven by the rising importance of delivery—from agglomeration around prime districts toward optimization-oriented distributed siting.</li>
+        </ul>`,
         images: [
           { src: "figures/retail_locations.png", caption: "Quick commerce & retail locations" },
           { src: "figures/multilocation_network_centrality.png", caption: "Multi-location network centrality" },
@@ -140,13 +150,19 @@ const DATA = {
     {
       year: 2020,
       title:
-        "Storage: 2020 Korean Real Estate Through the Eyes of Twenties (Book)",
+        "Storage: 2020 Korean Real Estate through the Eyes of Twenties (Book)",
       venue:
         "Published by the SNU Real Estate Club (Contributing Author & Editor)",
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
-        html: `<p>A student-led volume by SNU Real Estate Club presenting Gen Z perspectives on Korea’s 2020 real estate market. ISBN: 9788924076691.</p>`,
+        html: `
+        <p>A student-edited volume presenting Gen Z perspectives on South Korea’s 2020 real-estate market.</p>
+        <ul>
+          <li><b>I.</b> Co-authored and edited essays and briefs, coordinating contributions and copyediting.</li>
+          <li><b>II.</b> Synthesized Gen Z perspectives on housing, finance, and policy changes in the volatile Covid-19 market year.</li>
+          <li><b>III.</b> Offered industry professionals valuable insights into younger-generation perspectives on the real-estate sector.</li>
+        </ul>`,
         images: [{ src: "figures/storage.png", caption: "Cover" }],
       },
     },
@@ -161,7 +177,14 @@ const DATA = {
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "Spatial network analysis"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> May 2025 – ongoing · <b>Work:</b> Spatial network analysis of SME transactions.</p>`,
+        html: `
+        <p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> May 2025 – ongoing</p>
+        <p>Using inter-firm transaction big data, network analysis was conducted and economic regions were delineated in South Korea.</p>
+        <ul>
+          <li><b>Methodology.</b> Constructed an inter-firm transaction graph and performed network centrality analysis, community detection, and polycentricity analysis.</li>
+          <li><b>Findings.</b> Identified spatial patterns of transactions and inter-regional link structures differentiated by industry and firm size.</li>
+          <li><b>Implications.</b> Clarifies the effects of urbanization and localization economies in inter-firm trade.</li>
+        </ul>`,
         images: [
           { src: "figures/transactions.png", caption: "Transaction network (example)" },
           { src: "figures/community.png", caption: "Community detection (example)" },
@@ -172,12 +195,19 @@ const DATA = {
     {
       year: 2024,
       title:
-        "A Study on Advancing Big Data-based Policy Evaluation for Small and Medium-sized Enterprises",
+        "A Study on Advancing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",
       descr: "Funded by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> Jun 2024 – Dec 2024 · <b>Contributions:</b> ESDA of SME data.</p>`,
+        html: `
+        <p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> Jun – Dec 2024</p>
+        <p>Exploratory spatial data analysis (ESDA) was conducted using SME financial information and related indicators.</p>
+        <ul>
+          <li><b>Methodology.</b> Performed spatial and aspatial analyses on time-series data for sales and other firm-level indicators.</li>
+          <li><b>Findings.</b> Detected spatial heterogeneity and local clusters that were not apparent in publicly available datasets (e.g., firm counts).</li>
+          <li><b>Implications.</b> Offers guidance for government policies tailored to regional industrial structures.</li>
+        </ul>`,
         images: [
           { src: "figures/SME_Gmoran.png", caption: "Global Moran's I (example)" },
           { src: "figures/SME_Lmoran.png", caption: "Local Moran's I (example)" },
@@ -192,7 +222,14 @@ const DATA = {
       url: "",
       tags: ["Education", "Curriculum", "Interdisciplinary"],
       highlights: {
-        html: `<p><b>Role:</b> Graduate Student Research Assistant · <b>Institution:</b> SNU Geography · <b>Period:</b> Jan–Feb 2025 · <b>Contributions:</b> Survey of geography-related interdisciplinary degree programs in Korea.</p>`,
+        html: `
+        <p><b>Role:</b> Graduate Student Research Assistant · <b>Institution:</b> SNU Geography · <b>Period:</b> Jan – Feb 2025</p>
+        <p>Interdisciplinary degree programs in South Korea related to geography were surveyed.</p>
+        <ul>
+          <li><b>Methodology.</b> Built a list of geography-related programs, typologized cross-disciplinary structures, and compared curricula.</li>
+          <li><b>Findings.</b> Organized program compositions by department and found that geography departments participate in many interdisciplinary majors with GIS-centered competencies.</li>
+          <li><b>Implications.</b> Offers practical guidance for curriculum design.</li>
+        </ul>`,
         images: [],
       },
     },
@@ -203,7 +240,14 @@ const DATA = {
       url: "https://www.snusrc.com/elysia",
       tags: ["Real estate", "Student initiative", "Periodic reports"],
       highlights: {
-        html: `<p><b>Role:</b> Project Lead · <b>Organization:</b> SNUSRC Real Estate Club · <b>Period:</b> Aug–Dec 2020 · <b>Contributions:</b> Managed sponsorship, led PM, edited & co-authored reports.</p>`,
+        html: `
+        <p><b>Role:</b> Project Lead · <b>Organization:</b> SNUSRC Real Estate Club · <b>Period:</b> Aug – Dec 2020</p>
+        <p>A sponsored series of real-estate market reports was produced through a student-led initiative.</p>
+        <ul>
+          <li><b>I.</b> Managed sponsorships, coordinated contributors, and edited recurring briefings.</li>
+          <li><b>II.</b> Delivered timely syntheses of key market issues and insights for an industry readership.</li>
+          <li><b>III.</b> Demonstrated student–industry collaboration and a repeatable reporting workflow.</li>
+        </ul>`,
         images: [
           { src: "figures/SRC_ELYSIA_cover.png", caption: "Cover" },
           { src: "figures/SRC_ELYSIA_list.png", caption: "List of Reports" },
@@ -216,31 +260,14 @@ const DATA = {
     {
       year: 2025,
       title:
-        "Equity of detour costs in road networks based on the principle of equal sacrifice",
+        "Equity of Detour Costs in Road Networks Based on the Principle of Equal Sacrifice",
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["Detour cost", "Equity"],
       publishedRef:
         "analyzing-the-equity-of-road-services-through-accessibility-gaps-focusing-on-detour-costs",
       publishedLabel: "Published",
-      highlights: {
-        html: `
-          <p>From a <i>conceptual</i> perspective, this study reinterprets location rent as accessibility rent, highlighting the role of detour in road-network equity.</p>
-          <ul>
-            <li><b>Definition.</b> Location rent theory usually employs “distance” without clear specification.</li>
-            <li><b>Practice.</b> Distance is often measured along roads, so rent represents <i>accessibility rent</i> rather than pure <i>land rent</i>.</li>
-            <li><b>Model.</b> If distance is Euclidean (<i>d</i><sub>E</sub>), rent is <span>R(d<sub>E</sub>) = R<sub>0</sub> &minus; &beta; d<sub>E</sub></span>.</li>
-            <li><b>Network.</b> With road detours (<i>d</i><sub>N</sub>), the ratio <span>DR = d<sub>N</sub> / d<sub>E</sub> &ge; 1</span> inflates distance and induces inequality.</li>
-            <li><b>Equity.</b> When <span>Var[R(d<sub>N</sub>)] &gt; Var[R(d<sub>E</sub>)]</span>, the road system amplifies disparities and thus fails equity.</li>
-          </ul>
-        `,
-        images: [
-          {
-            src: "figures/Framework_road_equity.png",
-            caption: "Framework for analyzing road equity",
-          },
-        ],
-      },
+      highlights: {},
     },
     {
       year: 2025,
@@ -249,12 +276,19 @@ const DATA = {
       venue: "Korean Geography Conference, Seoul (Jul. 27–28)",
       url: "",
       tags: ["OD", "Spatial CV", "ML"],
-      highlights: { html: `<p>In progress of publication.</p>` },
+      highlights: {
+        html: `
+          <p>Proposed a cross-validation strategy that reflects the properties of OD data.</p>
+          <ul>
+            <li><b>In progress (to be released after submission).</b></li>
+          </ul>
+        `,
+      },
     },
     {
       year: 2025,
       title:
-        "Analysis of the relationship between the linearity of urban structure and accessibility",
+        "Analysis of the Relationship between the Linearity of Urban Structure and Accessibility",
       venue: "AAG Annual Meeting, Detroit (Mar. 24–28)",
       url: "",
       tags: ["Linear city", "Accessibility", "Network analysis"],
@@ -266,7 +300,7 @@ const DATA = {
     {
       year: 2024,
       title:
-        "Differentials in spatial agglomeration among government-supported versus non-supported SMEs: an exploratory spatial data analysis",
+        "Differentials in Spatial Agglomeration among Government-Supported versus Non-Supported SMEs: An Exploratory Spatial Data Analysis",
       venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
@@ -294,7 +328,13 @@ const DATA = {
       url: "",
       tags: ["Urban development axes", "Clustering", "SNA"],
       highlights: {
-        html: `<p>Clustering-based detection of urban development axes.</p>`,
+        html: `
+        <p>Developed and applied a path-based clustering method to detect urban development axes.</p>
+        <ul>
+          <li><b>Methodology.</b> Constructed population-weighted path trees expanding from centers to census units; extracted subtrees by stability thresholds; and defined each subtree as an axis cluster.</li>
+          <li><b>Findings.</b> Axis clusters revealed clear, network-induced spatial differentiation that aligned with government corridor plans.</li>
+          <li><b>Implications.</b> Enable fine-grained analysis of urban development axes and provide reference points for corridor-oriented urban planning.</li>
+        </ul>`,
         images: [
           { src: "figures/Hierarchical_road_network.png", caption: "Hierarchical road network" },
           { src: "figures/Compared_with_urbanplan.png", caption: "Compared with government plan" },
@@ -317,7 +357,7 @@ const DATA = {
     {
       year: 2023,
       title:
-        "Comparative Locational Analysis of Quick-Commerce Versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
+        "Comparative Locational Analysis of Quick-Commerce versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
       venue: "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
@@ -328,6 +368,8 @@ const DATA = {
     },
   ],
 };
+
+
 
 /** ───────────────────── 1.5) 갤러리 자동 수집기 ───────────────────── */
 /** publications/projects/talks의 highlights.images를 모아 히어로 갤러리 생성 */
