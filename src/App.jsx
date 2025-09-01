@@ -128,7 +128,7 @@ const DATA = {
     {
       year: 2024,
       title:
-        "Analysis of Quick Commerce Location Using Modified Network Centrality",
+        "Analysis of Quick Commerce Location Using Modified Network Centrality: focused on transportation cost of multi-location brand.",
       venue: "Journal of the Korean Urban Geographical Society, 27(1):17–32",
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
@@ -311,7 +311,7 @@ const DATA = {
     {
       year: 2024,
       title:
-        "Urban Linearity and Efficiency–Equity of Accessibility: A Principal Component and Network Analysis of Transport Networks in South Korea’s Cities",
+        "Urban Linearity and Efficiency–Equity of Accessibility: Network Analysis of Transport Networks in South Korea’s Cities",
       venue: "Annual Meeting of Korean Geographers, Gongju (Dec. 6)",
       url: "",
       tags: ["Linear city", "Accessibility", "Equity"],
@@ -333,7 +333,7 @@ const DATA = {
         <ul>
           <li><b>Methodology.</b> Constructed population-weighted path trees expanding from centers to census units; extracted subtrees by stability thresholds; and defined each subtree as an axis cluster.</li>
           <li><b>Findings.</b> Axis clusters revealed clear, network-induced spatial differentiation that aligned with government corridor plans.</li>
-          <li><b>Implications.</b> Enable fine-grained analysis of urban development axes and provide reference points for corridor-oriented urban planning.</li>
+          <li><b>Implications.</b> Enables fine-grained analysis of urban development axes and provides reference points for corridor-oriented urban planning.</li>
         </ul>`,
         images: [
           { src: "figures/Hierarchical_road_network.png", caption: "Hierarchical road network" },
