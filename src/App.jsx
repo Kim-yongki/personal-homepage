@@ -128,7 +128,7 @@ const DATA = {
     {
       year: 2024,
       title:
-        "Analysis of Quick Commerce Location Using Modified Network Centrality: focused on transportation cost of multi-location brand.",
+        "Analysis of Quick Commerce Location Using Modified Network Centrality: Focused on Transportation Cost of Multi-Location Brands",
       venue: "Journal of the Korean Urban Geographical Society, 27(1):17–32",
       url: "https://doi.org/10.21189/JKUGS.27.1.2",
       tags: ["Quick commerce", "Network centrality", "Retail"],
@@ -152,7 +152,7 @@ const DATA = {
       title:
         "Storage: 2020 Korean Real Estate through the Eyes of Twenties (Book)",
       venue:
-        "Published by the SNU Real Estate Club (Contributing Author & Editor)",
+        "Published by the SNU Real Estate Club",
       url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
@@ -350,19 +350,19 @@ const DATA = {
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
       publishedRef:
-        "analysis-of-quick-commerce-location-using-modified-network-centrality",
+        "analysis-of-quick-commerce-location-using-modified-network-centrality: focused on transportation cost of multi-location brands",
       publishedLabel: "Published",
       highlights: {},
     },
     {
       year: 2023,
-      title:
+      title: 
         "Comparative Locational Analysis of Quick-Commerce versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
       venue: "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
       publishedRef:
-        "analysis-of-quick-commerce-location-using-modified-network-centrality",
+        "analysis-of-quick-commerce-location-using-modified-network-centrality: focused on transportation cost of multi-location brands",
       publishedLabel: "Published",
       highlights: {},
     },
