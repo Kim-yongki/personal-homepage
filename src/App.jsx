@@ -820,12 +820,31 @@ export default function App() {
       caption: "",
       idx: -1,
     });
+    const stripRef = React.useRef(null);
+
     if (!hlModal.open) return null;
 
-    const close = () => setHlModal({ open: false, title: "", html: "", images: [] });
+    const close = () =>
+      setHlModal({ open: false, title: "", html: "", images: [] });
+
     const images = (hlModal.images || []).map((img) =>
       typeof img === "string" ? { src: img, caption: "" } : img
     );
+
+    const openViewer = (i) =>
+      setViewer({
+        open: true,
+        src: resolveImgSrc(images[i].src),
+        caption: images[i].caption || "",
+        idx: i,
+      });
+
+    const scrollStrip = (dir = 1) => {
+      const el = stripRef.current;
+      if (!el) return;
+      const step = Math.min(300, el.clientWidth * 0.9);
+      el.scrollBy({ left: step * dir, behavior: "smooth" });
+    };
 
     return (
       <>
@@ -855,6 +874,7 @@ export default function App() {
               fontFamily: styles.fontFamily,
             }}
           >
+            {/* Modal header */}
             <div
               style={{
                 display: "flex",
@@ -864,39 +884,82 @@ export default function App() {
                 borderBottom: "1px solid #E2E8F0",
               }}
             >
-              <strong style={{ fontSize: 18 }}>
-                {hlModal.title} — Highlights
-              </strong>
-              <Button variant="outline" onClick={close}>
-                ✕ Close
-              </Button>
+              <strong style={{ fontSize: 18 }}>{hlModal.title} — Highlights</strong>
+              <Button variant="outline" onClick={close}>✕ Close</Button>
             </div>
 
+            {/* Modal body */}
             <div style={{ padding: 16, overflowY: "auto" }}>
+              {/* Thumbnails */}
               {images.length > 0 && (
-                <div className="thumb-grid" style={{ marginBottom: 12 }}>
-                  {images.map((im, i) => (
-                    <div key={i}>
-                      <img
-                        src={resolveImgSrc(im.src)}
-                        alt={`thumb-${i}`}
-                        className="thumb"
-                        onClick={() =>
-                          setViewer({
-                            open: true,
-                            src: resolveImgSrc(im.src),
-                            caption: im.caption || "",
-                            idx: i,
-                          })
-                        }
-                      />
-                      {im.caption ? (
-                        <div className="thumb-cap">{im.caption}</div>
-                      ) : null}
+                images.length >= 4 ? (
+                  // 5장 이상: 가로 스크롤 스트립
+                  <div className="thumb-strip-wrap" style={{ marginBottom: 12 }}>
+                    <button
+                      type="button"
+                      className="strip-nav strip-left"
+                      aria-label="Scroll left"
+                      onClick={() => scrollStrip(-1)}
+                    >
+                      ◀
+                    </button>
+                    <div className="thumb-strip" ref={stripRef}>
+                      {images.map((im, i) => (
+                        <div key={i} className="thumb-item">
+                          <img
+                            src={resolveImgSrc(im.src)}
+                            alt={`thumb-${i}`}
+                            className="thumb"
+                            onClick={() => openViewer(i)}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter" || e.key === " ")
+                                openViewer(i);
+                            }}
+                            tabIndex={0}
+                            role="button"
+                          />
+                          {im.caption ? (
+                            <div className="thumb-cap">{im.caption}</div>
+                          ) : null}
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                    <button
+                      type="button"
+                      className="strip-nav strip-right"
+                      aria-label="Scroll right"
+                      onClick={() => scrollStrip(1)}
+                    >
+                      ▶
+                    </button>
+                  </div>
+                ) : (
+                  // 4장 이하: 기존 그리드
+                  <div className="thumb-grid" style={{ marginBottom: 12 }}>
+                    {images.map((im, i) => (
+                      <div key={i}>
+                        <img
+                          src={resolveImgSrc(im.src)}
+                          alt={`thumb-${i}`}
+                          className="thumb"
+                          onClick={() => openViewer(i)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ")
+                              openViewer(i);
+                          }}
+                          tabIndex={0}
+                          role="button"
+                        />
+                        {im.caption ? (
+                          <div className="thumb-cap">{im.caption}</div>
+                        ) : null}
+                      </div>
+                    ))}
+                  </div>
+                )
               )}
+
+              {/* HTML highlights */}
               {hlModal.html && (
                 <div
                   style={{ color: "#334155", lineHeight: 1.7 }}
@@ -907,12 +970,11 @@ export default function App() {
           </div>
         </div>
 
+        {/* Lightbox */}
         {viewer.open && (
           <div
             className="lightbox"
-            onClick={() =>
-              setViewer({ open: false, src: "", caption: "", idx: -1 })
-            }
+            onClick={() => setViewer({ open: false, src: "", caption: "", idx: -1 })}
           >
             <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <div className="lightbox-top">
