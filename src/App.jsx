@@ -111,7 +111,7 @@ const DATA = {
       tags: ["Equity", "Road network", "Detour cost"],
       highlights: {
         html: `
-        <p>The endogeneity of road distance (i.e., detours) within bid-rent theory was articulated, and a conceptual framework for evaluating equity in road networks was proposed. Based on the equal-sacrifice principle, an empirical analysis was conducted for small and mid-sized cities in South Korea.</p>
+        <p>Articulated the endogeneity of road distance (i.e., detours) within bid-rent theory, and proposed a conceptual framework for evaluating equity in road networks. Based on the equal-sacrifice principle, conducted an empirical analysis for small and mid-sized cities in South Korea.</p>
         <ul>
           <li><b>Methodology.</b> Compared Euclidean and network distances, analyzed within-city accessibility dispersion using the standard deviation and the Gini coefficient, and assessed road-network equity under absolute, proportional, and marginal equal-sacrifice criteria.</li>
           <li><b>Findings.</b> Dispersion in network distances (SD, Gini) generally exceeded that of Euclidean distances, reflecting amplified Euclidean-based gaps and/or unequal development of road networks.</li>
@@ -179,7 +179,7 @@ const DATA = {
       highlights: {
         html: `
         <p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> May 2025 – ongoing</p>
-        <p>Using inter-firm transaction big data, network analysis was conducted and economic regions were delineated in South Korea.</p>
+        <p>Using inter-firm transaction big data, conducted network analysis and delineated economic regions in South Korea.</p>
         <ul>
           <li><b>Methodology.</b> Constructed an inter-firm transaction graph and performed network centrality analysis, community detection, and polycentricity analysis.</li>
           <li><b>Findings.</b> Identified spatial patterns of transactions and inter-regional link structures differentiated by industry and firm size.</li>
@@ -202,7 +202,7 @@ const DATA = {
       highlights: {
         html: `
         <p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> Jun – Dec 2024</p>
-        <p>Exploratory spatial data analysis (ESDA) was conducted using SME financial information and related indicators.</p>
+        <p>Conducted exploratory spatial data analysis (ESDA) using corporate financial information and related indicators</p>
         <ul>
           <li><b>Methodology.</b> Performed spatial and aspatial analyses on time-series data for sales and other firm-level indicators.</li>
           <li><b>Findings.</b> Detected spatial heterogeneity and local clusters that were not apparent in publicly available datasets (e.g., firm counts).</li>
@@ -224,7 +224,7 @@ const DATA = {
       highlights: {
         html: `
         <p><b>Role:</b> Graduate Student Research Assistant · <b>Institution:</b> SNU Geography · <b>Period:</b> Jan – Feb 2025</p>
-        <p>Interdisciplinary degree programs in South Korea related to geography were surveyed.</p>
+        <p>Surveyed interdisciplinary degree programs in South Korea related to geography.</p>
         <ul>
           <li><b>Methodology.</b> Built a list of geography-related programs, typologized cross-disciplinary structures, and compared curricula.</li>
           <li><b>Findings.</b> Organized program compositions by department and found that geography departments participate in many interdisciplinary majors with GIS-centered competencies.</li>
@@ -242,7 +242,7 @@ const DATA = {
       highlights: {
         html: `
         <p><b>Role:</b> Project Lead · <b>Organization:</b> SNUSRC Real Estate Club · <b>Period:</b> Aug – Dec 2020</p>
-        <p>A sponsored series of real-estate market reports was produced through a student-led initiative.</p>
+        <p>Produced a sponsored series of real-estate market reports through a student-led initiative.</p>
         <ul>
           <li><b>I.</b> Managed sponsorships, coordinated contributors, and edited recurring briefings.</li>
           <li><b>II.</b> Delivered timely syntheses of key market issues and insights for an industry readership.</li>
@@ -598,9 +598,15 @@ function ResponsiveStyles() {
       }
       .flash-highlight { outline: 2px solid #22c55e; animation: flashBorder 1.8s ease-out 0s 2; border-radius: 16px; }
 
-      .thumb-grid { display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0,1fr)); }
-      .thumb { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #E2E8F0; border-radius: 10px; cursor: zoom-in; display: block; }
+      .thumb-grid {display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0,1fr));}
+      .thumb {width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #E2E8F0; border-radius: 10px; cursor: zoom-in; display: block;}
       .thumb-cap{ font-size: 12px; color: #475569; margin-top: 4px; line-height: 1.4; }
+
+      .thumb-strip {display: flex; gap: 8px; overflow-x: auto; overflow-y: hidden; padding-bottom: 6px; scroll-snap-type: x mandatory;}
+      .thumb-item { flex: 0 0 auto; width: 180px; scroll-snap-align: start; }
+      .thumb-strip .thumb {width: 100%; aspect-ratio: 4 / 3; }
+
+      @media (max-width: 520px){ .thumb-item { width: 150px; } }
 
       .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; }
       .lightbox-inner { background: #fff; max-width: min(1100px, 94vw); max-height: 92vh; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
