@@ -614,9 +614,10 @@ function ResponsiveStyles() {
         gap: 8px;
         overflow-x: auto;
         overflow-y: hidden;
-        padding: 6px 36px; /* 좌우 화살표 여백 */
+        padding: 6px 8px;  /* 화살표 없어졌으니 여백 최소화 */
         scroll-snap-type: x mandatory;
       }
+
 
       .thumb-item {
         flex: 0 0 auto;
@@ -934,12 +935,27 @@ export default function App() {
               {/* Thumbnails */}
               {images.length > 0 && (
                 images.length >= 4 ? (
-                  // 5장 이상: 가로 스크롤 스트립
+                  // 4장 이상: 가로 스크롤 스트립 (화살표 없이)
                   <div className="thumb-strip-wrap" style={{ marginBottom: 12 }}>
-                
+                    <div className="thumb-strip" ref={stripRef}>
+                      {images.map((im, i) => (
+                        <div key={i} className="thumb-item">
+                          <img
+                            src={resolveImgSrc(im.src)}
+                            alt={`thumb-${i}`}
+                            className="thumb"
+                            onClick={() => openViewer(i)}
+                            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") openViewer(i); }}
+                            tabIndex={0}
+                            role="button"
+                          />
+                          {im.caption ? (<div className="thumb-cap">{im.caption}</div>) : null}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ) : (
-                  // 4장 이하: 기존 그리드
+                  // 3장 이하: 그리드
                   <div className="thumb-grid" style={{ marginBottom: 12 }}>
                     {images.map((im, i) => (
                       <div key={i}>
@@ -948,16 +964,11 @@ export default function App() {
                           alt={`thumb-${i}`}
                           className="thumb"
                           onClick={() => openViewer(i)}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ")
-                              openViewer(i);
-                          }}
+                          onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") openViewer(i); }}
                           tabIndex={0}
                           role="button"
                         />
-                        {im.caption ? (
-                          <div className="thumb-cap">{im.caption}</div>
-                        ) : null}
+                        {im.caption ? (<div className="thumb-cap">{im.caption}</div>) : null}
                       </div>
                     ))}
                   </div>
