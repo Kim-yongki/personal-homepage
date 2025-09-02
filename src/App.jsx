@@ -627,6 +627,10 @@ function ResponsiveStyles() {
         border-radius: 10px;
         cursor: zoom-in;
         display: block;
+        image-rendering: auto;          /* crisp-edges 제거 → 과도한 톱니현상 방지 */
+        -ms-interpolation-mode: bicubic;/* (레거시 IE용, 해가 되진 않음) */
+        transform: translateZ(0);       /* GPU 보간 유도 → 축소 시 덜 깨짐 */
+        backface-visibility: hidden;
       }
 
       .thumb-cap {
