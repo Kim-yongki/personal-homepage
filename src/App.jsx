@@ -613,11 +613,9 @@ function ResponsiveStyles() {
         padding: 6px;
         scroll-snap-type: x mandatory;
       }
-
-      /* ✨ 항상 같은 크기: 컨테이너 대비 1/3 폭을 기본으로, 120~160px 사이로 클램프 */
+        
       .thumb-item {
-        flex: 0 0 auto;
-        width: clamp(120px, calc((100% - 16px) / 3), 160px);
+        flex: 0 0 calc((100% - 16px) / 3); /* gap 고려해서 3장만 보이게 */
         scroll-snap-align: start;
       }
 
