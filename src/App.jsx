@@ -598,17 +598,13 @@ function ResponsiveStyles() {
       }
       .flash-highlight { outline: 2px solid #22c55e; animation: flashBorder 1.8s ease-out 0s 2; border-radius: 16px; }
 
-      .thumb-grid {display: grid; gap: 8px; grid-template-columns: repeat(3, minmax(0,1fr));}
-      .thumb {width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #E2E8F0; border-radius: 10px; cursor: zoom-in; display: block;}
-      .thumb-cap{ font-size: 12px; color: #475569; margin-top: 4px; line-height: 1.4; }
-
       /* ── Thumb strip: 항상 가로 스크롤, 얇고 작게 ── */
-      /* ── Thumb strip: 항상 가로 스크롤, 3장 정도 보이도록 ── */
       .thumb-strip-wrap {
         position: relative;
         margin-bottom: 10px;
       }
 
+      /* grid는 더 이상 안 써도 무방하지만 남겨둬도 문제 없음 */
       .thumb-strip {
         display: flex;
         gap: 8px;
@@ -618,11 +614,10 @@ function ResponsiveStyles() {
         scroll-snap-type: x mandatory;
       }
 
+      /* ✨ 항상 같은 크기: 컨테이너 대비 1/3 폭을 기본으로, 120~160px 사이로 클램프 */
       .thumb-item {
         flex: 0 0 auto;
-        width: calc((100% - 16px) / 3); /* 3장만 딱 보이게 */
-        max-width: 160px;
-        min-width: 120px;
+        width: clamp(120px, calc((100% - 16px) / 3), 160px);
         scroll-snap-align: start;
       }
 
@@ -647,7 +642,6 @@ function ResponsiveStyles() {
       @media (max-width: 520px){
         .thumb-item { width: 45%; max-width: 140px; min-width: 110px; }
       }
-
 
       .lightbox { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; }
       .lightbox-inner { background: #fff; max-width: min(1100px, 94vw); max-height: 92vh; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,.35); }
@@ -933,43 +927,22 @@ export default function App() {
             <div style={{ padding: 16, overflowY: "auto" }}>
               {/* Thumbnails */}
               {images.length > 0 && (
-                images.length > 3 ? (
-                  // 3장만 기본으로 보이고, 나머지는 스크롤
-                  <div className="thumb-strip" style={{ marginBottom: 12 }}>
-                    {images.map((im, i) => (
-                      <div key={i} className="thumb-item">
-                        <img
-                          src={resolveImgSrc(im.src)}
-                          alt={`thumb-${i}`}
-                          className="thumb"
-                          onClick={() => openViewer(i)}
-                          tabIndex={0}
-                          role="button"
-                        />
-                        {im.caption && <div className="thumb-cap">{im.caption}</div>}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  // 3장 이하일 때는 grid
-                  <div className="thumb-grid" style={{ marginBottom: 12 }}>
-                    {images.map((im, i) => (
-                      <div key={i}>
-                        <img
-                          src={resolveImgSrc(im.src)}
-                          alt={`thumb-${i}`}
-                          className="thumb"
-                          onClick={() => openViewer(i)}
-                          tabIndex={0}
-                          role="button"
-                        />
-                        {im.caption && <div className="thumb-cap">{im.caption}</div>}
-                      </div>
-                    ))}
-                  </div>
-                )
+                <div className="thumb-strip" style={{ marginBottom: 12 }}>
+                  {images.map((im, i) => (
+                    <div key={i} className="thumb-item">
+                      <img
+                        src={resolveImgSrc(im.src)}
+                        alt={`thumb-${i}`}
+                        className="thumb"
+                        onClick={() => openViewer(i)}
+                        tabIndex={0}
+                        role="button"
+                      />
+                      {im.caption && <div className="thumb-cap">{im.caption}</div>}
+                    </div>
+                  ))}
+                </div>
               )}
-
               {/* HTML highlights */}
               {hlModal.html && (
                 <div
