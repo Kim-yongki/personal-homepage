@@ -193,6 +193,10 @@ Error generating stack: `+i.message+`
         border-radius: 10px;
         cursor: zoom-in;
         display: block;
+        image-rendering: auto;          /* crisp-edges \uC81C\uAC70 \u2192 \uACFC\uB3C4\uD55C \uD1B1\uB2C8\uD604\uC0C1 \uBC29\uC9C0 */
+        -ms-interpolation-mode: bicubic;/* (\uB808\uAC70\uC2DC IE\uC6A9, \uD574\uAC00 \uB418\uC9C4 \uC54A\uC74C) */
+        transform: translateZ(0);       /* GPU \uBCF4\uAC04 \uC720\uB3C4 \u2192 \uCD95\uC18C \uC2DC \uB35C \uAE68\uC9D0 */
+        backface-visibility: hidden;
       }
 
       .thumb-cap {
