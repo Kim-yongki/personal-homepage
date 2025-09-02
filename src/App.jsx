@@ -153,7 +153,7 @@ const DATA = {
         "Storage: 2020 Korean Real Estate through the Eyes of Twenties (Book)",
       venue:
         "Published by the SNU Real Estate Club",
-      url: "https://tumblbug.com/rep?ref=GNB%2F%EC%A0%84%EC%B2%B4",
+      url: "https://books.google.co.kr/books/about/Storage.html?id=Tx_szgEACAAJ&redir_esc=y",
       tags: ["Real estate", "Finance", "Policy"],
       highlights: {
         html: `
