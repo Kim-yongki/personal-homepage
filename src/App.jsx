@@ -614,14 +614,13 @@ function ResponsiveStyles() {
         gap: 8px;
         overflow-x: auto;
         overflow-y: hidden;
-        padding: 6px 8px;  /* 화살표 없어졌으니 여백 최소화 */
+        padding: 6px;
         scroll-snap-type: x mandatory;
       }
 
-
       .thumb-item {
         flex: 0 0 auto;
-        width: 32%;              /* 모달 기준 3장 보이도록 */
+        width: calc((100% - 16px) / 3); /* 3장만 딱 보이게 */
         max-width: 160px;
         min-width: 120px;
         scroll-snap-align: start;
@@ -629,7 +628,7 @@ function ResponsiveStyles() {
 
       .thumb {
         width: 100%;
-        aspect-ratio: 4 / 3;     /* 세로 얇아지지 않고 비율 유지 */
+        aspect-ratio: 4 / 3;
         object-fit: cover;
         border: 1px solid #E2E8F0;
         border-radius: 10px;
@@ -934,28 +933,25 @@ export default function App() {
             <div style={{ padding: 16, overflowY: "auto" }}>
               {/* Thumbnails */}
               {images.length > 0 && (
-                images.length >= 4 ? (
-                  // 4장 이상: 가로 스크롤 스트립 (화살표 없이)
-                  <div className="thumb-strip-wrap" style={{ marginBottom: 12 }}>
-                    <div className="thumb-strip" ref={stripRef}>
-                      {images.map((im, i) => (
-                        <div key={i} className="thumb-item">
-                          <img
-                            src={resolveImgSrc(im.src)}
-                            alt={`thumb-${i}`}
-                            className="thumb"
-                            onClick={() => openViewer(i)}
-                            onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") openViewer(i); }}
-                            tabIndex={0}
-                            role="button"
-                          />
-                          {im.caption ? (<div className="thumb-cap">{im.caption}</div>) : null}
-                        </div>
-                      ))}
-                    </div>
+                images.length > 3 ? (
+                  // 3장만 기본으로 보이고, 나머지는 스크롤
+                  <div className="thumb-strip" style={{ marginBottom: 12 }}>
+                    {images.map((im, i) => (
+                      <div key={i} className="thumb-item">
+                        <img
+                          src={resolveImgSrc(im.src)}
+                          alt={`thumb-${i}`}
+                          className="thumb"
+                          onClick={() => openViewer(i)}
+                          tabIndex={0}
+                          role="button"
+                        />
+                        {im.caption && <div className="thumb-cap">{im.caption}</div>}
+                      </div>
+                    ))}
                   </div>
                 ) : (
-                  // 3장 이하: 그리드
+                  // 3장 이하일 때는 grid
                   <div className="thumb-grid" style={{ marginBottom: 12 }}>
                     {images.map((im, i) => (
                       <div key={i}>
@@ -964,11 +960,10 @@ export default function App() {
                           alt={`thumb-${i}`}
                           className="thumb"
                           onClick={() => openViewer(i)}
-                          onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") openViewer(i); }}
                           tabIndex={0}
                           role="button"
                         />
-                        {im.caption ? (<div className="thumb-cap">{im.caption}</div>) : null}
+                        {im.caption && <div className="thumb-cap">{im.caption}</div>}
                       </div>
                     ))}
                   </div>
