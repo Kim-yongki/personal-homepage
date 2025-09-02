@@ -350,7 +350,7 @@ const DATA = {
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
       publishedRef:
-        "analysis-of-quick-commerce-location-using-modified-network-centrality: focused on transportation cost of multi-location brands",
+        "analysis-of-quick-commerce-location-using-modified-network-centrality:-focused-on-transportation-cost-of-multi-location-brands",
       publishedLabel: "Published",
       highlights: {},
     },
@@ -362,7 +362,7 @@ const DATA = {
       url: "",
       tags: ["Q-commerce", "Centrality", "MFC"],
       publishedRef:
-        "analysis-of-quick-commerce-location-using-modified-network-centrality: focused on transportation cost of multi-location brands",
+        "analysis-of-quick-commerce-location-using-modified-network-centrality:-focused-on-transportation-cost-of-multi-location-brands",
       publishedLabel: "Published",
       highlights: {},
     },
@@ -823,7 +823,7 @@ export default function App() {
                           {type === "talks" && it.publishedRef && (
                             <Button
                               variant="outline"
-                              onClick={() => goToAndFlash(it.publishedRef)}
+                              onClick={() => goToAndFlash(slug(it.publishedRef))}
                               title="Go to the corresponding publication"
                             >
                               Related Paper
@@ -834,7 +834,7 @@ export default function App() {
                           {type === "talks" && it.relatedProjectRef && (
                             <Button
                               variant="outline"
-                              onClick={() => goToAndFlash(it.relatedProjectRef)}
+                              onClick={() => goToAndFlash(slug(it.relatedProjectRef))}
                               title="Go to the related project"
                             >
                               Related Project
