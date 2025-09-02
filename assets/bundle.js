@@ -179,11 +179,9 @@ Error generating stack: `+i.message+`
         padding: 6px;
         scroll-snap-type: x mandatory;
       }
-
-      /* \u2728 \uD56D\uC0C1 \uAC19\uC740 \uD06C\uAE30: \uCEE8\uD14C\uC774\uB108 \uB300\uBE44 1/3 \uD3ED\uC744 \uAE30\uBCF8\uC73C\uB85C, 120~160px \uC0AC\uC774\uB85C \uD074\uB7A8\uD504 */
+        
       .thumb-item {
-        flex: 0 0 auto;
-        width: clamp(120px, calc((100% - 16px) / 3), 160px);
+        flex: 0 0 calc((100% - 16px) / 3); /* gap \uACE0\uB824\uD574\uC11C 3\uC7A5\uB9CC \uBCF4\uC774\uAC8C */
         scroll-snap-align: start;
       }
 
