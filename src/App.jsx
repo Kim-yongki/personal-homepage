@@ -61,7 +61,7 @@ const DATA = {
       year: 2025,
       title:
         "Rethinking Linear-City Accessibility: Development of Linearity Indices",
-      venue: "[Under Review] Journal of Transport Geography",
+      venue: "[Under Review]",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
       highlights: {
