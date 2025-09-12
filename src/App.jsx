@@ -1057,7 +1057,7 @@ export default function App() {
       {/* Header */}
       <header style={styles.header}>
         <div style={{ ...styles.container, ...styles.navRow }} className="r-container">
-          <a href="#home" style={{ ...styles.link, fontWeight: 700, fontSize: 20 }}>
+          <a href="#home" style={{ ...styles.link, fontWeight: 700, fontSize: 30 }}>
             {CONFIG.site.ownerName}
           </a>
           <nav style={styles.navLinks} className="r-nav">
