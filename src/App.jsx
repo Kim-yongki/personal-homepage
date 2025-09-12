@@ -66,9 +66,9 @@ const DATA = {
       tags: ["Linear city", "Accessibility", "Index development"],
       highlights: {
         html: `
-        <p>To test whether linear road configurations actually improve accessibility and equity, two flow-based linearity indices were developed and applied to 65 cities in South Korea.</p>
+        <p>To test the prevailing assumption that linear road configurations improve accessibility and equity, we developed two flow-based linearity indices and applied them to 65 cities in South Korea.</p>
         <ul>
-          <li><b>Methodology.</b> Defined the Morphological Linearity Index and the Structural Linearity Index, and analyzed their correlation with accessibility in small and mid-sized cities.</li>
+          <li><b>Methodology.</b> Defined the Morphological Linearity Index (MLI) and the Structural Linearity Index (SLI), and analyzed their correlation with accessibility in small and mid-sized cities.</li>
           <li><b>Findings.</b> Higher MLI was associated with lower mean detour rates but slightly longer average trip distances, whereas higher SLI corresponded to higher detour rates and greater detour inequality.</li>
           <li><b>Implications.</b> The results suggest that a linear urban form is not inherently efficient or equitable; benefits materialize only when it is coupled with capacity-rich trunk corridors (e.g., fast regional rail) and careful corridor design.</li>
         </ul>`,
@@ -91,8 +91,8 @@ const DATA = {
         <p>This thesis quantified how fulfillment-based delivery reshaped logistics space in the Seoul Capital Area (SCA) and where transport and detour costs concentrated along supply chains.</p>
         <ul>
           <li><b>Methodology.</b> Using parcel OD and firm data (CJ Logistics vs. Coupang), terminal allocation and route-optimization-based simulations were conducted for hub-and-spoke versus fulfillment scenarios, and changes in logistics space—including logistics sprawl—were interpreted from both market- and public-sector perspectives.</li>
-          <li><b>Findings 1.</b> Fulfillment enhanced transport efficiency by minimizing detours along transport chains and achieved substantial transport-cost savings via consumer proximity.</li>
-          <li><b>Findings 2.</b> As an investment asset, logistics facilities increasingly sprawled, driven more by real-estate market liquidity than by network optimization; similar dynamics appeared even in public-led supply.</li>
+          <li><b>Findings 1.</b> In e-commerce fulfillment, the proximity of logistics facilities, especially hubs, to consumers is much more important than in traditional parcel delivery systems. This strategic positioning minimizes detours along the transportation chain, achieving substantial cost savings. </li>
+          <li><b>Findings 2.</b> Logistics facilities have increasingly sprawled, driven more by the liquidity of the real estate market than by the effectiveness of the network. This phenomenon became more pronounced as the urban periphery absorbed the surge in demand for large-scale logistics facilities during the pandemic.</li>
           <li><b>Implications.</b> The findings underscore the growing importance of optimizing location and allocation strategies for proximity logistics and transport networks, and highlight the need for government-led siting incentives to support the formation of logistics clusters.</li>
         </ul>`,
         images: [
