@@ -10,7 +10,7 @@ const CONFIG = {
       "https://drive.google.com/file/d/1y6qNMvp16ZrmA4EqHIb09fLoe-ipbIov/view?usp=drive_link",
   },
   hero: {
-    title: "Urban Kinetic: \n Anatomy of City Networks",
+    title: "Urban Kinetics: \n Anatomy of City Networks",
     blurb: "",
     badges: [
       "Transport Geography",
@@ -1108,7 +1108,9 @@ export default function App() {
                 wordBreak: "break-all",
               }}
             >
-              {CONFIG.hero.title}
+              {CONFIG.hero.title.split("\n").map((line, index) => (
+                <span key={index}> style={{ display: "block" }}>{line}</span>
+              ))}
             </h1>
             <p style={{ marginTop: 16, color: "#475569", lineHeight: 1.6 }}>
               {CONFIG.hero.blurb}
