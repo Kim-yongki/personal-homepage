@@ -91,8 +91,8 @@ const DATA = {
         <p>This thesis quantified how fulfillment-based delivery reshaped logistics space in the Seoul Capital Area (SCA) and where transport and detour costs concentrated along supply chains.</p>
         <ul>
           <li><b>Methodology.</b> Using parcel OD and firm data (CJ Logistics vs. Coupang), terminal allocation and route-optimization-based simulations were conducted for hub-and-spoke versus fulfillment scenarios, and changes in logistics space—including logistics sprawl—were interpreted from both market- and public-sector perspectives.</li>
-          <li><b>Findings 1.</b> In e-commerce fulfillment, the proximity of logistics facilities, especially hubs, to consumers is much more important than in traditional parcel delivery systems. This strategic positioning minimizes detours along the transportation chain, achieving substantial cost savings. </li>
-          <li><b>Findings 2.</b> Logistics facilities have increasingly sprawled, driven more by the liquidity of the real estate market than by the effectiveness of the network. This phenomenon became more pronounced as the urban periphery absorbed the surge in demand for large-scale logistics facilities during the pandemic.</li>
+          <li><b>Findings 1.</b> The ability to dynamically route orders from the most optimal location makes consumer proximity a significantly more important factor in e-commerce fulfillment than in traditional, rigid parcel networks. </li>
+          <li><b>Findings 2.</b> However, logistics facilities have increasingly sprawled, driven more by the liquidity of the real estate market than by the effectiveness of the network. This phenomenon became more pronounced as the urban periphery absorbed the surge in demand for large-scale logistics facilities during the pandemic.</li>
           <li><b>Implications.</b> The findings underscore the growing importance of optimizing location and allocation strategies for proximity logistics and transport networks, and highlight the need for government-led siting incentives to support the formation of logistics clusters.</li>
         </ul>`,
         images: [
@@ -114,7 +114,7 @@ const DATA = {
         <p>Articulated the endogeneity of road distance (i.e., detours) within bid-rent theory, and proposed a conceptual framework for evaluating equity in road networks. Based on the equal-sacrifice principle, conducted an empirical analysis for small and mid-sized cities in South Korea.</p>
         <ul>
           <li><b>Methodology.</b> Compared Euclidean and network distances, analyzed within-city accessibility dispersion using the standard deviation and the Gini coefficient, and assessed road-network equity under absolute, proportional, and marginal equal-sacrifice criteria.</li>
-          <li><b>Findings.</b> Dispersion in network distances (SD, Gini) generally exceeded that of Euclidean distances, reflecting amplified Euclidean-based gaps and/or unequal development of road networks.</li>
+          <li><b>Findings.</b> Dispersion in road network distances (SD, Gini) generally exceeded that of Euclidean distances, reflecting amplified Euclidean-based gaps and/or unequal development of road networks.</li>
           <li><b>Implications.</b> Articulates concrete policy goals that road networks—as a public service—can pursue beyond “free use,” and recommends embedding such goals into road-network planning and appraisal.</li>
         </ul>`,
         images: [
