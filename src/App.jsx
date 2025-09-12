@@ -1109,7 +1109,7 @@ export default function App() {
               }}
             >
               {CONFIG.hero.title.split("\n").map((line, index) => (
-                <span key={index}> style={{ display: "block" }}>{line}</span>
+                <span key={index} style={{ display: "block" }}>{line}</span>
               ))}
             </h1>
             <p style={{ marginTop: 16, color: "#475569", lineHeight: 1.6 }}>
