@@ -91,7 +91,7 @@ const DATA = {
         <p>This thesis quantified how fulfillment-based delivery reshaped logistics space in the Seoul Capital Area (SCA) and where transport and detour costs concentrated along supply chains.</p>
         <ul>
           <li><b>Methodology.</b> Using parcel OD and firm data (CJ Logistics vs. Coupang), terminal allocation and route-optimization-based simulations were conducted for hub-and-spoke versus fulfillment scenarios, and changes in logistics space—including logistics sprawl—were interpreted from both market- and public-sector perspectives.</li>
-          <li><b>Findings 1.</b> The ability to dynamically route orders from the most optimal location makes consumer proximity a significantly more important factor in e-commerce fulfillment than in traditional, rigid parcel networks. </li>
+          <li><b>Findings 1.</b> Fulfillment services allow more flexible routing, making consumer proximity a significantly more important factor than in traditional, rigid parcel networks.</li>
           <li><b>Findings 2.</b> However, logistics facilities have increasingly sprawled, driven more by the liquidity of the real estate market than by the effectiveness of the network. This phenomenon became more pronounced as the urban periphery absorbed the surge in demand for large-scale logistics facilities during the pandemic.</li>
           <li><b>Implications.</b> The findings underscore the growing importance of optimizing location and allocation strategies for proximity logistics and transport networks, and highlight the need for government-led siting incentives to support the formation of logistics clusters.</li>
         </ul>`,
