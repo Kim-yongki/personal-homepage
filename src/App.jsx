@@ -10,15 +10,14 @@ const CONFIG = {
       "https://drive.google.com/file/d/1y6qNMvp16ZrmA4EqHIb09fLoe-ipbIov/view?usp=drive_link",
   },
   hero: {
-    title: "Transport • Urban Geography",
+    title: "Urban Kinetic: \n Anatomy of City Networks",
     blurb: "",
     badges: [
       "Transport Geography",
       "Urban Planning",
       "Logistics",
       "Real Estate",
-      "Spatial Data Science",
-      "Network Analysis",
+      "Spatial Data Science"
     ],
   },
   person: {
