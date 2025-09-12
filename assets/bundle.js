@@ -114,7 +114,7 @@ Error generating stack: `+i.message+`
       }
       .hero-gallery{
         margin-top: 8px;
-        max-height: 260px;
+        max-height: 390px;
         overflow-y: auto;
         border: 1px solid #E2E8F0;
         border-radius: 12px;
