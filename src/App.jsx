@@ -534,11 +534,11 @@ function ResponsiveStyles() {
         .r-cols-3, .r-cols-2 { grid-template-columns: repeat(1, minmax(0,1fr)); }
         .r-nav { gap: 12px; }
         .r-nav a { font-size: 16px; }
-        .r-profile { width:96px; height:96px; }
+        .r-profile { width:120px; height:120px; }
       }
 
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
-      .r-profile { width:120px; height:120px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
+      .r-profile { width:180px; height:180px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
       /* ── Hero figure gallery ── */
       .hg-hint{
