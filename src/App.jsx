@@ -194,7 +194,7 @@ const DATA = {
     {
       year: 2024,
       title:
-        "A Study on Advancing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",
+        "A Study on Developing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",
       descr: "Funded by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
@@ -304,7 +304,7 @@ const DATA = {
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
       relatedProjectRef:
-        "a-study-on-advancing-big-data-based-policy-evaluation-for-small-and-medium-sized-enterprises",
+        "a-study-on-developing-big-data-based-policy-evaluation-for-small-and-medium-sized-enterprises",
       highlights: {},
     },
     {
