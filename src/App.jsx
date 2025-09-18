@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-/** ───────────────────── 0) CONTENT CONFIGURATION (Edit this section only) ───────────────────── */
+/** ───────────────────── 0) CONTENT CONFIGURATION ───────────────────── */
 const CONFIG = {
   site: {
     ownerName: "Yongki Kim",
@@ -44,7 +44,7 @@ const CONFIG = {
 };
 
 
-/** ───────────────────── 1) SECTION DATA (Edit this section only) ───────────────────── */
+/** ───────────────────── 1) SECTION DATA ───────────────────── */
 const DATA = {
   publications: [
     {
