@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-/** ───────────────────── 0) CONTENT CONFIG (여기만 수정) ───────────────────── */
+/** ───────────────────── 0) CONTENT CONFIGURATION (Edit this section only) ───────────────────── */
 const CONFIG = {
   site: {
     ownerName: "Yongki Kim",
     fontFamily: `'Times New Roman', Times, serif`,
-    profileImage: "./profile image.jpg", // /public 기준
+    profileImage: "./profile image.jpg", // Relative to /public directory
     cvUrl:
       "https://drive.google.com/file/d/1y6qNMvp16ZrmA4EqHIb09fLoe-ipbIov/view?usp=drive_link",
   },
@@ -22,7 +22,7 @@ const CONFIG = {
   },
   person: {
     about:
-      "Hi! I’m an M.A. student in Geography at Seoul National University (SNU), studying the impact of transport networks and urban structures on accessibility and equity. My core academic approach is to translate complex urban challenges into tractable problems by developing clear indicators and analytical frameworks for evidence-based decision-making. Applying this approach, my research interest lies in how to weave efficient, sustainable, and affordable logistics into the urban syntax.",
+      "Hi! I’m an M.A. student in Geography at Seoul National University (SNU), studying the impact of transport networks and urban structures on accessibility and equity. My core academic approach is to translate complex urban challenges into tractable problems by developing clear indicators and analytical frameworks for evidence-based decision-making. Applying this approach, my research interest lies in how to weave efficient and affordable logistics into the urban syntax.",
     location: "Seoul, South Korea",
     emails: ["pauluhill74@gmail.com", "pauluhill@snu.ac.kr"],
     links: {
@@ -43,17 +43,8 @@ const CONFIG = {
   ],
 };
 
-/** ───────────────────── 0.5) 이미지 경로 resolver (figures 폴더 지원) ───────────────────── */
-// figures 폴더가 public/figures 에 있다고 가정 → /figures/파일명 으로 접근
-const IMAGE_BASE = "/figures/";
-function resolveImgSrc(src) {
-  if (!src) return src;
-  if (/^(https?:)?\/\//i.test(src) || /^data:/i.test(src)) return src;
-  if (/^\.?\/?figures\//i.test(src)) return src.replace(/^\.?\//, "/");
-  return `${IMAGE_BASE}${src.replace(/^\.?\//, "")}`;
-}
 
-/** ───────────────────── 1) SECTION DATA (여기만 수정) ───────────────────── */
+/** ───────────────────── 1) SECTION DATA (Edit this section only) ───────────────────── */
 const DATA = {
   publications: [
     {
@@ -299,7 +290,7 @@ const DATA = {
     {
       year: 2024,
       title:
-        "Differentials in Spatial Agglomeration among Government-Supported versus Non-Supported SMEs: An Exploratory Spatial Data Analysis",
+        "Differences in Spatial Agglomeration among Government-Supported versus Non-Supported SMEs: An Exploratory Spatial Data Analysis",
       venue: "2024W Conference of the Korean Urban Geographical Society, Gwangju (Dec. 12)",
       url: "",
       tags: ["SME", "Agglomeration", "ESDA"],
@@ -355,7 +346,7 @@ const DATA = {
     },
     {
       year: 2023,
-      title: 
+      title:
         "Comparative Locational Analysis of Quick-Commerce versus Conventional Retail Stores: A Network Centrality and Coverage Perspective",
       venue: "2023W Conference of the Korean Urban Geographical Society, Seoul (Dec. 9)",
       url: "",
@@ -370,14 +361,22 @@ const DATA = {
 
 
 
-/** ───────────────────── 1.5) 갤러리 자동 수집기 ───────────────────── */
-/** publications/projects/talks의 highlights.images를 모아 히어로 갤러리 생성 */
+/** ───────────────────── 1.5) AUTOMATIC GALLERY BUILDER ───────────────────── */
+/** Gathers `highlights.images` from publications, projects, and talks to create the hero gallery. */
+const IMAGE_BASE = "/figures/";
+function resolveImgSrc(src) {
+  if (!src) return src;
+  if (/^(https?:)?\/\//i.test(src) || /^data:/i.test(src)) return src;
+  if (/^\.?\/?figures\//i.test(src)) return src.replace(/^\.?\//, "/");
+  return `${IMAGE_BASE}${src.replace(/^\.?\//, "")}`;
+}
+
 function buildHeroGallery(DATA, limit = 9999) {
   const seen = new Set();
   const items = [];
   function collectFromArray(arr) {
     (arr || []).forEach((entry) => {
-      const targetRef = slug(entry.title); // 카드 id
+      const targetRef = slug(entry.title); // Card ID
       const imgs = entry?.highlights?.images || [];
       imgs.forEach((im) => {
         const src = resolveImgSrc(typeof im === "string" ? im : im.src);
@@ -394,7 +393,7 @@ function buildHeroGallery(DATA, limit = 9999) {
   collectFromArray(DATA.publications);
   collectFromArray(DATA.projects);
   collectFromArray(DATA.talks);
-  // 🔀 랜덤 셔플
+  // 🔀 Randomly shuffle the items
   for (let i = items.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [items[i], items[j]] = [items[j], items[i]];
@@ -402,7 +401,7 @@ function buildHeroGallery(DATA, limit = 9999) {
   return limit ? items.slice(0, limit) : items;
 }
 
-/** ───────────────────── 2) Mini UI (no external deps) ───────────────────── */
+/** ───────────────────── 2) MINI UI FRAMEWORK (no external dependencies) ───────────────────── */
 const styles = {
   fontFamily: CONFIG.site.fontFamily,
   btn: {
@@ -463,14 +462,14 @@ const styles = {
   h2: { fontSize: 26, margin: "0 0 12px 0", fontWeight: 800 },
 };
 
-/** 유틸: 제목을 앵커 ID로 변환 */
+/** Utility: Converts a string into a URL-friendly slug for anchor IDs. */
 const slug = (s) =>
   s
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-/** 버튼/카드 컴포넌트 */
+/** Button and Card Components */
 function Button({ children, href, variant = "solid", size = "md", ...props }) {
   const style = {
     ...styles.btn.base,
@@ -505,7 +504,7 @@ function Badge({ children }) {
   return <span style={styles.badge}>{children}</span>;
 }
 
-/** ───────────────────── 3) Responsive & gallery & highlight CSS ───────────────────── */
+/** ───────────────────── 3) RESPONSIVE & DYNAMIC STYLES ───────────────────── */
 function ResponsiveStyles() {
   return (
     <style>{`
@@ -514,12 +513,12 @@ function ResponsiveStyles() {
       .r-cols-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
       .r-cols-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
 
-      /* 데스크톱: About | Text */
+      /* Desktop layout: About | Text */
       .r-hero { display: grid; grid-template-columns: 1fr 1.2fr; gap: 16px; align-items: center; grid-template-areas: "about text"; }
       .hero-text  { grid-area: text; }
       .hero-about { grid-area: about; }
 
-      /* 표시 토글 유틸 */
+      /* Visibility toggle utilities */
       .only-desktop { display: block; }
       .only-mobile { display: none; }
 
@@ -539,7 +538,7 @@ function ResponsiveStyles() {
       .r-nav { display:flex; gap:18px; align-items:center; flex-wrap: wrap; }
       .r-profile { width:180px; height:180px; border-radius:9999px; object-fit:cover; border:1px solid #E2E8F0; }
 
-      /* ── Hero figure gallery ── */
+      /* --- Hero Figure Gallery --- */
       .hg-hint{
         font-size: 12px;
         color: #64748B;
@@ -589,7 +588,7 @@ function ResponsiveStyles() {
         .hg-grid{ grid-template-columns: 1fr; }
       }
 
-      /* 카드 하이라이트 */
+      /* Card highlight animation */
       @keyframes flashBorder {
         0% { box-shadow: 0 0 0 rgba(34,197,94,0); }
         30% { box-shadow: 0 0 0 6px rgba(34,197,94,.25); }
@@ -597,13 +596,12 @@ function ResponsiveStyles() {
       }
       .flash-highlight { outline: 2px solid #22c55e; animation: flashBorder 1.8s ease-out 0s 2; border-radius: 16px; }
 
-      /* ── Thumb strip: 항상 가로 스크롤, 얇고 작게 ── */
+      /* --- Thumbnail Strip: Always horizontal, thin, and compact --- */
       .thumb-strip-wrap {
         position: relative;
         margin-bottom: 10px;
       }
 
-      /* grid는 더 이상 안 써도 무방하지만 남겨둬도 문제 없음 */
       .thumb-strip {
         display: flex;
         gap: 8px;
@@ -614,7 +612,7 @@ function ResponsiveStyles() {
       }
         
       .thumb-item {
-        flex: 0 0 calc((100% - 16px) / 3); /* gap 고려해서 3장만 보이게 */
+        flex: 0 0 calc((100% - 16px) / 3); /* Show 3 items, accounting for gap */
         scroll-snap-align: start;
       }
 
@@ -626,9 +624,9 @@ function ResponsiveStyles() {
         border-radius: 10px;
         cursor: zoom-in;
         display: block;
-        image-rendering: auto;          /* crisp-edges 제거 → 과도한 톱니현상 방지 */
-        -ms-interpolation-mode: bicubic;/* (레거시 IE용, 해가 되진 않음) */
-        transform: translateZ(0);       /* GPU 보간 유도 → 축소 시 덜 깨짐 */
+        image-rendering: auto;         /* Remove 'crisp-edges' to prevent excessive aliasing. */
+        -ms-interpolation-mode: bicubic;/* Legacy IE support; harmless for modern browsers. */
+        transform: translateZ(0);       /* Promote GPU rendering to improve interpolation quality on downscaling. */
         backface-visibility: hidden;
       }
 
@@ -639,7 +637,7 @@ function ResponsiveStyles() {
         line-height: 1.35;
       }
 
-      /* 모바일에서는 조금 더 좁게 */
+      /* Adjust width for smaller mobile viewports. */
       @media (max-width: 520px){
         .thumb-item { width: 45%; max-width: 140px; min-width: 110px; }
       }
@@ -654,21 +652,21 @@ function ResponsiveStyles() {
   );
 }
 
-/** ───────────────────── 4) App ───────────────────── */
+/** ───────────────────── 4) MAIN APP COMPONENT ───────────────────── */
 export default function App() {
-  // 하이라이트 모달
+  // State for the "Highlights" modal
   const [hlModal, setHlModal] = useState({
     open: false,
     title: "",
     html: "",
     images: [],
   });
-  // 카드 깜빡임 제어
+  // State to control the flashing highlight on a card
   const [flashId, setFlashId] = useState("");
-  // 히어로 갤러리 자동 수집
+  // Automatically build the hero gallery items using a memoized function
   const heroGalleryItems = React.useMemo(() => buildHeroGallery(DATA), []);
 
-  /** 특정 카드로 스크롤 & 하이라이트 */
+  /** Scrolls to a specific card and applies a temporary highlight effect. */
   function goToAndFlash(id) {
     if (!id) return;
     const el = document.getElementById(id);
@@ -679,7 +677,7 @@ export default function App() {
     }
   }
 
-  /** 갤러리 위 안내문구 */
+  /** Renders the instructional text above the hero gallery. */
   function HeroGalleryHint() {
     return (
       <div className="hg-hint">
@@ -688,7 +686,7 @@ export default function App() {
     );
   }
 
-  /** 히어로 갤러리 */
+  /** The main hero gallery component. */
   function HeroGallery({ items }) {
     if (!items || items.length === 0) return null;
     return (
@@ -814,7 +812,7 @@ export default function App() {
                             </Button>
                           )}
 
-                          {/* Talks → Publications */}
+                          {/* Button to link from a Talk to its corresponding Publication */}
                           {type === "talks" && it.publishedRef && (
                             <Button
                               variant="outline"
@@ -825,7 +823,7 @@ export default function App() {
                             </Button>
                           )}
 
-                          {/* Talks → Projects (파생 관계) */}
+                          {/* Button to link from a Talk to a related Project */}
                           {type === "talks" && it.relatedProjectRef && (
                             <Button
                               variant="outline"
@@ -848,7 +846,7 @@ export default function App() {
     );
   }
 
-  /** 하이라이트 모달 + 라이트박스 */
+  /** Renders the modal for "Highlights" and includes an image lightbox viewer. */
   function HighlightsModal() {
     const [viewer, setViewer] = React.useState({
       open: false,
@@ -986,7 +984,7 @@ export default function App() {
     );
   }
 
-  /** 헤더 네비 링크 (CONFIG.nav 사용) */
+  /** Generates navigation links based on the CONFIG.nav array. */
   const navLinks = CONFIG.nav.map((n) => {
     const href = n.useCV ? CONFIG.site.cvUrl : n.href;
     const props = n.external || n.useCV ? { target: "_blank", rel: "noreferrer" } : {};
@@ -998,7 +996,7 @@ export default function App() {
     );
   });
 
-  /** 연락처 공통 렌더 */
+  /** Renders the contact links block. */
   function ContactLinks() {
     const L = CONFIG.person.links;
     return (
@@ -1069,7 +1067,7 @@ export default function App() {
       {/* Hero / About */}
       <section id="home" style={{ ...styles.container, padding: "56px 16px" }} className="r-container">
         <div className="r-hero">
-          {/* About me card (왼쪽) */}
+          {/* About me card (left column on desktop) */}
           <div id="about" className="hero-about" style={{ paddingRight: 10 }}>
             <Card>
               <CardHeader>
@@ -1077,7 +1075,7 @@ export default function App() {
               </CardHeader>
               <CardContent>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
-                  {/* 확대 기능 없음 */}
+                  {/* Profile image, no zoom functionality */}
                   <img src={CONFIG.site.profileImage} alt="Profile" className="r-profile" />
                 </div>
                 <p style={{ color: "#334155", lineHeight: 1.6, marginBottom: 12 }}>
@@ -1090,14 +1088,14 @@ export default function App() {
               </CardContent>
             </Card>
 
-            {/* ✅ 모바일 전용: About 아래 갤러리 */}
+            {/* ✅ Mobile-only: Gallery appears below the About card */}
             <div className="only-mobile" style={{ marginTop: 12 }}>
               <HeroGalleryHint />
               <HeroGallery items={heroGalleryItems} />
             </div>
           </div>
 
-          {/* 타이틀/배지/소개 + 갤러리 (오른쪽 - 데스크톱 전용) */}
+          {/* Title, badges, and gallery (right column on desktop) */}
           <div className="hero-text">
             <h1
               style={{
@@ -1121,7 +1119,7 @@ export default function App() {
               ))}
             </div>
 
-            {/* 🔽 데스크톱 전용 갤러리 (모바일에서는 숨김) */}
+            {/* 🔽 Desktop-only gallery (hidden on mobile) */}
             <div className="only-desktop">
               <HeroGalleryHint />
               <HeroGallery items={heroGalleryItems} />
