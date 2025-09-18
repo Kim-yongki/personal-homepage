@@ -50,7 +50,7 @@ const DATA = {
     {
       year: 2025,
       title:
-        "Rethinking Linear-City Accessibility: Development of Linearity Indices",
+        "What Defines a Linear City? Examining Accessibility Premises with Novel Flow-Based Indices",
       venue: "[Under Review]",
       url: "",
       tags: ["Linear city", "Accessibility", "Index development"],
@@ -283,7 +283,7 @@ const DATA = {
       url: "",
       tags: ["Linear city", "Accessibility", "Network analysis"],
       publishedRef:
-        "rethinking-linear-city-accessibility-development-of-linearity-indices",
+        "what-defines-a-linear-city-examining-accessibility-premises-with-novel-flow-based-indices",
       publishedLabel: "Published",
       highlights: {},
     },
@@ -306,7 +306,7 @@ const DATA = {
       url: "",
       tags: ["Linear city", "Accessibility", "Equity"],
       publishedRef:
-        "rethinking-linear-city-accessibility-development-of-linearity-indices",
+        "what-defines-a-linear-city-examining-accessibility-premises-with-novel-flow-based-indices",
       publishedLabel: "Published",
       highlights: {},
     },
