@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Kim-yongki.github.io/personal-homepage-template",
+  "homepage": "https://Kim-yongki.github.io/personal-homepage",
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
