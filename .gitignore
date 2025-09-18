@@ -16,3 +16,7 @@ yarn-error.log*
 
 # Env files
 .env
+
+# Others
+image.png
+public/figures/
