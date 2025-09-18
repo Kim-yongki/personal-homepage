@@ -361,7 +361,7 @@ const DATA = {
 
 
 
-/** ───────────────────── 1.5) AUTOMATIC GALLERY BUILDER ───────────────────── */
+/** ───────────────────── 2) AUTOMATIC GALLERY BUILDER ───────────────────── */
 /** Gathers `highlights.images` from publications, projects, and talks to create the hero gallery. */
 const IMAGE_BASE = "/figures/";
 function resolveImgSrc(src) {
@@ -401,7 +401,7 @@ function buildHeroGallery(DATA, limit = 9999) {
   return limit ? items.slice(0, limit) : items;
 }
 
-/** ───────────────────── 2) MINI UI FRAMEWORK (no external dependencies) ───────────────────── */
+/** ───────────────────── 3) MINI UI FRAMEWORK (no external dependencies) ───────────────────── */
 const styles = {
   fontFamily: CONFIG.site.fontFamily,
   btn: {
@@ -504,7 +504,7 @@ function Badge({ children }) {
   return <span style={styles.badge}>{children}</span>;
 }
 
-/** ───────────────────── 3) RESPONSIVE & DYNAMIC STYLES ───────────────────── */
+/** ───────────────────── 4) RESPONSIVE & DYNAMIC STYLES ───────────────────── */
 function ResponsiveStyles() {
   return (
     <style>{`
@@ -652,7 +652,7 @@ function ResponsiveStyles() {
   );
 }
 
-/** ───────────────────── 4) MAIN APP COMPONENT ───────────────────── */
+/** ───────────────────── 5) MAIN APP COMPONENT ───────────────────── */
 export default function App() {
   // State for the "Highlights" modal
   const [hlModal, setHlModal] = useState({
