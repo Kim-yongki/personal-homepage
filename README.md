@@ -1,4 +1,4 @@
-# personal-homepage
+# personal-homepage (research protfolio)
 ---
 
 📝 License  
