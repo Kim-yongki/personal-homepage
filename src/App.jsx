@@ -165,15 +165,15 @@ const DATA = {
       year: 2025,
       title:
         "A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",
-      descr: "[In progress] Funded by Ministry of SMEs and Startups.",
+      descr: "[In progress] Commissioned by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "Spatial network analysis"],
       highlights: {
         html: `
         <p><b>Role:</b> Graduate Student Researcher · <b>Institution:</b> SNU Enterprise Policy Center · <b>Period:</b> May 2025 – ongoing</p>
-        <p>Using inter-firm transaction big data, conducted network analysis and delineated economic regions in South Korea.</p>
+        <p>Using inter-firm transaction big data(>2B), conducted network analysis and delineated economic regions in South Korea.</p>
         <ul>
-          <li><b>Methodology.</b> Constructed an inter-firm transaction graph and performed network centrality analysis, community detection, and polycentricity analysis.</li>
+          <li><b>Methodology.</b> Constructed an inter-firm transaction network and performed network centrality analysis, community detection, and polycentricity analysis.</li>
           <li><b>Findings.</b> Identified spatial patterns of transactions and inter-regional link structures differentiated by industry and firm size.</li>
           <li><b>Implications.</b> Clarifies the effects of urbanization and localization economies in inter-firm trade.</li>
         </ul>`,
@@ -188,7 +188,7 @@ const DATA = {
       year: 2024,
       title:
         "A Study on Developing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",
-      descr: "Funded by Ministry of SMEs and Startups.",
+      descr: "Commissioned by Ministry of SMEs and Startups.",
       url: "",
       tags: ["SME", "Big data", "Policy evaluation", "ESDA"],
       highlights: {
@@ -210,7 +210,7 @@ const DATA = {
       year: 2025,
       title:
         "A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",
-      descr: "Funded by Brain Korea Research Team for the Future Landscape.",
+      descr: "Commissioned by Brain Korea Research Team for the Future Landscape.",
       url: "",
       tags: ["Education", "Curriculum", "Interdisciplinary"],
       highlights: {
