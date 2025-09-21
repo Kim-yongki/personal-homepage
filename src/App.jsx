@@ -31,6 +31,8 @@ const CONFIG = {
         "https://scholar.google.com/citations?user=G-AE3o0AAAAJ&hl=ko&oi=sra",
       researchgate:
         "https://www.researchgate.net/profile/Yongki-Kim-2?ev=hdr_xprf",
+      github:
+        "https://github.com/Kim-yongki"
     },
   },
   nav: [
@@ -1034,6 +1036,12 @@ export default function App() {
           📄{" "}
           <a href={L.researchgate} target="_blank" rel="noreferrer">
             ResearchGate
+          </a>
+        </div>
+        <div style={{ display: "flex", gap: 8 }}>
+          📄{" "}
+          <a href={L.github} target="_blank" rel="noreferrer">
+            GitHub
           </a>
         </div>
       </>
