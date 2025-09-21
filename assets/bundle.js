@@ -37,21 +37,21 @@ Error generating stack: `+i.message+`
           <li><b>I.</b> Co-authored and edited essays and briefs, coordinating contributions and copyediting.</li>
           <li><b>II.</b> Synthesized Gen Z perspectives on housing, finance, and policy changes in the volatile Covid-19 market year.</li>
           <li><b>III.</b> Offered industry professionals valuable insights into younger-generation perspectives on the real-estate sector.</li>
-        </ul>`,images:[{src:"figures/storage.png",caption:"Cover"}]}}],projects:[{year:2025,title:"A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",descr:"[In progress] Funded by Ministry of SMEs and Startups.",url:"",tags:["SME","Big data","Policy evaluation","Spatial network analysis"],highlights:{html:`
+        </ul>`,images:[{src:"figures/storage.png",caption:"Cover"}]}}],projects:[{year:2025,title:"A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",descr:"[In progress] Commissioned by Ministry of SMEs and Startups.",url:"",tags:["SME","Big data","Policy evaluation","Spatial network analysis"],highlights:{html:`
         <p><b>Role:</b> Graduate Student Researcher \xB7 <b>Institution:</b> SNU Enterprise Policy Center \xB7 <b>Period:</b> May 2025 \u2013 ongoing</p>
-        <p>Using inter-firm transaction big data, conducted network analysis and delineated economic regions in South Korea.</p>
+        <p>Using inter-firm transaction big data(>2B), conducted network analysis and delineated economic regions in South Korea.</p>
         <ul>
-          <li><b>Methodology.</b> Constructed an inter-firm transaction graph and performed network centrality analysis, community detection, and polycentricity analysis.</li>
+          <li><b>Methodology.</b> Constructed an inter-firm transaction network and performed network centrality analysis, community detection, and polycentricity analysis.</li>
           <li><b>Findings.</b> Identified spatial patterns of transactions and inter-regional link structures differentiated by industry and firm size.</li>
           <li><b>Implications.</b> Clarifies the effects of urbanization and localization economies in inter-firm trade.</li>
-        </ul>`,images:[{src:"figures/transactions.png",caption:"Transaction network (example)"},{src:"figures/community.png",caption:"Community detection (example)"},{src:"figures/sankey.png",caption:"Sankey diagram (example)"}]}},{year:2024,title:"A Study on Developing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",descr:"Funded by Ministry of SMEs and Startups.",url:"",tags:["SME","Big data","Policy evaluation","ESDA"],highlights:{html:`
+        </ul>`,images:[{src:"figures/transactions.png",caption:"Transaction network (example)"},{src:"figures/community.png",caption:"Community detection (example)"},{src:"figures/sankey.png",caption:"Sankey diagram (example)"}]}},{year:2024,title:"A Study on Developing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",descr:"Commissioned by Ministry of SMEs and Startups.",url:"",tags:["SME","Big data","Policy evaluation","ESDA"],highlights:{html:`
         <p><b>Role:</b> Graduate Student Researcher \xB7 <b>Institution:</b> SNU Enterprise Policy Center \xB7 <b>Period:</b> Jun \u2013 Dec 2024</p>
         <p>Conducted exploratory spatial data analysis (ESDA) using corporate financial information and related indicators</p>
         <ul>
           <li><b>Methodology.</b> Performed spatial and aspatial analyses on time-series data for sales and other firm-level indicators.</li>
           <li><b>Findings.</b> Detected spatial heterogeneity and local clusters that were not apparent in publicly available datasets (e.g., firm counts).</li>
           <li><b>Implications.</b> Offers guidance for government policies tailored to regional industrial structures.</li>
-        </ul>`,images:[{src:"figures/SME_Gmoran.png",caption:"Global Moran's I (example)"},{src:"figures/SME_Lmoran.png",caption:"Local Moran's I (example)"}]}},{year:2025,title:"A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",descr:"Funded by Brain Korea Research Team for the Future Landscape.",url:"",tags:["Education","Curriculum","Interdisciplinary"],highlights:{html:`
+        </ul>`,images:[{src:"figures/SME_Gmoran.png",caption:"Global Moran's I (example)"},{src:"figures/SME_Lmoran.png",caption:"Local Moran's I (example)"}]}},{year:2025,title:"A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",descr:"Commissioned by Brain Korea Research Team for the Future Landscape.",url:"",tags:["Education","Curriculum","Interdisciplinary"],highlights:{html:`
         <p><b>Role:</b> Graduate Student Research Assistant \xB7 <b>Institution:</b> SNU Geography \xB7 <b>Period:</b> Jan \u2013 Feb 2025</p>
         <p>Surveyed interdisciplinary degree programs in South Korea related to geography.</p>
         <ul>
