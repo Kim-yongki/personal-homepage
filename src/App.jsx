@@ -1019,17 +1019,17 @@ export default function App() {
           <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          <FaLinkedin size={20} color="#0A66C2" />
+          <FaLinkedin size={20} color="black" />
           <a href={L.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          <FaGoogleScholar size={20} color="#4285F4" />
+          <FaGoogleScholar size={20} color="black" />
           <a href={L.scholar} target="_blank" rel="noreferrer">Google Scholar</a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          <FaResearchgate size={20} color="#00CCBB" />
+          <FaResearchgate size={20} color="black" />
           <a href={L.researchgate} target="_blank" rel="noreferrer">ResearchGate</a>
         </div>
 
