@@ -5,15 +5,17 @@
   "homepage": "https://Kim-yongki.github.io/personal-homepage",
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "esbuild": "^0.23.0"
+    "esbuild": "^0.23.0",
+    "gh-pages": "^6.1.1"
   },
-"scripts": {
-  "start": "npx serve -s build -l 3000",
-  "build": "if exist build rmdir /s /q build && mkdir build && npx esbuild src/index.js --bundle --outfile=build/assets/bundle.js --define:process.env.NODE_ENV='\"production\"' --minify --loader:.js=jsx && xcopy public build /E /I /Y",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}}
+  "scripts": {
+    "start": "npx serve -s build -l 3000",
+    "build": "if exist build rmdir /s /q build && mkdir build && npx esbuild src/index.js --bundle --outfile=build/assets/bundle.js --define:process.env.NODE_ENV='\"production\"' --minify --loader:.js=jsx && xcopy public build /E /I /Y",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}

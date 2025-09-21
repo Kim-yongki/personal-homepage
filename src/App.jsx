@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaLinkedin, FaGoogleScholar, FaResearchgate, FaGithub } from "react-icons/fa6";
 
 /** ───────────────────── 0) CONTENT CONFIGURATION ───────────────────── */
 const CONFIG = {
@@ -1017,32 +1018,24 @@ export default function App() {
           ✉️ <a href="mailto:pauluhill74@gmail.com">pauluhill74@gmail.com</a> •{" "}
           <a href="mailto:pauluhill@snu.ac.kr">pauluhill@snu.ac.kr</a>
         </div>
-
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          🔗{" "}
-          <a href={L.linkedin} target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
+          <FaLinkedin size={20} color="#0A66C2" />
+          <a href={L.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
         </div>
 
         <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
-          🌐{" "}
-          <a href={L.scholar} target="_blank" rel="noreferrer">
-            Google Scholar
-          </a>
+          <FaGoogleScholar size={20} color="#4285F4" />
+          <a href={L.scholar} target="_blank" rel="noreferrer">Google Scholar</a>
+        </div>
+
+        <div style={{ display: "flex", gap: 8, marginBottom: 6 }}>
+          <FaResearchgate size={20} color="#00CCBB" />
+          <a href={L.researchgate} target="_blank" rel="noreferrer">ResearchGate</a>
         </div>
 
         <div style={{ display: "flex", gap: 8 }}>
-          📄{" "}
-          <a href={L.researchgate} target="_blank" rel="noreferrer">
-            ResearchGate
-          </a>
-        </div>
-        <div style={{ display: "flex", gap: 8 }}>
-          📄{" "}
-          <a href={L.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
+          <FaGithub size={20} color="black" />
+          <a href={L.github} target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </>
     );
