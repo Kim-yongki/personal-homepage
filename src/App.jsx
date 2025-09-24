@@ -14,11 +14,9 @@ const CONFIG = {
     title: "Urban Kinetics: \n Anatomy of City Networks",
     blurb: "",
     badges: [
-      "Transport Geography",
-      "Urban Planning",
-      "Logistics",
-      "Real Estate",
-      "Spatial Data Science"
+      "Transportation network analysis", 
+      "Freight planning", 
+      "Urban morphology", "Quantification"
     ],
   },
   person: {
