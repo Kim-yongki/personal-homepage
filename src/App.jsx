@@ -15,8 +15,8 @@ const CONFIG = {
     blurb: "",
     badges: [
       "Transportation network analysis", 
-      "Freight planning", 
-      "Urban morphology", "Quantification"
+      "Urban morphology",
+      "Freight planning"
     ],
   },
   person: {
