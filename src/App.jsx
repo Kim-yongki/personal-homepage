@@ -39,8 +39,7 @@ const CONFIG = {
     { label: "Publications", href: "#pubs", external: false },
     { label: "Projects", href: "#projects", external: false },
     { label: "Talks", href: "#talks", external: false },
-    { label: "Contact", href: "#contact", external: false },
-    { label: "CV", href: null, external: true, useCV: true },
+    { label: "Contact", href: "#contact", external: false }
   ],
 };
 
@@ -1070,7 +1069,17 @@ export default function App() {
           <div id="about" className="hero-about" style={{ paddingRight: 10 }}>
             <Card>
               <CardHeader>
-                <CardTitle>About me</CardTitle>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
+                  <CardTitle>About me</CardTitle>
+                  <a
+                    href={CONFIG.site.cvUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{ fontWeight: 800, textDecoration: "underline" }}
+                  >
+                    *CV
+                  </a>
+                </div>
               </CardHeader>
               <CardContent>
                 <div style={{ display: "flex", justifyContent: "center", marginBottom: 12 }}>
