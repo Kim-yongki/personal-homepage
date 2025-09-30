@@ -1077,7 +1077,7 @@ export default function App() {
                     rel="noreferrer"
                     style={{ fontWeight: 800, textDecoration: "underline" }}
                   >
-                    *CV
+                    Curriculum Vitae
                   </a>
                 </div>
               </CardHeader>
