@@ -665,17 +665,68 @@ export default function App() {
   const [flashId, setFlashId] = useState("");
   // Automatically build the hero gallery items using a memoized function
   const heroGalleryItems = React.useMemo(() => buildHeroGallery(DATA), []);
+  const openHighlightForId = React.useCallback((id, { scroll = true } = {}) => {
+  if (!id) return false;
+  const entry =
+    [...DATA.publications, ...DATA.projects, ...DATA.talks]
+      .find((e) => slug(e.title) === id);
+
+  if (!entry || !entry.highlights) return false;
+
+  setHlModal({
+    open: true,
+    title: entry.title,
+    html: entry.highlights?.html || "",
+    images: entry.highlights?.images || [],
+  });
+  if (scroll) goToAndFlash(id);
+  return true;
+}, []);
+
+const setUrlHighlight = React.useCallback((id, { replace = false } = {}) => {
+  const url = new URL(window.location.href);
+  if (id) {
+    url.searchParams.set("hl", id);
+    url.hash = id; // 해시도 같이 업데이트 (카드로 스크롤될 수 있게)
+  } else {
+    url.searchParams.delete("hl");
+  }
+  history[replace ? "replaceState" : "pushState"]({}, "", url);
+}, []);
+
+const syncFromUrl = React.useCallback(() => {
+  const url = new URL(window.location.href);
+  const id = url.searchParams.get("hl");
+  if (id) {
+    // 해당 id가 없으면 최소한 카드로 스크롤만
+    if (!openHighlightForId(id, { scroll: true })) {
+      goToAndFlash(id);
+    }
+  } else if (hlModal.open) {
+    setHlModal({ open: false, title: "", html: "", images: [] });
+  }
+}, [openHighlightForId, hlModal.open]);
+
+React.useEffect(() => {
+  // 최초 로드 & 뒤로가기/앞으로가기 반영
+  syncFromUrl();
+  window.addEventListener("popstate", syncFromUrl);
+  return () => window.removeEventListener("popstate", syncFromUrl);
+}, [syncFromUrl]);
 
   /** Scrolls to a specific card and applies a temporary highlight effect. */
-  function goToAndFlash(id) {
-    if (!id) return;
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "center" });
-      setFlashId(id);
-      window.setTimeout(() => setFlashId(""), 4000);
-    }
+function goToAndFlash(id) {
+  if (!id) return;
+  // URL 해시 갱신 (공유/새로고침 시 해당 카드 위치 유지)
+  history.pushState({}, "", `#${id}`);
+
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    setFlashId(id);
+    window.setTimeout(() => setFlashId(""), 4000);
   }
+}
 
   /** Renders the instructional text above the hero gallery. */
   function HeroGalleryHint() {
@@ -799,14 +850,16 @@ export default function App() {
                           {hasHL && (
                             <Button
                               variant="outline"
-                              onClick={() =>
+                              onClick={() => {
+                                const id = slug(it.title);
+                                setUrlHighlight(id); // ← URL에 ?hl=... 과 #... 반영
                                 setHlModal({
                                   open: true,
                                   title: it.title,
                                   html: it.highlights?.html || "",
                                   images: it.highlights?.images || [],
-                                })
-                              }
+                                });
+                              }}
                             >
                               Highlights
                             </Button>
@@ -858,12 +911,14 @@ export default function App() {
 
     if (!hlModal.open) return null;
 
-    const close = () =>
-      setHlModal({ open: false, title: "", html: "", images: [] });
+    const close = () => {
+      // ?hl 파라미터만 제거 (해시는 남겨 카드 위치 유지)
+      const url = new URL(window.location.href);
+      url.searchParams.delete("hl");
+      history.pushState({}, "", url);
 
-    const images = (hlModal.images || []).map((img) =>
-      typeof img === "string" ? { src: img, caption: "" } : img
-    );
+      setHlModal({ open: false, title: "", html: "", images: [] });
+    };
 
     const openViewer = (i) =>
       setViewer({
