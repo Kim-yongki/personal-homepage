@@ -687,7 +687,6 @@ const setUrlHighlight = React.useCallback((id, { replace = false } = {}) => {
   const url = new URL(window.location.href);
   if (id) {
     url.searchParams.set("hl", id);
-    url.hash = id; // 해시도 같이 업데이트 (카드로 스크롤될 수 있게)
   } else {
     url.searchParams.delete("hl");
   }
@@ -717,7 +716,6 @@ React.useEffect(() => {
   /** Scrolls to a specific card and applies a temporary highlight effect. */
 function goToAndFlash(id) {
   if (!id) return;
-  // URL 해시 갱신 (공유/새로고침 시 해당 카드 위치 유지)
 
   const el = document.getElementById(id);
   if (el) {
