@@ -910,6 +910,9 @@ function goToAndFlash(id) {
     const stripRef = React.useRef(null);
 
     if (!hlModal.open) return null;
+    const images = (hlModal.images || []).map((img) =>
+      typeof img === "string" ? { src: img, caption: "" } : img
+    );
 
     const close = () => {
       // ?hl 파라미터만 제거 (해시는 남겨 카드 위치 유지)
