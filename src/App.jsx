@@ -912,9 +912,9 @@ function goToAndFlash(id) {
     );
 
     const close = () => {
-      // ?hl 파라미터만 제거 (해시는 남겨 카드 위치 유지)
       const url = new URL(window.location.href);
       url.searchParams.delete("hl");
+      url.hash = ""
       history.pushState({}, "", url);
 
       setHlModal({ open: false, title: "", html: "", images: [] });
