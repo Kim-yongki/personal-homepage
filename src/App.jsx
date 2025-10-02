@@ -363,11 +363,11 @@ const DATA = {
 
 /** ───────────────────── 2) AUTOMATIC GALLERY BUILDER ───────────────────── */
 /** Gathers `highlights.images` from publications, projects, and talks to create the hero gallery. */
-const IMAGE_BASE = "/figures/";
+const IMAGE_BASE = "./figures/";
 function resolveImgSrc(src) {
   if (!src) return src;
   if (/^(https?:)?\/\//i.test(src) || /^data:/i.test(src)) return src;
-  if (/^\.?\/?figures\//i.test(src)) return src.replace(/^\.?\//, "/");
+  if (/^\.?\/?figures\//i.test(src)) return src.replace(/^\/+/, "");
   return `${IMAGE_BASE}${src.replace(/^\.?\//, "")}`;
 }
 
