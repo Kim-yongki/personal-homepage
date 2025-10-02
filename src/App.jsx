@@ -718,7 +718,6 @@ React.useEffect(() => {
 function goToAndFlash(id) {
   if (!id) return;
   // URL 해시 갱신 (공유/새로고침 시 해당 카드 위치 유지)
-  history.pushState({}, "", `#${id}`);
 
   const el = document.getElementById(id);
   if (el) {
