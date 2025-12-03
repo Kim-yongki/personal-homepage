@@ -73,7 +73,7 @@ const DATA = {
       year: 2025,
       title:
         "Fulfillment Services and Proximity Logistics: Focused on the Logistics Space of the Seoul Capital Area",
-      venue: "[In Progress] M.A. Thesis, Seoul National University",
+      venue: "[Approved] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
       highlights: {
