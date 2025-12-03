@@ -17,7 +17,7 @@ Error generating stack: `+r.message+`
         <ul>
           <li><b>Methodology.</b> Using parcel OD and firm data (CJ Logistics vs. Coupang), terminal allocation and route-optimization-based simulations were conducted for hub-and-spoke versus fulfillment scenarios, and changes in logistics space\u2014including logistics sprawl\u2014were interpreted from both market- and public-sector perspectives.</li>
           <li><b>Findings 1.</b> Fulfillment services allow more flexible routing, making consumer proximity a significantly more important factor than in traditional, rigid parcel networks.</li>
-          <li><b>Findings 2.</b> However, logistics facilities have increasingly sprawled, driven more by the liquidity of the real estate market than by the effectiveness of the network. This phenomenon became more pronounced as the urban periphery absorbed the surge in demand for large-scale logistics facilities during the pandemic.</li>
+          <li><b>Findings 2.</b> However, logistics facilities have increasingly sprawled, driven more by the real estate market than by the effectiveness of the network. This phenomenon became more pronounced as the urban periphery absorbed the surge in demand for large-scale logistics facilities during the pandemic.</li>
           <li><b>Implications.</b> The findings underscore the growing importance of optimizing location and allocation strategies for proximity logistics and transport networks, and highlight the need for government-led siting incentives to support the formation of logistics clusters.</li>
         </ul>`,images:[{src:"figures/Freight_supplychain.png",caption:"Supply chain by scenarios"},{src:"figures/Freight_scenario.png",caption:"Transportation cost by scenarios"},{src:"figures/Logistics_sprawl.png",caption:"Logistics sprawl over time"}]}},{year:2025,title:"Analyzing the Equity of Road Services through Accessibility Gaps: Focusing on Detour Costs",venue:"Journal of the Korean Geographical Society, 60(2):168\u2013186",url:"https://doi.org/10.22776/kgs.2025.60.2.168",tags:["Equity","Road network","Detour cost"],highlights:{html:`
         <p>Articulated the endogeneity of road distance (i.e., detours) within bid-rent theory, and proposed a conceptual framework for evaluating equity in road networks. Based on the equal-sacrifice principle, conducted an empirical analysis for small and mid-sized cities in South Korea.</p>
@@ -30,7 +30,7 @@ Error generating stack: `+r.message+`
         <ul>
           <li><b>Methodology.</b> Modified network centrality indices to measure multi-location brand centrality, and analyzed locational patterns by retail category.</li>
           <li><b>Findings.</b> Q-commerce fulfillment centers tended to locate in lower-rent subcenters while still exhibiting superior centrality (accessibility) relative to offline retail.</li>
-          <li><b>Implications.</b> The results indicate a shift in retail spatial structure\u2014driven by the rising importance of delivery\u2014from agglomeration around prime districts toward optimization-oriented distributed siting.</li>
+          <li><b>Implications.</b> The results indicate a shift in retail spatial structure; driven by the rising importance of delivery: from agglomeration around main streets toward optimization-oriented distributed siting.</li>
         </ul>`,images:[{src:"figures/retail_locations.png",caption:"Quick commerce & retail locations"},{src:"figures/multilocation_network_centrality.png",caption:"Multi-location network centrality"},{src:"figures/multilocation_network_centrality(equation).png",caption:"Centrality (equation)"}]}},{year:2020,title:"Storage: 2020 Korean Real Estate through the Eyes of Twenties (Book)",venue:"Published by the SNU Real Estate Club",url:"https://books.google.co.kr/books/about/Storage.html?id=Tx_szgEACAAJ&redir_esc=y",tags:["Real estate","Finance","Policy"],highlights:{html:`
         <p>A student-edited volume presenting Gen Z perspectives on South Korea\u2019s 2020 real-estate market.</p>
         <ul>
@@ -38,21 +38,21 @@ Error generating stack: `+r.message+`
           <li><b>II.</b> Synthesized Gen Z perspectives on housing, finance, and policy changes in the volatile Covid-19 market year.</li>
           <li><b>III.</b> Offered industry professionals valuable insights into younger-generation perspectives on the real-estate sector.</li>
         </ul>`,images:[{src:"figures/storage.png",caption:"Cover"}]}}],projects:[{year:2025,title:"A Study on Enhancing SME Policy Evaluation through SME Big-Data Analytics",descr:"[In progress] Commissioned by Ministry of SMEs and Startups.",url:"",tags:["SME","Big data","Policy evaluation","Spatial network analysis"],highlights:{html:`
-        <p><b>Role:</b> Graduate Student Researcher \xB7 <b>Institution:</b> SNU Enterprise Policy Center \xB7 <b>Period:</b> May 2025 \u2013 ongoing</p>
+        <p><b>Role:</b> Research Assistant \xB7 <b>Institution:</b> SNU Enterprise Policy Center \xB7 <b>Period:</b> May 2025 \u2013 ongoing</p>
         <p>Using inter-firm transaction big data(>2B), conducted network analysis and delineated economic regions in South Korea.</p>
         <ul>
-          <li><b>Methodology.</b> Constructed an inter-firm transaction network and performed network centrality analysis, community detection, and polycentricity analysis.</li>
+          <li><b>Methodology.</b> Constructed a regional inter-firm transaction network and performed network centrality analysis, community detection, and polycentricity analysis.</li>
           <li><b>Findings.</b> Identified spatial patterns of transactions and inter-regional link structures differentiated by industry and firm size.</li>
           <li><b>Implications.</b> Clarifies the effects of urbanization and localization economies in inter-firm trade.</li>
         </ul>`,images:[{src:"figures/transactions.png",caption:"Transaction network (example)"},{src:"figures/community.png",caption:"Community detection (example)"},{src:"figures/sankey.png",caption:"Sankey diagram (example)"}]}},{year:2024,title:"A Study on Developing Big Data-Based Policy Evaluation for Small and Medium-Sized Enterprises",descr:"Commissioned by Ministry of SMEs and Startups.",url:"",tags:["SME","Big data","Policy evaluation","ESDA"],highlights:{html:`
-        <p><b>Role:</b> Graduate Student Researcher \xB7 <b>Institution:</b> SNU Enterprise Policy Center \xB7 <b>Period:</b> Jun \u2013 Dec 2024</p>
+        <p><b>Role:</b> Research Assistant \xB7 <b>Institution:</b> SNU Enterprise Policy Center \xB7 <b>Period:</b> Jun \u2013 Dec 2024</p>
         <p>Conducted exploratory spatial data analysis (ESDA) using corporate financial information and related indicators</p>
         <ul>
           <li><b>Methodology.</b> Performed spatial and aspatial analyses on time-series data for sales and other firm-level indicators.</li>
-          <li><b>Findings.</b> Detected spatial heterogeneity and local clusters that were not apparent in publicly available datasets (e.g., firm counts).</li>
+          <li><b>Findings.</b> Detected spatial heterogeneity and local clusters that were not apparent in open data (e.g., firm counts).</li>
           <li><b>Implications.</b> Offers guidance for government policies tailored to regional industrial structures.</li>
         </ul>`,images:[{src:"figures/SME_Gmoran.png",caption:"Global Moran's I (example)"},{src:"figures/SME_Lmoran.png",caption:"Local Moran's I (example)"}]}},{year:2025,title:"A Study on Strategies for Reforming the Geography Curriculum in the Era of Interdisciplinary and Open Majors",descr:"Commissioned by Brain Korea Research Team for the Future Landscape.",url:"",tags:["Education","Curriculum","Interdisciplinary"],highlights:{html:`
-        <p><b>Role:</b> Graduate Student Research Assistant \xB7 <b>Institution:</b> SNU Geography \xB7 <b>Period:</b> Jan \u2013 Feb 2025</p>
+        <p><b>Role:</b> Research Assistant \xB7 <b>Institution:</b> SNU Geography \xB7 <b>Period:</b> Jan \u2013 Feb 2025</p>
         <p>Surveyed interdisciplinary degree programs in South Korea related to geography.</p>
         <ul>
           <li><b>Methodology.</b> Built a list of geography-related programs, typologized cross-disciplinary structures, and compared curricula.</li>
