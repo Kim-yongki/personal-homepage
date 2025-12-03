@@ -16,6 +16,7 @@ const CONFIG = {
     badges: [
       "Transportation network analysis", 
       "Urban morphology",
+      "Trajectories",
       "Freight planning"
     ],
   },
