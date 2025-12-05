@@ -137,7 +137,7 @@ const DATA = {
           { src: "figures/retail_locations.png", caption: "Quick commerce & retail locations" },
           { src: "figures/multilocation_network_centrality.png", caption: "Multi-location network centrality" },
           { src: "figures/multilocation_network_centrality(equation).png", caption: "Centrality (equation)" },
-          { src: "figures/retail_traffic.png.png", caption: "Centrality vs. rent" }
+          { src: "figures/retail_traffic.png", caption: "Traffic patterns" }
         ],
       },
     },
