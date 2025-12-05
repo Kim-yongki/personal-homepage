@@ -67,13 +67,14 @@ const DATA = {
           { src: "figures/MLI.png", caption: "Morphological Linearity Index (MLI)" },
           { src: "figures/SLI.png", caption: "Structural Linearity Index (SLI)" },
           { src: "figures/local_SLI.png", caption: "Local SLI" },
+          { src: "figures/Results.png", caption: "Linearity vs Accessibility" }
         ],
       },
     },
     {
       year: 2025,
       title:
-        "Fulfillment Services and Proximity Logistics: Focused on the Logistics Space of the Seoul Capital Area",
+        "The Impact of E-commerce Fulfillment Growth on Logistics Space in the Seoul Metropolitan Area: Focusing on Transport Chains and Logistics Sprawl",
       venue: "[Approved] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
@@ -88,8 +89,8 @@ const DATA = {
         </ul>`,
         images: [
           { src: "figures/Freight_supplychain.png", caption: "Supply chain by scenarios" },
-          { src: "figures/Freight_scenario.png", caption: "Transportation cost by scenarios" },
-          { src: "figures/Logistics_sprawl.png", caption: "Logistics sprawl over time" },
+          { src: "figures/Optimizedlocation.png", caption: "Optimization Logic of models.png" },
+          { src: "figures/Logistics_sprawl.png", caption: "Logistics sprawl over time" }
         ],
       },
     },
@@ -106,13 +107,13 @@ const DATA = {
         <ul>
           <li><b>Methodology.</b> Compared Euclidean and network distances, analyzed within-city accessibility dispersion using the standard deviation and the Gini coefficient, and assessed road-network equity under absolute, proportional, and marginal equal-sacrifice criteria.</li>
           <li><b>Findings.</b> Dispersion in road network distances (SD, Gini) generally exceeded that of Euclidean distances, reflecting amplified Euclidean-based gaps and/or unequal development of road networks.</li>
-          <li><b>Implications.</b> Articulates concrete policy goals that road networks—as a public service—can pursue beyond “free use,” and recommends embedding such goals into road-network planning and appraisal.</li>
+          <li><b>Implications.</b> Articulates concrete policy goals that road networks, as a public service, can pursue beyond “free use,” and recommends embedding such goals into road-network planning and appraisal.</li>
         </ul>`,
         images: [
           { src: "figures/Framework_road_equity.png", caption: "Framework for analyzing road equity" },
           { src: "figures/Equal_transportation_sacrifice.png", caption: "Equal-sacrifice principle for detour" },
           { src: "figures/Road_effect.png", caption: "Road-network effect on accessibility gaps" },
-          { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" },
+          { src: "figures/accessibilities_detour_cost.png", caption: "Accessibility vs. detour costs" }
         ],
       },
     },
@@ -128,13 +129,15 @@ const DATA = {
         <p>By interpreting the Q-commerce industry as a retail format in which sellers bear delivery costs, changes in retail locational patterns driven by last-mile logistics were analyzed.</p>
         <ul>
           <li><b>Methodology.</b> Modified network centrality indices to measure multi-location brand centrality, and analyzed locational patterns by retail category.</li>
-          <li><b>Findings.</b> Q-commerce fulfillment centers tended to locate in lower-rent subcenters while still exhibiting superior centrality (accessibility) relative to offline retail.</li>
+          <li><b>Findings 1.</b> Q-commerce fulfillment centers tended to locate in lower-rent subcenters while still exhibiting superior centrality (accessibility) relative to offline retail.</li>
+          <li><b>Findings 2.</b> Quick-commerce facilities generate more alley-level flows, resulting in negative externalities related to truck traffic, than brick-and-mortar retail located on main streets.</li>
           <li><b>Implications.</b> The results indicate a shift in retail spatial structure; driven by the rising importance of delivery: from agglomeration around main streets toward optimization-oriented distributed siting.</li>
         </ul>`,
         images: [
           { src: "figures/retail_locations.png", caption: "Quick commerce & retail locations" },
           { src: "figures/multilocation_network_centrality.png", caption: "Multi-location network centrality" },
           { src: "figures/multilocation_network_centrality(equation).png", caption: "Centrality (equation)" },
+          { src: "figures/retail_traffic.png.png", caption: "Centrality vs. rent" }
         ],
       },
     },
@@ -179,7 +182,7 @@ const DATA = {
         images: [
           { src: "figures/transactions.png", caption: "Transaction network (example)" },
           { src: "figures/community.png", caption: "Community detection (example)" },
-          { src: "figures/sankey.png", caption: "Sankey diagram (example)" },
+          { src: "figures/sankey.png", caption: "Sankey diagram (example)" }
         ],
       },
     },
@@ -201,7 +204,7 @@ const DATA = {
         </ul>`,
         images: [
           { src: "figures/SME_Gmoran.png", caption: "Global Moran's I (example)" },
-          { src: "figures/SME_Lmoran.png", caption: "Local Moran's I (example)" },
+          { src: "figures/SME_Lmoran.png", caption: "Local Moran's I (example)" }
         ],
       },
     },
@@ -241,7 +244,7 @@ const DATA = {
         </ul>`,
         images: [
           { src: "figures/SRC_ELYSIA_cover.png", caption: "Cover" },
-          { src: "figures/SRC_ELYSIA_list.png", caption: "List of Reports" },
+          { src: "figures/SRC_ELYSIA_list.png", caption: "List of Reports" }
         ],
       },
     },
@@ -329,7 +332,7 @@ const DATA = {
         images: [
           { src: "figures/Hierarchical_road_network.png", caption: "Hierarchical road network" },
           { src: "figures/Compared_with_urbanplan.png", caption: "Compared with government plan" },
-          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Bid rent theory with axis clusters" },
+          { src: "figures/Bid_rent_theory_with_clusters.png", caption: "Bid rent theory with axis clusters" }
         ],
       },
     },
