@@ -74,7 +74,7 @@ const DATA = {
     {
       year: 2025,
       title:
-        "The Impact of E-commerce Fulfillment Growth on Logistics Space in the Seoul Metropolitan Area: Focusing on Transport Chains and Logistics Sprawl",
+        "“Proximity Logistics in the Seoul Metropolitan Area amid the Growth of Fulfillment Logistics: Changes in the Transport Chain and Logistics Space”",
       venue: "[Approved] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],
