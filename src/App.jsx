@@ -74,7 +74,7 @@ const DATA = {
     {
       year: 2025,
       title:
-        "“Proximity Logistics in the Seoul Metropolitan Area amid the Growth of Fulfillment Logistics: Changes in the Transport Chain and Logistics Space”",
+        "Proximity Logistics in the Seoul Metropolitan Area amid the Growth of Fulfillment Logistics: Changes in the Transport Chain and Logistics Space",
       venue: "[Approved] M.A. Thesis, Seoul National University",
       url: "",
       tags: ["Thesis", "Linear city", "Accessibility"],

@@ -6,7 +6,7 @@
 - Go into `App.jsx` and modify only **Section 0 (CONFIG)** and **Section 1 (DATA)**.  
   - Section 0 → personal info, navigation, hero title, etc.  
   - Section 1 → publications, projects, talks.  
-- That’s it — everything else (layout, UI) will work automatically.  
+- That’s it - everything else (layout, UI) will work automatically.  
 
 This makes it easy to adapt for your own academic / research portfolio with minimal edits.  
 
